@@ -8,8 +8,44 @@
 
 #define BUF_SIZE 1024
 
+void typeSpace(Space p) {
+    switch(p) {
+        case (Blank):
+            printf(". ");
+            break;
+        case (Black):
+            printf("# ");
+            break;
+        case (White):
+            printf("* ");
+            break;
+    }
+}
+
+
+
 void print_board(State state) {
 
+    for(int i = 0; i < 8; i++) {
+        printf("%d\t", i + 1);
+
+        if (i == 7)
+            printf("1 ");
+
+        for(int j = 0; j < 8; j++)
+            if ((i != 0 || j != 7) && (i != 7 || j != 0))
+                typeSpace(state.board[i][j]);
+
+        if ( i == 0)
+            printf("2");
+
+        puts("");
+    }
+
+    printf("\n\t");
+
+    for(int i = 0; i < 8; i ++)
+        printf("%c ", 'A' + i);
 }
 
 
