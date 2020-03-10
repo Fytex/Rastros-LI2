@@ -1,9 +1,11 @@
-//
-// Created by fytex on 3/9/20.
-//
+
 
 #include <stdlib.h>
 #include "state.h"
+
+/*
+ * Função que inicializa o Estado.
+ */
 
 State *initialize_state() {
     State *state = (State *) malloc(sizeof(State));
@@ -23,4 +25,13 @@ State *initialize_state() {
         }
 
     return state;
+}
+
+/*
+ * Função que coloca uma Peça numa casa jogada.
+ */
+void edit_space(State* state, Position pos, Space space){
+
+        state->board[pos.row][pos.column] = space;
+
 }

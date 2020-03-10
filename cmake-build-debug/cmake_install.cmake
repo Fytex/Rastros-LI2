@@ -1,4 +1,4 @@
-# Install script for directory: /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2
+# Install script for directory: /home/tiago/Desktop/LI2/Projeto/Rastros-LI2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

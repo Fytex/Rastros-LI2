@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fytex/clion-2019.3.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/tiago/Downloads/CLion-2019.3.3/clion-2019.3.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/fytex/clion-2019.3.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/tiago/Downloads/CLion-2019.3.3/clion-2019.3.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2
+CMAKE_SOURCE_DIR = /home/tiago/Desktop/LI2/Projeto/Rastros-LI2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Rastros_LI2.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/Rastros_LI2.dir/flags.make
 
 CMakeFiles/Rastros_LI2.dir/main.c.o: CMakeFiles/Rastros_LI2.dir/flags.make
 CMakeFiles/Rastros_LI2.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Rastros_LI2.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/main.c.o   -c /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Rastros_LI2.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/main.c.o   -c /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/main.c
 
 CMakeFiles/Rastros_LI2.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Rastros_LI2.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/main.c > CMakeFiles/Rastros_LI2.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/main.c > CMakeFiles/Rastros_LI2.dir/main.c.i
 
 CMakeFiles/Rastros_LI2.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Rastros_LI2.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/main.c -o CMakeFiles/Rastros_LI2.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/main.c -o CMakeFiles/Rastros_LI2.dir/main.c.s
 
 CMakeFiles/Rastros_LI2.dir/data/state.c.o: CMakeFiles/Rastros_LI2.dir/flags.make
 CMakeFiles/Rastros_LI2.dir/data/state.c.o: ../data/state.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Rastros_LI2.dir/data/state.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/data/state.c.o   -c /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/data/state.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Rastros_LI2.dir/data/state.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/data/state.c.o   -c /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/data/state.c
 
 CMakeFiles/Rastros_LI2.dir/data/state.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Rastros_LI2.dir/data/state.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/data/state.c > CMakeFiles/Rastros_LI2.dir/data/state.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/data/state.c > CMakeFiles/Rastros_LI2.dir/data/state.c.i
 
 CMakeFiles/Rastros_LI2.dir/data/state.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Rastros_LI2.dir/data/state.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/data/state.c -o CMakeFiles/Rastros_LI2.dir/data/state.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/data/state.c -o CMakeFiles/Rastros_LI2.dir/data/state.c.s
 
 CMakeFiles/Rastros_LI2.dir/logic/game.c.o: CMakeFiles/Rastros_LI2.dir/flags.make
 CMakeFiles/Rastros_LI2.dir/logic/game.c.o: ../logic/game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Rastros_LI2.dir/logic/game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/logic/game.c.o   -c /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/logic/game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Rastros_LI2.dir/logic/game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/logic/game.c.o   -c /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/logic/game.c
 
 CMakeFiles/Rastros_LI2.dir/logic/game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Rastros_LI2.dir/logic/game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/logic/game.c > CMakeFiles/Rastros_LI2.dir/logic/game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/logic/game.c > CMakeFiles/Rastros_LI2.dir/logic/game.c.i
 
 CMakeFiles/Rastros_LI2.dir/logic/game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Rastros_LI2.dir/logic/game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/logic/game.c -o CMakeFiles/Rastros_LI2.dir/logic/game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/logic/game.c -o CMakeFiles/Rastros_LI2.dir/logic/game.c.s
 
 CMakeFiles/Rastros_LI2.dir/interface/interface.c.o: CMakeFiles/Rastros_LI2.dir/flags.make
 CMakeFiles/Rastros_LI2.dir/interface/interface.c.o: ../interface/interface.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Rastros_LI2.dir/interface/interface.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/interface/interface.c.o   -c /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/interface/interface.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Rastros_LI2.dir/interface/interface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Rastros_LI2.dir/interface/interface.c.o   -c /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/interface/interface.c
 
 CMakeFiles/Rastros_LI2.dir/interface/interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Rastros_LI2.dir/interface/interface.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/interface/interface.c > CMakeFiles/Rastros_LI2.dir/interface/interface.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/interface/interface.c > CMakeFiles/Rastros_LI2.dir/interface/interface.c.i
 
 CMakeFiles/Rastros_LI2.dir/interface/interface.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Rastros_LI2.dir/interface/interface.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/interface/interface.c -o CMakeFiles/Rastros_LI2.dir/interface/interface.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/interface/interface.c -o CMakeFiles/Rastros_LI2.dir/interface/interface.c.s
 
 # Object files for target Rastros_LI2
 Rastros_LI2_OBJECTS = \
@@ -125,7 +125,7 @@ Rastros_LI2: CMakeFiles/Rastros_LI2.dir/logic/game.c.o
 Rastros_LI2: CMakeFiles/Rastros_LI2.dir/interface/interface.c.o
 Rastros_LI2: CMakeFiles/Rastros_LI2.dir/build.make
 Rastros_LI2: CMakeFiles/Rastros_LI2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Rastros_LI2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Rastros_LI2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Rastros_LI2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/Rastros_LI2.dir/clean:
 .PHONY : CMakeFiles/Rastros_LI2.dir/clean
 
 CMakeFiles/Rastros_LI2.dir/depend:
-	cd /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2 /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2 /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles/Rastros_LI2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tiago/Desktop/LI2/Projeto/Rastros-LI2 /home/tiago/Desktop/LI2/Projeto/Rastros-LI2 /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles/Rastros_LI2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Rastros_LI2.dir/depend
 

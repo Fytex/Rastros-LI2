@@ -1,3 +1,3 @@
-/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles/Rastros_LI2.dir
-/home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles/Rastros_LI2.dir
+/home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,6 +1,4 @@
-//
-// Created by fytex on 3/9/20.
-//
+
 
 #ifndef RASTROS_LI2_STATE_H
 #define RASTROS_LI2_STATE_H
@@ -28,6 +26,7 @@ typedef struct {
 } State;
 
 State *initialize_state();
+void edit_space(State* state, Position pos, Space space);
 //int get_current_player(State *state);
 //int get_move_count(State *state);
 //int get_state_space(State *e, Position c);

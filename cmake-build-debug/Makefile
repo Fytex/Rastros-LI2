@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fytex/clion-2019.3.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/tiago/Downloads/CLion-2019.3.3/clion-2019.3.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/fytex/clion-2019.3.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/tiago/Downloads/CLion-2019.3.3/clion-2019.3.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2
+CMAKE_SOURCE_DIR = /home/tiago/Desktop/LI2/Projeto/Rastros-LI2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-deb
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/fytex/clion-2019.3.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/tiago/Downloads/CLion-2019.3.3/clion-2019.3.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/fytex/clion-2019.3.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/tiago/Downloads/CLion-2019.3.3/clion-2019.3.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fytex/Desktop/Fichas_UM/LI2/Rastros-LI2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tiago/Desktop/LI2/Projeto/Rastros-LI2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
