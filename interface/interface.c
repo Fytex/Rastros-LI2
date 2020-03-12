@@ -14,19 +14,19 @@
  * Recebe uma casa e imprime no ecrã
  */
 
-void type_space(Space p) {
+void type_space(Space p, FILE *file) {
 
     switch(p) {
 
         case (Black):
-            printf("# ");
+            fprintf(file, "# ");
             break;
 
         case (White):
-            printf("* ");
+            fprintf(file, "* ");
             break;
 
-        default: printf(". ");
+        default: fprintf(file, ". ");
     }
 }
 
@@ -47,38 +47,77 @@ void print_last_info(State state) {
  * Imprime o tabuleiro
  */
 
-void print_board(State state) {
+void print_board(State state, FILE *file) {
 
-    for(int row = 0; row < 8; row++) {
-        printf("%d\t", row + 1);
+    for (int row = 0; row < 8; row++) {
+        if (file == stdout)
+            printf("%d     ", row + 1);
 
         if (row == 7) {
             if (state.last_play.row == 7 && state.last_play.column == 0)
-                type_space(White);
+                type_space(White, file);
             else
-                printf("1 ");
+                fprintf(file, "1 ");
         }
 
-        for(int col = 0; col < 8; col++)
+        for (int col = 0; col < 8; col++)
             if (abs(row - col) != 7)
-                type_space(state.board[row][col]);
+                type_space(state.board[row][col], file);
 
         if (row == 0) {
             if (state.last_play.row == 0 && state.last_play.column == 7)
-                type_space(White);
+                type_space(White, file);
             else
-                printf("2");
+                fprintf(file, "2");
         }
 
-        puts(""); // New line
+        fprintf(file, "\n"); // New line
     }
 
-    printf("\n\t");
+    fprintf(file, "\n");
 
-    for(int i = 0; i < 8; i++)
-        printf("%c ", 'a' + i);
+    if (file == stdout) {
+        printf("      ");
 
-    puts("\n"); // New Line
+        for (int i = 0; i < 8; i++)
+            printf("%c ", 'a' + i);
+
+        puts("\n"); // New Line
+    } else {
+        int i = 0;
+
+        for ( ; i < state.move_count; i++)
+
+            fprintf(file, "%02d : %c%d %c%d\n", i, state.moves[i].player1.column + 'a',
+                    state.moves[i].player1.row + 1, state.moves[i].player2.column + 'a',
+                    state.moves[i].player2.row + 1);
+
+        if (state.current_player == 2)
+            fprintf(file, "%02d : %c%d", i, state.last_play.column + 'a',
+                    state.last_play.row + 1);
+
+    }
+}
+
+
+/*
+ * Escreve para o ficheiro indicado
+ */
+
+void write_to_file(State state, char *filename){
+
+    char directory[BUF_SIZE] = "saves/";
+    FILE *file;
+
+    strcat(directory, filename);
+
+    file = fopen(directory, "w");
+
+    print_board(state, file);
+    puts("File created\n");
+
+    fclose(file);
+
 }
 
 /*
@@ -86,11 +125,13 @@ void print_board(State state) {
  */
 
 int interpreter(State *state) {
+
     char line[BUF_SIZE];
     char col[2], row[2];
     unsigned int winner;
 
-    print_board(*state);
+
+    print_board(*state, stdout);
     printf("Player %d >> ", state->current_player);
 
     while (fgets(line, BUF_SIZE, stdin) != NULL) {
@@ -100,7 +141,7 @@ int interpreter(State *state) {
 
             if (play(state, pos)) {
                 print_last_info(*state);
-                print_board(*state);
+                print_board(*state, stdout);
 
                 winner = game_finished(*state);
 
@@ -113,7 +154,15 @@ int interpreter(State *state) {
             }
             else
                 puts("Introduza Jogada válida");
-        } else
+        }
+
+        else if (strlen(line) == 2 && *line == 'Q')
+            exit(0);
+
+        else if (strncmp(line, "gr ", 3)== 0)
+             write_to_file(*state, line + 3);
+
+        else
             puts("Introduza Jogada válida");
 
         printf("Player %d >> ", state->current_player);
