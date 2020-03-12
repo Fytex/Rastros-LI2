@@ -22,11 +22,12 @@ typedef struct {
     Position last_play;
     Moves moves;
     int move_count;
-    int current_player;
+    unsigned int current_player;
 } State;
 
 State *initialize_state();
-void edit_space(State* state, Position pos, Space space);
+void make_move(State* state, Position pos);
+void swap_players(State* state);
 //int get_current_player(State *state);
 //int get_move_count(State *state);
 //int get_state_space(State *e, Position c);
