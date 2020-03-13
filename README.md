@@ -13,3 +13,7 @@ Rastros is a Maths' game that was created in 1992. It's a game where both player
 - Cristiano Pereira (CJGNP) N.º a93726
 - Pedro Paulo Tavares (Fytex) N.º a93227
 - Tiago Daniel Costa (tiago885) N.º a93322
+
+## Group
+Group: 1
+Shift: 2
