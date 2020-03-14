@@ -30,7 +30,7 @@ State *initialize_state() {
 /*
  * Altera as casas de cada jogada e adiciona a jogada ao array de jogadas
  */
-void make_move(State* state, Position pos){
+void make_move(State *state, Position pos){
 
         // Altera a casa da última jogada para preta
         state->board[state->last_play.row][state->last_play.column] = Black;
@@ -50,7 +50,7 @@ void make_move(State* state, Position pos){
  * Troca o jogador atual (current_player)
  */
 
-void swap_players(State* state) {
+void swap_players(State *state) {
 
     // XOR (Operação Binária para trocar 1 por 2 e vice-versa mais eficaz e simples)
     state->current_player = state->current_player ^ (unsigned) 3;

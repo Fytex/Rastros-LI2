@@ -26,8 +26,8 @@ typedef struct {
 } State;
 
 State *initialize_state();
-void make_move(State* state, Position pos);
-void swap_players(State* state);
+void make_move(State *state, Position pos);
+void swap_players(State *state);
 //int get_current_player(State *state);
 //int get_move_count(State *state);
 //int get_state_space(State *e, Position c);
