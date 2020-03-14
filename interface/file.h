@@ -8,5 +8,6 @@
 #include "../data/state.h"
 
 void write_to_file(State *state, char *filename);
+void read_from_file(State *state, char *filename);
 
 #endif //RASTROS_LI2_FILE_H

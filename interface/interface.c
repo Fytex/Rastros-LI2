@@ -74,6 +74,9 @@ int interpreter(State *state) {
         else if (!strcmp(command, "gr") && argument)
             write_to_file(state, argument);
 
+        else if (!strcmp(command, "ler") && argument)
+            read_from_file(state, argument);
+
         else
             puts("Introduza Jogada válida");
 
