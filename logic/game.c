@@ -6,19 +6,20 @@
 #include "../data/state.h"
 
 /*
- * Função que verifica se uma Jogada é válida.
+ * Checks if play is valid
  */
 
 int check_move(State *state, Position pos){
+    Position last_play = get_last_play(state);
 
     return pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
-        abs(state->last_play.row - pos.row) <= 1 && abs(state->last_play.column - pos.column) <= 1 &&
-        state->board[pos.row][pos.column] == Blank;
+        abs(last_play.row - pos.row) <= 1 && abs(last_play.column - pos.column) <= 1 &&
+        !get_position_space(state, pos);
 
 }
 
 /*
- * Função que modifica o estado ao jogar na casa correta se a jogada for válida.
+ * Changes state if played in a valid position
  */
 
 int play(State *state, Position pos) {
@@ -32,31 +33,31 @@ int play(State *state, Position pos) {
 }
 
 /*
- * Verifica se o jogo acabou e retorna o vencedor.
- * Retorna 0 caso o jogo ainda não tenha terminado.
+ * Checks if game finished and returns the winner
+ * Returns 0 in case game not finished yet
  */
 
 unsigned int game_finished(State *state) {
 
     int sum_row[8] = {1, 1, 1, 0, 0,-1,-1,-1};
     int sum_col[8] = {1, 0,-1, 1,-1, 1, 0,-1};
-    int row_test, col_test;
+    Position pos, last_play=get_last_play(state);
 
-    if (state->last_play.row - state->last_play.column == 7)
+    if (last_play.row - last_play.column == 7)
         return 1;
-    else if (state->last_play.column - state->last_play.row == 7)
+    else if (last_play.column - last_play.row == 7)
         return 2;
 
     for (int i=0; i < 8; i++) {
-        row_test = state->last_play.row + sum_row[i];
-        col_test = state->last_play.column + sum_col[i];
+        pos.column = get_last_play(state).column + sum_col[i];
+        pos.row = get_last_play(state).row + sum_row[i];
 
-        if (row_test >= 0 && row_test < 8 && col_test >= 0 && col_test < 8 &&
-            state->board[row_test][col_test] == Blank)
-            return 0; // O jogo ainda não acabou
+        if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
+            get_position_space(state, pos) == Blank)
+            return 0; // Game not finished yet
     }
 
-    return state->current_player;
+    return get_current_player(state);
 }
 
 

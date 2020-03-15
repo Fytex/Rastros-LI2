@@ -5,7 +5,7 @@
 #ifndef RASTROS_LI2_FILE_H
 #define RASTROS_LI2_FILE_H
 
-#include "../data/state.h"
+#include "state.h"
 
 void write_to_file(State *state, char *filename);
 void read_from_file(State *state, char *filename);

@@ -9,7 +9,7 @@
 #include "../data/state.h"
 
 /*
- * Recebe uma casa e imprime no ecrã
+ * Receives a space and prints it in terminal
  */
 
 void type_space(Space p, FILE *file) {
@@ -17,72 +17,78 @@ void type_space(Space p, FILE *file) {
     switch(p) {
 
         case (Black):
-            fprintf(file, "# ");
+            fprintf(file, (file == stdout) ? "# " : "#");
             break;
 
         case (White):
-            fprintf(file, "* ");
+            fprintf(file, (file == stdout) ? "* " : "*");
             break;
 
-        default: fprintf(file, ". ");
+        default: fprintf(file, (file == stdout) ? ". " : ".");
     }
 }
 
 
 
 /*
- * Imprime o tabuleiro
+ * Prints the board of the state
  */
 
 
 void print_board(State *state, FILE *file) {
+    Position pos, last_play=get_last_play(state);
 
-    for (int row = 0; row < 8; row++) {
+    for (pos.row=0; pos.row < 8; pos.row++) {
         if (file == stdout)
-            printf("%d     ", row + 1);
+            printf("  %d   ", pos.row + 1);
 
-        if (row == 7) {
-            if (state->last_play.row == 7 && state->last_play.column == 0)
+        if (pos.row == 7) {
+            if (last_play.row == 7 && last_play.column == 0)
                 type_space(White, file);
             else
-                fprintf(file, "1 ");
+                fprintf(file, (file == stdout) ? "1 " : "1");
         }
 
-        for (int col = 0; col < 8; col++)
-            if (abs(row - col) != 7)
-                type_space(state->board[row][col], file);
+        for (pos.column=0; pos.column < 8; pos.column++)
+            if (abs(pos.row - pos.column) != 7)
+                type_space(get_position_space(state, pos), file);
 
-        if (row == 0) {
-            if (state->last_play.row == 0 && state->last_play.column == 7)
+        if (pos.row == 0) {
+            if (last_play.row == 0 && last_play.column == 7)
                 type_space(White, file);
             else
                 fprintf(file, "2");
         }
 
-        fprintf(file, "\n"); // New line
+        if (pos.row != 7)
+            fprintf(file, "\n"); // New line
     }
 
-    fprintf(file, "\n");
 
     if (file == stdout) {
-        printf("      ");
+        printf("\n\n      ");
 
         for (int i = 0; i < 8; i++)
             printf("%c ", 'a' + i);
 
         puts("\n"); // New Line
     } else {
-        int i = 0;
+        int i = 0, move_count = get_move_count(state);
+        Move move;
 
-        for ( ; i < state->move_count; i++)
+        fprintf(file, "\n\n");
 
-            fprintf(file, "%02d : %c%d %c%d\n", i, state->moves[i].player1.column + 'a',
-                    state->moves[i].player1.row + 1, state->moves[i].player2.column + 'a',
-                    state->moves[i].player2.row + 1);
+        for ( ; i < move_count; i++) {
+            move = get_move(state, i);
 
-        if (state->current_player == 2)
-            fprintf(file, "%02d : %c%d", i, state->last_play.column + 'a',
-                    state->last_play.row + 1);
+            fprintf(file, "%02d : %c%d %c%d\n", i,
+                    move.player1.column + 'a', move.player1.row + 1,
+                    move.player2.column + 'a', move.player2.row + 1);
+        }
+
+        if (get_current_player(state) == 2)
+            fprintf(file, "%02d : %c%d", i, last_play.column + 'a',
+                    last_play.row + 1);
 
     }
 }

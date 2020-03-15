@@ -4,7 +4,7 @@
 #include "state.h"
 
 /*
- * Função que inicializa o Estado.
+ * Initialize State
  */
 
 State *initialize_state() {
@@ -28,14 +28,14 @@ State *initialize_state() {
 }
 
 /*
- * Altera as casas de cada jogada e adiciona a jogada ao array de jogadas
+ * Changes spaces from each move's position and appends move to moves' array
  */
 void make_move(State *state, Position pos){
 
-        // Altera a casa da última jogada para preta
+        // Changes last move's position in the boarder to Black
         state->board[state->last_play.row][state->last_play.column] = Black;
 
-        // Altera a casa da nova jogada para branca
+        // Changes new move's position in the boarder to White
         state->board[pos.row][pos.column] = White;
 
         if (state->current_player == 2) {
@@ -46,13 +46,63 @@ void make_move(State *state, Position pos){
         state->last_play = pos;
 }
 
+
 /*
- * Troca o jogador atual (current_player)
+ * Returns last play of the state
  */
 
-void swap_players(State *state) {
+Position get_last_play(State *state) {
+    return state->last_play;
+}
 
-    // XOR (Operação Binária para trocar 1 por 2 e vice-versa mais eficaz e simples)
-    state->current_player = state->current_player ^ (unsigned) 3;
+
+/*
+ * Returns the move in that index position from moves' array
+ */
+
+Move get_move(State *state, int idx) {
+    return state->moves[idx];
+}
+
+
+/*
+ * Returns current player of the state
+ */
+
+unsigned int get_current_player(State *state) {
+    return state->current_player;
+}
+
+
+/*
+ * Returns the moves' count of the state
+ */
+
+int get_move_count(State *state) {
+    return state->move_count;
+}
+
+
+/*
+ * Returns the space in the boarder's position
+ */
+
+Space get_position_space(State *state, Position pos){
+    return state->board[pos.row][pos.column];
+}
+
+
+/*
+ * Swap current player in state and returns new player
+ */
+
+unsigned int swap_players(State *state) {
+
+    // XOR (Binary Operation - Simple and efficient way to change from player 1 to 2 and vice-versa)
+    unsigned int next_player = state->current_player ^ (unsigned) 3;
+
+    state->current_player = next_player;
+
+    return next_player;
 
 }

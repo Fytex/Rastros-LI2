@@ -6,42 +6,53 @@
 #include <stdlib.h>
 #include "../data/state.h"
 #include "../logic/game.h"
+#include "../data/file.h"
 #include "board.h"
-#include "file.h"
 
 #define BUF_SIZE 1024
 
 
 /*
- * Limpa o ecrã e imprime informações sobre a última jogada
+ * Clears the terminal
+ */
+
+void clear_terminal() {
+
+    // Executes command in terminal to clear (Compatible with Win and *nix)
+    system("cls || clear");
+
+}
+
+
+/*
+ * Prints out information about last play
  */
 
 void print_last_info(State *state) {
-
-    // Executar comando no terminal para o limpar (Compatível com Win e *nix)
-    system("cls || clear");
+    Position last_play=get_last_play(state);
+    clear_terminal();
 
     printf("Last Play:\n\tPlayer: %d\n\tRow: %d\n\tColumn: %c\n\n",
-           state->current_player, state->last_play.row + 1, state->last_play.column + 'a');
+           get_current_player(state), last_play.row + 1, last_play.column + 'a');
 }
 
 
 
 
 /*
- * Interpretador (Comunicação com o terminal)
+ * Interpreter (Comunication with terminal)
  */
 
 int interpreter(State *state) {
 
     char line[BUF_SIZE];
     char col[2], row[2];
-    unsigned int winner;
+    unsigned int winner, player=get_current_player(state);
     char *command, *argument;
 
 
     print_board(state, stdout);
-    printf("Player %d >> ", state->current_player);
+    printf("Player %d >> ", player);
 
     while (fgets(line, BUF_SIZE, stdin) != NULL) {
 
@@ -62,7 +73,7 @@ int interpreter(State *state) {
                     return 1;
                 }
 
-                swap_players(state);
+                player = swap_players(state);
             }
             else
                 puts("Introduza Jogada válida");
@@ -74,13 +85,22 @@ int interpreter(State *state) {
         else if (!strcmp(command, "gr") && argument)
             write_to_file(state, argument);
 
-        else if (!strcmp(command, "ler") && argument)
-            read_from_file(state, argument);
+        else if (!strcmp(command, "ler") && argument) {
+            read_from_file(state, argument); // updates state
+
+            if (get_move_count(state) || get_current_player(state) == 1) // If not first play (current_player corresponds to last player)
+                print_last_info(state);
+            else
+                clear_terminal();
+
+            player = swap_players(state);
+            print_board(state, stdout);
+        }
 
         else
             puts("Introduza Jogada válida");
 
-        printf("Player %d >> ", state->current_player);
+        printf("Player %d >> ", player);
     }
 
     return 0;
