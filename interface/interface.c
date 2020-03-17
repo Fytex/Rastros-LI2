@@ -11,6 +11,14 @@
 
 #define BUF_SIZE 1024
 
+/*
+ * Converts string to lowercase
+ */
+
+void lower_string(char *s) {
+    for ( ; *s; ++s) *s = (char) tolower(*s);
+}
+
 
 /*
  * Clears the terminal
@@ -52,15 +60,17 @@ int interpreter(State *state) {
 
 
     print_board(state, stdout);
-    printf("Player %d >> ", player);
+    printf("Player %d (00) >> ", player);
 
     while (fgets(line, BUF_SIZE, stdin) != NULL) {
 
         command = strtok(line, " \n");
+        lower_string(command);
+
         argument = strtok(NULL, " \n");
 
-        if (!argument && sscanf(command, "%[a-hA-H]%[1-8]", col, row) == 2) {
-            Position pos = {tolower(*col) - 'a', *row - '1'};
+        if (!argument && sscanf(command, "%[a-h]%[1-8]", col, row) == 2) {
+            Position pos = {*col - 'a', *row - '1'};
 
             if (play(state, pos)) {
                 print_last_info(state);
@@ -79,7 +89,7 @@ int interpreter(State *state) {
                 puts("Introduza Jogada válida");
         }
 
-        else if (!strcmp(command, "Q"))
+        else if (!strcmp(command, "q"))
             exit(0);
 
         else if (!strcmp(command, "gr") && argument)
@@ -97,10 +107,19 @@ int interpreter(State *state) {
             print_board(state, stdout);
         }
 
+        else if (!strcmp(command, "movs")) {
+
+            clear_terminal();
+            print_board(state, stdout);
+            print_moves(state, stdout);
+            puts("\n");
+
+        }
+
         else
             puts("Introduza Jogada válida");
 
-        printf("Player %d >> ", player);
+        printf("Player %d (%02d) >> ", player, get_move_count(state));
     }
 
     return 0;

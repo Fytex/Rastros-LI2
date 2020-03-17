@@ -28,7 +28,23 @@ void type_space(Space p, FILE *file) {
     }
 }
 
+void print_moves(State *state, FILE *file){
+    int i = 0, move_count = get_move_count(state);
+    Position last_play = get_last_play(state);
+    Move move;
 
+    for ( ; i < move_count; i++) {
+        move = get_move(state, i);
+
+        fprintf(file, "%02d : %c%d %c%d\n", i,
+                move.player1.column + 'a', move.player1.row + 1,
+                move.player2.column + 'a', move.player2.row + 1);
+    }
+
+    if (get_current_player(state) == 2)
+        fprintf(file, "%02d : %c%d", i, last_play.column + 'a',
+                last_play.row + 1);
+}
 
 /*
  * Prints the board of the state
@@ -36,7 +52,7 @@ void type_space(Space p, FILE *file) {
 
 
 void print_board(State *state, FILE *file) {
-    Position pos, last_play=get_last_play(state);
+    Position pos, last_play = get_last_play(state);
 
     for (pos.row=0; pos.row < 8; pos.row++) {
         if (file == stdout)
@@ -73,22 +89,7 @@ void print_board(State *state, FILE *file) {
 
         puts("\n"); // New Line
     } else {
-        int i = 0, move_count = get_move_count(state);
-        Move move;
-
         fprintf(file, "\n\n");
-
-        for ( ; i < move_count; i++) {
-            move = get_move(state, i);
-
-            fprintf(file, "%02d : %c%d %c%d\n", i,
-                    move.player1.column + 'a', move.player1.row + 1,
-                    move.player2.column + 'a', move.player2.row + 1);
-        }
-
-        if (get_current_player(state) == 2)
-            fprintf(file, "%02d : %c%d", i, last_play.column + 'a',
-                    last_play.row + 1);
-
+        print_moves(state, file);
     }
 }

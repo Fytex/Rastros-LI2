@@ -9,5 +9,6 @@
 #include "../data/state.h"
 
 void print_board(State *state, FILE *file);
+void print_moves(State *state, FILE *file);
 
 #endif //RASTROS_LI2_BOARD_H
