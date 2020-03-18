@@ -31,6 +31,28 @@ void clear_terminal() {
 
 }
 
+/*
+ * Help command that shows available commands
+ */
+
+int help_terminal(FILE *file){
+    char buf [2];
+
+    fprintf (file, "Comandos disponíveis :\n\n");
+    fprintf (file, "  >> gr (Comando que grava o jogo para um ficheiro)\n");
+    fprintf (file, "  >> ler (Comando que lê um ficheiro caso exista)\n");
+    fprintf (file, "  >> movs (Comando que permite visualizar as jogadas feitas)\n");
+    fprintf (file, "  >> Q (Comando que termina o jogo)\n\n");
+
+    fprintf (file, "Pressione Enter se pretender voltar ao jogo!\n");
+
+        if (fgets (buf, 2, stdin))
+            return 0;
+
+    return 1;
+}
+
+
 
 /*
  * Prints out information about last play
@@ -43,8 +65,6 @@ void print_last_info(State *state) {
     printf("Last Play:\n\tPlayer: %d\n\tRow: %d\n\tColumn: %c\n\n",
            get_current_player(state), last_play.row + 1, last_play.column + 'a');
 }
-
-
 
 
 /*
@@ -114,6 +134,15 @@ int interpreter(State *state) {
             print_moves(state, stdout);
             puts("\n");
 
+        }
+
+        else if (!strcmp(command, "help")){
+
+            clear_terminal();
+            if (!help_terminal(stdout)) {
+                clear_terminal();
+                print_board(state, stdout);
+            }
         }
 
         else
