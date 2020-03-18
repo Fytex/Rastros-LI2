@@ -1,6 +1,7 @@
-//
-// Created by fytex on 3/13/20.
-//
+/**
+@file board.h
+Definição das funções que imprimem o estado do jogo.
+*/
 
 #ifndef RASTROS_LI2_BOARD_H
 #define RASTROS_LI2_BOARD_H
@@ -8,7 +9,18 @@
 #include <stdio.h>
 #include "../data/state.h"
 
+/**
+\brief Esta função imprime o tabuleiro.
+@param state Apontador para o estado
+@param file Apontador para o tipo de ficheiro aonde irá imprimir
+*/
 void print_board(State *state, FILE *file);
+
+/**
+\brief Esta função imprime as jogadas.
+@param state Apontador para o estado
+@param file Apontador para o tipo de ficheiro aonde irá imprimir
+*/
 void print_moves(State *state, FILE *file);
 
 #endif //RASTROS_LI2_BOARD_H

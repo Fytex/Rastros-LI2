@@ -1,0 +1,59 @@
+\hypertarget{file_8h}{}\section{Referência ao ficheiro file.\+h}
+\label{file_8h}\index{file.\+h@{file.\+h}}
+
+
+Funções que manipulam ficheiros de texto.  
+
+
+{\ttfamily \#include \char`\"{}state.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para file.\+h\+:
+% FIG 0
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{file_8h_ab1d1c171870d2b60c0011e7db3d95039}{write\+\_\+to\+\_\+file} (\hyperlink{structState}{State} $\ast$state, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Escreve num ficheiro indicado a informacção do estado. \end{DoxyCompactList}\item 
+void \hyperlink{file_8h_a98ffb568ac7c375d307666b6b0cdb992}{read\+\_\+from\+\_\+file} (\hyperlink{structState}{State} $\ast$state, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Lê um ficheiro indicado e altera a informação do estado pela do ficheiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Funções que manipulam ficheiros de texto. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{file_8h_a98ffb568ac7c375d307666b6b0cdb992}\label{file_8h_a98ffb568ac7c375d307666b6b0cdb992}} 
+\index{file.\+h@{file.\+h}!read\+\_\+from\+\_\+file@{read\+\_\+from\+\_\+file}}
+\index{read\+\_\+from\+\_\+file@{read\+\_\+from\+\_\+file}!file.\+h@{file.\+h}}
+\subsubsection{\texorpdfstring{read\+\_\+from\+\_\+file()}{read\_from\_file()}}
+{\footnotesize\ttfamily void read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{structState}{State} $\ast$}]{state,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Lê um ficheiro indicado e altera a informação do estado pela do ficheiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em state} & Apontador para o estado \\
+\hline
+{\em filename} & Apontador para o nome do ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file_8h_ab1d1c171870d2b60c0011e7db3d95039}\label{file_8h_ab1d1c171870d2b60c0011e7db3d95039}} 
+\index{file.\+h@{file.\+h}!write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}}
+\index{write\+\_\+to\+\_\+file@{write\+\_\+to\+\_\+file}!file.\+h@{file.\+h}}
+\subsubsection{\texorpdfstring{write\+\_\+to\+\_\+file()}{write\_to\_file()}}
+{\footnotesize\ttfamily void write\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{structState}{State} $\ast$}]{state,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Escreve num ficheiro indicado a informacção do estado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em state} & Apontador para o estado \\
+\hline
+{\em filename} & Apontador para o nome do ficheiro \\
+\hline
+\end{DoxyParams}
