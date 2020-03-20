@@ -35,21 +35,16 @@ void clear_terminal() {
  * Help command that shows available commands
  */
 
-int help_terminal(FILE *file){
-    char buf [2];
+void help_terminal(){
 
-    fprintf (file, "Comandos disponíveis :\n\n");
-    fprintf (file, "  >> gr (Comando que grava o jogo para um ficheiro)\n");
-    fprintf (file, "  >> ler (Comando que lê um ficheiro caso exista)\n");
-    fprintf (file, "  >> movs (Comando que permite visualizar as jogadas feitas)\n");
-    fprintf (file, "  >> Q (Comando que termina o jogo)\n\n");
+    puts("Comandos disponíveis :\n");
+    puts("  >> gr (Comando que grava o jogo para um ficheiro)");
+    puts("  >> ler (Comando que lê um ficheiro caso exista)");
+    puts("  >> movs (Comando que permite visualizar as jogadas feitas)\n");
+    puts("  >> Q (Comando que termina o jogo)\n");
 
-    fprintf (file, "Pressione Enter se pretender voltar ao jogo!\n");
-
-        if (fgets (buf, 2, stdin))
-            return 0;
-
-    return 1;
+    puts("Pressione Enter se pretender voltar ao jogo!");
+    while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
 }
 
 
@@ -68,10 +63,10 @@ void print_last_info(State *state) {
 
 
 /*
- * Interpreter (Comunication with terminal)
+ * Interpreter (Communication with terminal)
  */
 
-int interpreter(State *state) {
+unsigned int interpreter(State *state) {
 
     char line[BUF_SIZE];
     char col[2], row[2];
@@ -100,7 +95,7 @@ int interpreter(State *state) {
 
                 if (winner) {
                     printf("Congrats Player %d\n", winner);
-                    return 1;
+                    return winner;
                 }
 
                 player = swap_players(state);
@@ -139,10 +134,13 @@ int interpreter(State *state) {
         else if (!strcmp(command, "help")){
 
             clear_terminal();
-            if (!help_terminal(stdout)) {
-                clear_terminal();
-                print_board(state, stdout);
-            }
+            help_terminal();
+            clear_terminal();
+
+            if (get_move_count(state) || get_current_player(state) == 1) // If not first play (current_player corresponds to last player)
+                print_last_info(state);
+
+            print_board(state, stdout);
         }
 
         else

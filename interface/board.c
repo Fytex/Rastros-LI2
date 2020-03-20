@@ -13,19 +13,11 @@
  */
 
 void type_space(Space p, FILE *file) {
+    putc(p, file);
 
-    switch(p) {
+    if (file == stdout)
+        putchar(' ');
 
-        case (Black):
-            fprintf(file, (file == stdout) ? "# " : "#");
-            break;
-
-        case (White):
-            fprintf(file, (file == stdout) ? "* " : "*");
-            break;
-
-        default: fprintf(file, (file == stdout) ? ". " : ".");
-    }
 }
 
 void print_moves(State *state, FILE *file){
@@ -73,7 +65,7 @@ void print_board(State *state, FILE *file) {
             if (last_play.row == 0 && last_play.column == 7)
                 type_space(White, file);
             else
-                fprintf(file, "2");
+                putc('2', file);
         }
 
         if (pos.row != 7)
@@ -88,7 +80,7 @@ void print_board(State *state, FILE *file) {
             printf("%c ", 'a' + i);
 
         puts("\n"); // New Line
-    } else {
+    } else if (get_move_count(state)) {
         fprintf(file, "\n\n");
         print_moves(state, file);
     }

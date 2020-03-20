@@ -9,7 +9,11 @@ Definição do estado e das funções que o manipulam.
 /**
 \brief Tipo de espaço no tabuleiro.
 */
-typedef enum {Blank, Black, White} Space;
+typedef enum {
+    Blank = '.',
+    Black = '#',
+    White = '*'
+} Space;
 
 /**
 \brief Tipo de dados das coordenadas no tabuleiro.
@@ -49,13 +53,6 @@ Esta função inicializa o valor do estado. Isso implica o tabuleiro ser colocad
 @returns O novo estado
 */
 State *initialize_state();
-
-/**
-\brief Esta função faz a jogada.
-@param state Apontador para o estado
-@param pos Posição da última jogada
-*/
-void make_move(State *state, Position pos);
 
 /**
 \brief Esta função troca o jogador a jogar.
@@ -100,5 +97,12 @@ Move get_move(State *state, int idx);
 @returns O tipo de espaço da coordenada
 */
 Space get_position_space(State *state, Position pos);
+
+void edit_position_space(State *state, Position pos, Space space);
+void edit_current_player(State *state, unsigned int player);
+void append_move(State *state,  Move move);
+void edit_last_play(State *state, Position pos);
+void edit_move_count(State *state, int count);
+void edit_move(State *state, int idx, Move move);
 
 #endif //RASTROS_LI2_STATE_H

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "data/state.h"
 #include "interface/interface.h"
 

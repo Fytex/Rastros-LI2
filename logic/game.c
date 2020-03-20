@@ -14,9 +14,32 @@ int check_move(State *state, Position pos){
 
     return pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
         abs(last_play.row - pos.row) <= 1 && abs(last_play.column - pos.column) <= 1 &&
-        !get_position_space(state, pos);
+        get_position_space(state, pos) == Blank;
 
 }
+
+
+/*
+ * Changes spaces from each move's position and appends move to moves' array
+ */
+void make_move(State *state, Position pos){
+    unsigned int current_player = get_current_player(state);
+    Position last_play = get_last_play(state);
+
+    // Changes last move's position in the boarder to Black
+    edit_position_space(state, last_play, Black);
+
+    // Changes new move's position in the boarder to White
+    edit_position_space(state, pos, White);
+
+    if (current_player == 2) {
+        Move move = {.player1 = last_play, .player2 = pos};
+        append_move(state, move);
+    }
+
+    edit_last_play(state, pos);
+}
+
 
 /*
  * Changes state if played in a valid position
@@ -49,8 +72,7 @@ unsigned int game_finished(State *state) {
         return 2;
 
     for (int i=0; i < 8; i++) {
-        pos.column = get_last_play(state).column + sum_col[i];
-        pos.row = get_last_play(state).row + sum_row[i];
+        pos = (Position) {.row = last_play.row + sum_row[i], .column = last_play.column + sum_col[i]};
 
         if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
             get_position_space(state, pos) == Blank)

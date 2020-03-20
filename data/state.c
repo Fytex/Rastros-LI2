@@ -27,25 +27,6 @@ State *initialize_state() {
     return state;
 }
 
-/*
- * Changes spaces from each move's position and appends move to moves' array
- */
-void make_move(State *state, Position pos){
-
-        // Changes last move's position in the boarder to Black
-        state->board[state->last_play.row][state->last_play.column] = Black;
-
-        // Changes new move's position in the boarder to White
-        state->board[pos.row][pos.column] = White;
-
-        if (state->current_player == 2) {
-            Move move = {state->last_play, pos};
-            state->moves[state->move_count++] = move;
-        }
-
-        state->last_play = pos;
-}
-
 
 /*
  * Returns last play of the state
@@ -57,11 +38,29 @@ Position get_last_play(State *state) {
 
 
 /*
+ * Edits last play of the state
+ */
+
+void edit_last_play(State *state, Position pos) {
+    state->last_play = pos;
+}
+
+
+/*
  * Returns the move in that index position from moves' array
  */
 
 Move get_move(State *state, int idx) {
     return state->moves[idx];
+}
+
+
+/*
+ * Edits the move in that index position from moves' array
+ */
+
+void edit_move(State *state, int idx, Move move) {
+    state->moves[idx] = move;
 }
 
 
@@ -84,11 +83,38 @@ int get_move_count(State *state) {
 
 
 /*
+ * Edit the moves' count of the state
+ */
+
+void edit_move_count(State *state, int count) {
+    state->move_count = count;
+}
+
+
+/*
  * Returns the space in the boarder's position
  */
 
 Space get_position_space(State *state, Position pos){
     return state->board[pos.row][pos.column];
+}
+
+
+/*
+ * Edits the space in the boarder's position
+ */
+
+void edit_position_space(State *state, Position pos, Space space){
+    state->board[pos.row][pos.column] = space;
+}
+
+
+/*
+ * Edit current player
+ */
+
+void edit_current_player(State *state, unsigned int player) {
+    state->current_player = player;
 }
 
 
@@ -101,8 +127,20 @@ unsigned int swap_players(State *state) {
     // XOR (Binary Operation - Simple and efficient way to change from player 1 to 2 and vice-versa)
     unsigned int next_player = state->current_player ^ (unsigned) 3;
 
-    state->current_player = next_player;
+    edit_current_player(state, next_player);
 
     return next_player;
 
+}
+
+
+/*
+ * Add a move to moves' array and increments move_count
+ */
+
+void append_move(State *state,  Move move) {
+    int count = get_move_count(state);
+
+    edit_move(state, count, move);
+    edit_move_count(state, ++count);
 }
