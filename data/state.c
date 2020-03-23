@@ -1,5 +1,3 @@
-
-
 #include <stdlib.h>
 #include "state.h"
 
@@ -14,8 +12,8 @@ State *initialize_state() {
     state->last_play.row = 3;
     state->last_play.column = 4;
 
-    for (int row=0; row < 8; row++)
-        for (int column=0; column < 8; column++) {
+    for (int row=0; row < 8; ++row)
+        for (int column=0; column < 8; ++column) {
 
             if (row == 3 && column == 4)
                 state->board[row][column] = White;

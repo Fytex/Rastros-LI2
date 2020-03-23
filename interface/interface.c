@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -37,14 +35,13 @@ void clear_terminal() {
 
 void help_terminal(){
 
-    puts("Comandos disponíveis :\n");
-    puts("  >> gr (Comando que grava o jogo para um ficheiro)");
-    puts("  >> ler (Comando que lê um ficheiro caso exista)");
-    puts("  >> movs (Comando que permite visualizar as jogadas feitas)\n");
-    puts("  >> Q (Comando que termina o jogo)\n");
+    puts("Available Commands :\n");
+    puts("  >> gr <file>\t(Saves the current game to a file)");
+    puts("  >> ler <file>\t(Load the game from the file)");
+    puts("  >> movs\t(Lists all the plays)");
+    puts("  >> list\t(Lists all saved files)");
+    puts("  >> Q\t(Ends the game)\n");
 
-    puts("Pressione Enter se pretender voltar ao jogo!");
-    while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
 }
 
 
@@ -63,6 +60,26 @@ void print_last_info(State *state) {
 
 
 /*
+ * Displays something in terminal
+ * Clears terminal, calls the given function and after an input from the user it goes back to the game
+ */
+
+void display_in_terminal(State *state, void func()) {
+    clear_terminal();
+
+    func();
+    puts("Press Enter to go back to the game!");
+    while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
+
+    clear_terminal();
+
+    if (get_move_count(state) || get_current_player(state) == 2) // If neither first play nor first player
+        print_last_info(state);
+
+    print_board(state, stdout);
+}
+
+/*
  * Interpreter (Communication with terminal)
  */
 
@@ -75,78 +92,79 @@ unsigned int interpreter(State *state) {
 
 
     print_board(state, stdout);
-    printf("Player %d (00) >> ", player);
+    printf("Player %d (0) >> ", player);
 
     while (fgets(line, BUF_SIZE, stdin) != NULL) {
 
         command = strtok(line, " \n");
-        lower_string(command);
 
-        argument = strtok(NULL, " \n");
+        if (command) {
+            lower_string(command);
 
-        if (!argument && sscanf(command, "%[a-h]%[1-8]", col, row) == 2) {
-            Position pos = {*col - 'a', *row - '1'};
+            argument = strtok(NULL, " \n");
 
-            if (play(state, pos)) {
-                print_last_info(state);
-                print_board(state, stdout);
+            if (!argument && sscanf(command, "%[a-h]%[1-8]", col, row) == 2) {
+                Position pos = {*col - 'a', *row - '1'};
 
-                winner = game_finished(state);
+                if (play(state, pos)) {
+                    print_last_info(state);
+                    print_board(state, stdout);
 
-                if (winner) {
-                    printf("Congrats Player %d\n", winner);
-                    return winner;
-                }
+                    winner = game_finished(state);
 
-                player = swap_players(state);
+                    if (winner) {
+                        printf("Congrats Player %d\n", winner);
+                        return winner;
+                    }
+
+                    player = swap_players(state);
+                } else
+                    puts("Introduza Jogada válida");
             }
+
+            else if (!strcmp(command, "q"))
+                exit(0);
+
+            else if (!strcmp(command, "gr") && argument)
+                write_to_file(state, argument);
+
+            else if (!strcmp(command, "ler") && argument) {
+
+                if (read_from_file(state, argument)) { // updates state
+
+                    if (get_move_count(state) ||
+                        get_current_player(state) == 2) // If neither first play nor first player
+                        print_last_info(state);
+                    else
+                        clear_terminal();
+
+                    player = get_current_player(state);
+                    print_board(state, stdout);
+                } else
+                    puts("File Not Found\n");
+
+            }
+
+            else if (!strcmp(command, "movs")) {
+
+                clear_terminal(); // Objective: Clear last play info
+                print_board(state, stdout);
+                print_moves(state, stdout);
+                puts("\n");
+
+            }
+
+            else if (!strcmp(command, "help"))
+                display_in_terminal(state, help_terminal);
+
+            else if (!strcmp(command, "list"))
+                display_in_terminal(state, print_dir_contents);
+
             else
                 puts("Introduza Jogada válida");
         }
 
-        else if (!strcmp(command, "q"))
-            exit(0);
-
-        else if (!strcmp(command, "gr") && argument)
-            write_to_file(state, argument);
-
-        else if (!strcmp(command, "ler") && argument) {
-            read_from_file(state, argument); // updates state
-
-            if (get_move_count(state) || get_current_player(state) == 1) // If not first play (current_player corresponds to last player)
-                print_last_info(state);
-            else
-                clear_terminal();
-
-            player = swap_players(state);
-            print_board(state, stdout);
-        }
-
-        else if (!strcmp(command, "movs")) {
-
-            clear_terminal();
-            print_board(state, stdout);
-            print_moves(state, stdout);
-            puts("\n");
-
-        }
-
-        else if (!strcmp(command, "help")){
-
-            clear_terminal();
-            help_terminal();
-            clear_terminal();
-
-            if (get_move_count(state) || get_current_player(state) == 1) // If not first play (current_player corresponds to last player)
-                print_last_info(state);
-
-            print_board(state, stdout);
-        }
-
-        else
-            puts("Introduza Jogada válida");
-
-        printf("Player %d (%02d) >> ", player, get_move_count(state));
+        printf("Player %d (%d) >> ", player, get_move_count(state));
     }
 
     return 0;

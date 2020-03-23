@@ -1,15 +1,19 @@
-//
-// Created by fytex on 3/13/20.
-//
+#ifdef WIN32
+    // Windows OS
+    int mkdir(const char *pathname, mode_t mode); // It avoids displaying warning compiling on mingw (Windows)
+#endif
 
 #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
 #include "state.h"
 #include "../interface/board.h"
+#include "list_contents/OS_list.h"
 
 #define DIR_MAX 261 // 255 (File name) + 6 (saves/)
 #define BUFFER_LINE 12 // Each line from file contains a max of 11 chars + 1 (End of string)
+#define DIR "saves/"
+
 
 /*
  * Write to the indicated file
@@ -17,10 +21,10 @@
 
 void write_to_file(State *state, char *filename){
 
-    char directory[DIR_MAX] = "saves/";
+    char directory[DIR_MAX] = DIR;
     FILE *file;
 
-    mkdir("saves/", 0777); // Creates directory if not exists giving permission to every user
+    mkdir(DIR, 0777); // Creates directory if not exists giving permission to every user
 
     strncat(directory, filename, DIR_MAX);
 
@@ -38,7 +42,7 @@ void write_to_file(State *state, char *filename){
 void line_to_board(State *state, int row, const char *line){
     Position pos;
 
-    for(int col = 0; col < 8; col++){
+    for(int col = 0; col < 8; ++col){
 
         pos = (Position) {.row = row, .column = col};
 
@@ -51,9 +55,9 @@ void line_to_board(State *state, int row, const char *line){
 }
 
 
-void read_from_file(State *state, char *filename){
+int read_from_file(State *state, char *filename){
     char file_line[BUFFER_LINE];
-    char directory[DIR_MAX] = "saves/";
+    char directory[DIR_MAX] = DIR;
     int count=0;
     FILE *file;
     Position pos1, pos2;
@@ -63,16 +67,19 @@ void read_from_file(State *state, char *filename){
 
     file = fopen(directory, "r");
 
-    for(int row = 0; row < 8; row ++) {
+    if (!file)
+        return 0;
+
+    for(int row = 0; row < 8; ++row) {
         fgets(file_line, BUFFER_LINE, file);
         line_to_board(state, row, file_line);
     }
 
-    edit_current_player(state, 2); // Represents last player to make a move. Changed later if was the first one
+    edit_current_player(state, 1);
 
     if (fgets(file_line, BUFFER_LINE, file)) { // if the file doesn't end (and skips one line)
 
-        for ( ; fgets(file_line, BUFFER_LINE, file); count++) {
+        for ( ; fgets(file_line, BUFFER_LINE, file); ++count) {
 
             if (file_line[7]) { // file_line[7] is '\0' if no second Position in Move
                 pos1 = (Position) {.row = file_line[6] - '1', .column = file_line[5] - 'a'};
@@ -86,7 +93,7 @@ void read_from_file(State *state, char *filename){
                 pos1 = (Position) {.row = file_line[6] - '1', .column = file_line[5] - 'a'};
                 edit_last_play(state, pos1);
 
-                edit_current_player(state, 1); // Represents last player to make a move.
+                edit_current_player(state, 2);
             }
         }
     }
@@ -97,4 +104,14 @@ void read_from_file(State *state, char *filename){
 
     fclose(file);
     edit_move_count(state, count);
+    return 1;
+}
+
+
+/*
+ * Prints every file in /saves (ls command)
+ */
+
+void print_dir_contents() {
+    print_OS_dir_contents(DIR);
 }

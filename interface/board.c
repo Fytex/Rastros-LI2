@@ -1,9 +1,3 @@
-//
-// Created by fytex on 3/13/20.
-//
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "../data/state.h"
@@ -25,7 +19,7 @@ void print_moves(State *state, FILE *file){
     Position last_play = get_last_play(state);
     Move move;
 
-    for ( ; i < move_count; i++) {
+    for ( ; i < move_count; ++i) {
         move = get_move(state, i);
 
         fprintf(file, "%02d : %c%d %c%d\n", i,
@@ -46,7 +40,7 @@ void print_moves(State *state, FILE *file){
 void print_board(State *state, FILE *file) {
     Position pos, last_play = get_last_play(state);
 
-    for (pos.row=0; pos.row < 8; pos.row++) {
+    for (pos.row=0; pos.row < 8; ++pos.row) {
         if (file == stdout)
             printf("  %d   ", pos.row + 1);
 
@@ -57,7 +51,7 @@ void print_board(State *state, FILE *file) {
                 fprintf(file, (file == stdout) ? "1 " : "1");
         }
 
-        for (pos.column=0; pos.column < 8; pos.column++)
+        for (pos.column=0; pos.column < 8; ++pos.column)
             if (abs(pos.row - pos.column) != 7)
                 type_space(get_position_space(state, pos), file);
 
@@ -76,7 +70,7 @@ void print_board(State *state, FILE *file) {
     if (file == stdout) {
         printf("\n\n      ");
 
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 8; ++i)
             printf("%c ", 'a' + i);
 
         puts("\n"); // New Line

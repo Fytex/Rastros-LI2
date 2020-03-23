@@ -19,7 +19,10 @@ void write_to_file(State *state, char *filename);
 \brief Lê um ficheiro indicado e altera a informação do estado pela do ficheiro.
 @param state Apontador para o estado
 @param filename Apontador para o nome do ficheiro
+@returns Sucesso da função
 */
-void read_from_file(State *state, char *filename);
+int read_from_file(State *state, char *filename);
+
+void print_dir_contents();
 
 #endif //RASTROS_LI2_FILE_H

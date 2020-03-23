@@ -1,5 +1,3 @@
-
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "game.h"
@@ -71,7 +69,7 @@ unsigned int game_finished(State *state) {
     else if (last_play.column - last_play.row == 7)
         return 2;
 
-    for (int i=0; i < 8; i++) {
+    for (int i=0; i < 8; ++i) {
         pos = (Position) {.row = last_play.row + sum_row[i], .column = last_play.column + sum_col[i]};
 
         if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
