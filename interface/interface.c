@@ -79,6 +79,63 @@ void display_in_terminal(State *state, void func()) {
     print_board(state, stdout);
 }
 
+void print_pos(State *state, const char* pos) {
+    long int npos = strtol(pos,NULL,10);
+    int nnpos = (int) npos;
+    char board[8][8];
+    int i;
+
+    for(i = 0; i < 8; i++)
+        for(int j = 0; j < 8; j++)
+            board[i][j] = '.';
+
+    if (nnpos >= state->move_count || nnpos < 0)
+        printf("Not a valid play.\n"); //ver o que meter aqui ao certo
+
+    else {
+        clear_terminal();
+
+        for (i = 0; i < nnpos; i++) {
+            board[state->moves[i].player1.row][state->moves[i].player1.column] = '#';
+            board[state->moves[i].player2.row][state->moves[i].player2.column] = '#';
+        }
+
+        board[state->moves[i].player1.row][state->moves[i].player1.column] = '#';
+        board[state->moves[i].player2.row][state->moves[i].player2.column] = '*';
+
+        printf("Play %d\n\n", nnpos);
+
+        for (int j = 0; j < 8; j++) {
+            printf("  %d   ", j + 1);
+            for (int k = 0; k < 8; k++) {
+                if (j == 0 && k == 7)
+                    printf("2");
+                else if (j == 7 && k == 0)
+                    printf("1 ");
+                else printf("%c ", board[j][k]);
+            }
+            printf("\n");
+        }
+
+        printf("\n      ");
+
+        for (i = 0; i < 8; i++)
+            printf("%c ", 'a' + i);
+
+        printf("\n\n");
+
+        puts("Press Enter to go back to the game!");
+        while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
+
+        clear_terminal();
+
+        if (get_move_count(state) || get_current_player(state) == 2) // If neither first play nor first player
+            print_last_info(state);
+
+        print_board(state, stdout);
+    }
+}
+
 /*
  * Interpreter (Communication with terminal)
  */
@@ -159,6 +216,9 @@ unsigned int interpreter(State *state) {
 
             else if (!strcmp(command, "list"))
                 display_in_terminal(state, print_dir_contents);
+
+            else if (!strcmp(command, "pos") && argument)
+                print_pos(state, argument);
 
             else
                 puts("Introduza Jogada válida");
