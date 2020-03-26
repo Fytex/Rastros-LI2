@@ -23,6 +23,9 @@ void write_to_file(State *state, char *filename);
 */
 int read_from_file(State *state, char *filename);
 
+/**
+\brief Mostra todos o ficheiros na pasta saves/ (comando ls no terminal).
+*/
 void print_dir_contents();
 
 #endif //RASTROS_LI2_FILE_H
