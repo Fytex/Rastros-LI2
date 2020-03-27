@@ -88,51 +88,59 @@ void display_in_terminal(const State* const state, void (* const func)()) {
     print_board(state, stdout);
 }
 
-void print_pos(const State* const state, const char* const pos) {
+
+/*
+ * Changes the state of the game to a previously done move, where we can start playing from.
+ */
+void print_pos(State* const state, const char* pos) {
     long int npos = strtol(pos,NULL,10);
     int nnpos = (int) npos;
-    char board[8][8];
+    Position board_position;
     int i;
 
     for(i = 0; i < 8; i++)
-        for(int j = 0; j < 8; j++)
-            board[i][j] = '.';
+        for(int j = 0; j < 8; j++) {
+            board_position.row = i;
+            board_position.column = j;
+            edit_position_space(state, board_position, Blank);
+        }
+
 
     if (nnpos >= state->move_count || nnpos < 0)
-        printf("Not a valid play.\n"); //ver o que meter aqui ao certo
+        printf("Not a valid play.\n");
 
     else {
-        clear_terminal();
-
-        for (i = 0; i < nnpos; i++) {
-            board[state->moves[i].player1.row][state->moves[i].player1.column] = '#';
-            board[state->moves[i].player2.row][state->moves[i].player2.column] = '#';
+        if (nnpos == 0) {
+            board_position.row = 3;
+            board_position.column = 4;
+            edit_position_space(state, board_position, White);
+            edit_last_play(state, board_position);
         }
+        else {
+            board_position.row = 3;
+            board_position.column = 4;
+            edit_position_space(state, board_position, Black);
 
-        board[state->moves[i].player1.row][state->moves[i].player1.column] = '#';
-        board[state->moves[i].player2.row][state->moves[i].player2.column] = '*';
-
-        printf("Play %d\n\n", nnpos);
-
-        for (int j = 0; j < 8; j++) {
-            printf("  %d   ", j + 1);
-            for (int k = 0; k < 8; k++) {
-                if (j == 0 && k == 7)
-                    printf("2");
-                else if (j == 7 && k == 0)
-                    printf("1 ");
-                else printf("%c ", board[j][k]);
+            for (i = 0; i < nnpos - 1; i++) {
+                board_position.row = state->moves[i].player1.row;
+                board_position.column = state->moves[i].player1.column;
+                edit_position_space(state, board_position, Black);
+                board_position.row = state->moves[i].player2.row;
+                board_position.column = state->moves[i].player2.column;
+                edit_position_space(state, board_position, Black);
             }
-            printf("\n");
+            board_position.row = state->moves[i].player1.row;
+            board_position.column = state->moves[i].player1.column;
+            edit_position_space(state, board_position, Black);
+            board_position.row = state->moves[i].player2.row;
+            board_position.column = state->moves[i].player2.column;
+            edit_position_space(state, board_position, White);
+            edit_last_play(state, board_position);
         }
 
-        printf("\n      ");
+        edit_move_count(state, nnpos);
 
-        for (i = 0; i < 8; i++)
-            printf("%c ", 'a' + i);
-
-        printf("\n\nPress enter to go back to the game...");
-        while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
+        edit_current_player(state, 1);
 
         clear_terminal();
 

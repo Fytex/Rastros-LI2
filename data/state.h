@@ -98,12 +98,50 @@ Move get_move(const State* state, int idx);
 */
 Space get_position_space(const State* state, Position pos);
 
+/**
+\brief Esta função altera o tipo de espaço numa dada coordenada do tabuleiro
+@param state Apontador para o estado
+@param pos Coordenada
+@param space Tipo de espaço
+*/
 void edit_position_space(State* state, Position pos, Space space);
+
+/**
+\brief Esta função altera o jogador a jogar
+@param state Apontador para o estado
+@param player Jogador para o qual altera
+*/
 void edit_current_player(State* state, unsigned int player);
+
+/**
+\brief Esta função adiciona uma jogada no array do estado com a lista de jogadas realizadas
+@param state Apontador para o estado
+@param move Jogada a adicionar
+*/
 void append_move(State* state, Move move);
+
+/**
+\brief Esta função altera a coordenada da última jogada realizada
+@param state Apontador para o estado
+@param pos Coordenadas da última jogada
+*/
 void edit_last_play(State* state, Position pos);
+
+/**
+\brief Esta função altera o contador do número de jogadas realizadas
+@param state Apontador para o estado
+@param count Número de jogadas realizadas
+*/
 void edit_move_count(State* state, int count);
+
+/**
+\brief Esta função altera a jogada na posição indicada do array de jogadas do estado
+@param state Apontador para o estado
+@param idx Posição a alterar no array de jogadas
+@param move Jogada
+*/
 void edit_move(State* state, int idx, Move move);
+
 void set_default_state(State* state);
 
 #endif //RASTROS_LI2_STATE_H
