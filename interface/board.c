@@ -6,7 +6,7 @@
  * Receives a space and prints it in terminal
  */
 
-void type_space(Space p, FILE *file) {
+void type_space(const Space p, FILE* const file) {
     putc(p, file);
 
     if (file == stdout)
@@ -14,9 +14,10 @@ void type_space(Space p, FILE *file) {
 
 }
 
-void print_moves(State *state, FILE *file){
-    int i = 0, move_count = get_move_count(state);
-    Position last_play = get_last_play(state);
+void print_moves(const State* const state, FILE* const file){
+    const int move_count = get_move_count(state);
+    int i = 0;
+    const Position last_play = get_last_play(state);
     Move move;
 
     for ( ; i < move_count; ++i) {
@@ -37,8 +38,9 @@ void print_moves(State *state, FILE *file){
  */
 
 
-void print_board(State *state, FILE *file) {
-    Position pos, last_play = get_last_play(state);
+void print_board(const State* const state, FILE* const file) {
+    const Position last_play = get_last_play(state);
+    Position pos;
 
     for (pos.row=0; pos.row < 8; ++pos.row) {
         if (file == stdout)

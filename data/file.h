@@ -13,7 +13,7 @@ Funções que manipulam ficheiros de texto.
 @param state Apontador para o estado
 @param filename Apontador para o nome do ficheiro
 */
-void write_to_file(State *state, char *filename);
+void write_to_file(const State* state, const char* filename);
 
 /**
 \brief Lê um ficheiro indicado e altera a informação do estado pela do ficheiro.
@@ -21,7 +21,7 @@ void write_to_file(State *state, char *filename);
 @param filename Apontador para o nome do ficheiro
 @returns Sucesso da função
 */
-int read_from_file(State *state, char *filename);
+int read_from_file(State *state, const char *filename);
 
 void print_dir_contents();
 

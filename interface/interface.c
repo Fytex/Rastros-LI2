@@ -13,7 +13,7 @@
  * Converts string to lowercase
  */
 
-void lower_string(char *s) {
+void lower_string(char* s) {
     for ( ; *s; ++s) *s = (char) tolower(*s);
 }
 
@@ -29,29 +29,38 @@ void clear_terminal() {
 
 }
 
+
+/*
+ * Clears the stdin buffer
+ */
+
+void clear_stdin_buffer() {
+    while ((getchar()) != '\n');
+}
+
+
 /*
  * Help command that shows available commands
  */
 
 void help_terminal(){
 
-    puts("Available Commands :\n");
-    puts("  >> gr <file>\t(Saves the current game to a file)");
-    puts("  >> ler <file>\t(Load the game from the file)");
-    puts("  >> movs\t(Lists all the plays)");
-    puts("  >> list\t(Lists all saved files)");
-    puts("  >> Q\t(Ends the game)\n");
+    puts("Available Commands :\n\n"
+    "  >> gr <file>\t(Saves the current game to a file)\n"
+    "  >> ler <file>\t(Load the game from the file)\n"
+    "  >> movs\t(Lists all the plays)\n"
+    "  >> list\t(Lists all saved files)\n"
+    "  >> Q\t(Ends the game)\n");
 
 }
-
 
 
 /*
  * Prints out information about last play
  */
 
-void print_last_info(State *state) {
-    Position last_play=get_last_play(state);
+void print_last_info(const State* const state) {
+    const Position last_play=get_last_play(state);
     clear_terminal();
 
     printf("Last Play:\n\tPlayer: %d\n\tRow: %d\n\tColumn: %c\n\n",
@@ -64,12 +73,12 @@ void print_last_info(State *state) {
  * Clears terminal, calls the given function and after an input from the user it goes back to the game
  */
 
-void display_in_terminal(State *state, void func()) {
+void display_in_terminal(const State* const state, void (* const func)()) {
     clear_terminal();
 
     func();
-    puts("Press Enter to go back to the game!");
-    while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
+    printf("\nPress Enter to go back to the game...");
+    clear_stdin_buffer();
 
     clear_terminal();
 
@@ -79,7 +88,7 @@ void display_in_terminal(State *state, void func()) {
     print_board(state, stdout);
 }
 
-void print_pos(State *state, const char* pos) {
+void print_pos(const State* const state, const char* const pos) {
     long int npos = strtol(pos,NULL,10);
     int nnpos = (int) npos;
     char board[8][8];
@@ -122,9 +131,7 @@ void print_pos(State *state, const char* pos) {
         for (i = 0; i < 8; i++)
             printf("%c ", 'a' + i);
 
-        printf("\n\n");
-
-        puts("Press Enter to go back to the game!");
+        printf("\n\nPress enter to go back to the game...");
         while ((getchar()) != '\n'); // Waits for an enter and clears the buffer
 
         clear_terminal();
@@ -140,15 +147,16 @@ void print_pos(State *state, const char* pos) {
  * Interpreter (Communication with terminal)
  */
 
-unsigned int interpreter(State *state) {
+unsigned int interpreter(State* const state) {
 
     char line[BUF_SIZE];
     char col[2], row[2];
-    unsigned int winner, player=get_current_player(state);
+    unsigned int winner=0, player=get_current_player(state);
     char *command, *argument;
 
 
     print_board(state, stdout);
+    puts("\tType 'Help' to show available commands!\n");
     printf("Player %d (0) >> ", player);
 
     while (fgets(line, BUF_SIZE, stdin) != NULL) {
@@ -170,17 +178,18 @@ unsigned int interpreter(State *state) {
                     winner = game_finished(state);
 
                     if (winner) {
-                        printf("Congrats Player %d\n", winner);
-                        return winner;
+                        printf("Congrats Player %d\n\nPress enter to go back to menu...", winner);
+                        clear_stdin_buffer();
+                        break;
                     }
 
                     player = swap_players(state);
                 } else
-                    puts("Introduza Jogada válida");
+                    puts("Insert a valid play\n");
             }
 
             else if (!strcmp(command, "q"))
-                exit(0);
+                break;
 
             else if (!strcmp(command, "gr") && argument)
                 write_to_file(state, argument);
@@ -190,12 +199,12 @@ unsigned int interpreter(State *state) {
                 if (read_from_file(state, argument)) { // updates state
 
                     if (get_move_count(state) ||
-                        get_current_player(state) == 2) // If neither first play nor first player
+                        get_current_player(state) == 1) // If neither first play nor last player was first player
                         print_last_info(state);
                     else
                         clear_terminal();
 
-                    player = get_current_player(state);
+                    player = swap_players(state);
                     print_board(state, stdout);
                 } else
                     puts("File Not Found\n");
@@ -227,5 +236,5 @@ unsigned int interpreter(State *state) {
         printf("Player %d (%d) >> ", player, get_move_count(state));
     }
 
-    return 0;
+    return winner;
 }

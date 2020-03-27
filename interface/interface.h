@@ -14,6 +14,10 @@ Definição da função que comunica com o terminal.
 @param state Apontador para o estado
 @returns O vencedor, ou se deu algum erro (caso 0)
 */
-unsigned int interpreter(State *state);
+unsigned int interpreter(State* state);
+
+
+void clear_terminal();
+void clear_stdin_buffer();
 
 #endif //RASTROS_LI2_INTERFACE_H

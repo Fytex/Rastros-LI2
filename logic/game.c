@@ -7,8 +7,8 @@
  * Checks if play is valid
  */
 
-int check_move(State *state, Position pos){
-    Position last_play = get_last_play(state);
+int check_move(const State* const state, const Position pos){
+    const Position last_play = get_last_play(state);
 
     return pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
         abs(last_play.row - pos.row) <= 1 && abs(last_play.column - pos.column) <= 1 &&
@@ -20,7 +20,7 @@ int check_move(State *state, Position pos){
 /*
  * Changes spaces from each move's position and appends move to moves' array
  */
-void make_move(State *state, Position pos){
+void make_move(State* const state, const Position pos){
     unsigned int current_player = get_current_player(state);
     Position last_play = get_last_play(state);
 
@@ -43,7 +43,7 @@ void make_move(State *state, Position pos){
  * Changes state if played in a valid position
  */
 
-int play(State *state, Position pos) {
+int play(State* const state, const Position pos) {
 
     if (!check_move(state, pos))
         return 0;
@@ -58,11 +58,11 @@ int play(State *state, Position pos) {
  * Returns 0 in case game not finished yet
  */
 
-unsigned int game_finished(State *state) {
+unsigned int game_finished(const State* const state) {
 
-    int sum_row[8] = {1, 1, 1, 0, 0,-1,-1,-1};
-    int sum_col[8] = {1, 0,-1, 1,-1, 1, 0,-1};
-    Position pos, last_play=get_last_play(state);
+    const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
+    const Position last_play=get_last_play(state);
+    Position pos;
 
     if (last_play.row - last_play.column == 7)
         return 1;
@@ -70,7 +70,7 @@ unsigned int game_finished(State *state) {
         return 2;
 
     for (int i=0; i < 8; ++i) {
-        pos = (Position) {.row = last_play.row + sum_row[i], .column = last_play.column + sum_col[i]};
+        pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
 
         if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
             get_position_space(state, pos) == Blank)

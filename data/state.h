@@ -52,35 +52,35 @@ typedef struct {
 Esta função inicializa o valor do estado. Isso implica o tabuleiro ser colocado na posição inicial e todos os campos do estado estarem com o valor por omissão.
 @returns O novo estado
 */
-State *initialize_state();
+State* initialize_state();
 
 /**
 \brief Esta função troca o jogador a jogar.
 @param state Apontador para o estado
 @returns O próximo jogador a jogar
 */
-unsigned int swap_players(State *state);
+unsigned int swap_players(State* state);
 
 /**
 \brief Esta função obtém o jogador atual
 @param state Apontador para o estado 
 @returns O jogador atual
 */
-unsigned int get_current_player(State *state);
+unsigned int get_current_player(const State* state);
 
 /**
 \brief Esta função obtém o número de jogadas
 @param state Apontador para o estado 
 @returns O número de jogadas
 */
-int get_move_count(State *state);
+int get_move_count(const State* state);
 
 /**
 \brief Esta função obtém a última jogada realizada
 @param state Apontador para o estado 
 @returns A última jogada
 */
-Position get_last_play(State *state);
+Position get_last_play(const State* state);
 
 /**
 \brief Esta função obtém uma certa jogada
@@ -88,7 +88,7 @@ Position get_last_play(State *state);
 @param idx Número da jogada
 @returns A jogada para esse dado valor
 */
-Move get_move(State *state, int idx);
+Move get_move(const State* state, int idx);
 
 /**
 \brief Esta função obtém o tipo de espaço do tabuleiro para uma dada coordenada
@@ -96,13 +96,14 @@ Move get_move(State *state, int idx);
 @param pos Coordenada
 @returns O tipo de espaço da coordenada
 */
-Space get_position_space(State *state, Position pos);
+Space get_position_space(const State* state, Position pos);
 
-void edit_position_space(State *state, Position pos, Space space);
-void edit_current_player(State *state, unsigned int player);
-void append_move(State *state,  Move move);
-void edit_last_play(State *state, Position pos);
-void edit_move_count(State *state, int count);
-void edit_move(State *state, int idx, Move move);
+void edit_position_space(State* state, Position pos, Space space);
+void edit_current_player(State* state, unsigned int player);
+void append_move(State* state, Move move);
+void edit_last_play(State* state, Position pos);
+void edit_move_count(State* state, int count);
+void edit_move(State* state, int idx, Move move);
+void set_default_state(State* state);
 
 #endif //RASTROS_LI2_STATE_H

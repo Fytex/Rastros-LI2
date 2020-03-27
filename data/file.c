@@ -19,7 +19,7 @@
  * Write to the indicated file
  */
 
-void write_to_file(State *state, char *filename){
+void write_to_file(const State* const state, const char* const filename){
 
     char directory[DIR_MAX] = DIR;
     FILE *file;
@@ -39,7 +39,7 @@ void write_to_file(State *state, char *filename){
 
 
 
-void line_to_board(State *state, int row, const char *line){
+void line_to_board(State *state, const int row, const char* const line){
     Position pos;
 
     for(int col = 0; col < 8; ++col){
@@ -55,11 +55,11 @@ void line_to_board(State *state, int row, const char *line){
 }
 
 
-int read_from_file(State *state, char *filename){
+int read_from_file(State* const state, const char* const filename){
     char file_line[BUFFER_LINE];
     char directory[DIR_MAX] = DIR;
     int count=0;
-    FILE *file;
+    FILE * file;
     Position pos1, pos2;
     Move move;
 
@@ -75,7 +75,7 @@ int read_from_file(State *state, char *filename){
         line_to_board(state, row, file_line);
     }
 
-    edit_current_player(state, 1);
+    edit_current_player(state, 2);
 
     if (fgets(file_line, BUFFER_LINE, file)) { // if the file doesn't end (and skips one line)
 
@@ -93,7 +93,7 @@ int read_from_file(State *state, char *filename){
                 pos1 = (Position) {.row = file_line[6] - '1', .column = file_line[5] - 'a'};
                 edit_last_play(state, pos1);
 
-                edit_current_player(state, 2);
+                edit_current_player(state, 1);
             }
         }
     }
