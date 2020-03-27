@@ -21,7 +21,7 @@ void write_to_file(const State* state, const char* filename);
 @param filename Apontador para o nome do ficheiro
 @returns Sucesso da função
 */
-int read_from_file(State *state, const char *filename);
+int read_from_file(State* state, const char* filename);
 
 /**
 \brief Mostra todos o ficheiros na pasta saves/ (comando ls no terminal).

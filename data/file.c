@@ -39,7 +39,7 @@ void write_to_file(const State* const state, const char* const filename){
 
 
 
-void line_to_board(State *state, const int row, const char* const line){
+void line_to_board(State* state, const int row, const char* const line){
     Position pos;
 
     for(int col = 0; col < 8; ++col){

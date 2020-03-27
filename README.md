@@ -10,6 +10,10 @@ This game is developed in C.
 Rastros is a Maths' game that was created in 1992. It's a game where both players try to take the *ball* to their own *goal* or put the enemy in the corner (blocking the enemy so when its their turn they don't have a space to play).
 
 
+## Documentation
+
+To generate the documentation its necessary to install doxygen and then execute the following command: 'doxygen'
+
 ## Collaborators
 
 - Cristiano Pereira (CJGNP) N.º a93726
