@@ -16,21 +16,21 @@ void type_space(const Space p, FILE* const file) {
 
 void print_moves(const State* const state, FILE* const file){
     const int move_count = get_move_count(state);
-    int i = 0;
+    int count = 0;
     const Position last_play = get_last_play(state);
     Move move;
 
-    for ( ; i < move_count; ++i) {
-        move = get_move(state, i);
+    for ( ; count < move_count; ++count) {
+        move = get_move(state, count);
 
-        fprintf(file, "%02d : %c%d %c%d\n", i,
-                move.player1.column + 'a', move.player1.row + 1,
-                move.player2.column + 'a', move.player2.row + 1);
+        fprintf(file, "%02d: %c%d %c%d\n", count + 1,
+                move.player1.column + 'a', 8 - move.player1.row,
+                move.player2.column + 'a', 8 - move.player2.row);
     }
 
     if (get_current_player(state) == 2)
-        fprintf(file, "%02d : %c%d", i, last_play.column + 'a',
-                last_play.row + 1);
+        fprintf(file, "%02d: %c%d", count + 1,
+                last_play.column + 'a', 8 - last_play.row);
 }
 
 /*
@@ -44,7 +44,7 @@ void print_board(const State* const state, FILE* const file) {
 
     for (pos.row=0; pos.row < 8; ++pos.row) {
         if (file == stdout)
-            printf("  %d   ", pos.row + 1);
+            printf("  %d   ", 8 - pos.row);
 
         if (pos.row == 7) {
             if (last_play.row == 7 && last_play.column == 0)
@@ -76,7 +76,7 @@ void print_board(const State* const state, FILE* const file) {
             printf("%c ", 'a' + i);
 
         puts("\n"); // New Line
-    } else if (get_move_count(state)) {
+    } else if (get_move_count(state) || get_current_player(state) == 2) {
         fprintf(file, "\n\n");
         print_moves(state, file);
     }

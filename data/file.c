@@ -11,7 +11,7 @@
 #include "list_contents/OS_list.h"
 
 #define DIR_MAX 261 // 255 (File name) + 6 (saves/)
-#define BUFFER_LINE 12 // Each line from file contains a max of 11 chars + 1 (End of string)
+#define BUFFER_LINE 11 // Each line from file contains a max of 10 chars + 1 (End of string)
 #define DIR "saves/"
 
 
@@ -81,16 +81,16 @@ int read_from_file(State* const state, const char* const filename){
 
         for ( ; fgets(file_line, BUFFER_LINE, file); ++count) {
 
-            if (file_line[7]) { // file_line[7] is '\0' if no second Position in Move
-                pos1 = (Position) {.row = file_line[6] - '1', .column = file_line[5] - 'a'};
-                pos2 = (Position) {.row = file_line[9] - '1', .column = file_line[8] - 'a'};
+            if (file_line[6]) { // file_line[6] is '\0' if no second Position in Move
+                pos1 = (Position) {.row = '8' - file_line[5], .column = file_line[4] - 'a'};
+                pos2 = (Position) {.row = '8' - file_line[8], .column = file_line[7] - 'a'};
                 move = (Move) {.player1 = pos1, .player2 = pos2};
 
                 edit_move(state, count, move);
                 edit_last_play(state, pos2);
             }
             else {
-                pos1 = (Position) {.row = file_line[6] - '1', .column = file_line[5] - 'a'};
+                pos1 = (Position) {.row = '8' - file_line[5], .column = file_line[4] - 'a'};
                 edit_last_play(state, pos1);
 
                 edit_current_player(state, 1);

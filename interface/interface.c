@@ -64,7 +64,7 @@ void print_last_info(const State* const state) {
     clear_terminal();
 
     printf("Last Play:\n\tPlayer: %d\n\tRow: %d\n\tColumn: %c\n\n",
-           get_current_player(state), last_play.row + 1, last_play.column + 'a');
+           get_current_player(state), 8 - last_play.row, last_play.column + 'a');
 }
 
 
@@ -165,7 +165,7 @@ unsigned int interpreter(State* const state) {
 
     print_board(state, stdout);
     puts("\tType 'Help' to show available commands!\n");
-    printf("Player %d (0) >> ", player);
+    printf("Player %d (1) >> ", player);
 
     while (fgets(line, BUF_SIZE, stdin) != NULL) {
 
@@ -177,7 +177,7 @@ unsigned int interpreter(State* const state) {
             argument = strtok(NULL, " \n");
 
             if (!argument && sscanf(command, "%[a-h]%[1-8]", col, row) == 2) {
-                Position pos = {*col - 'a', *row - '1'};
+                Position pos = {*col - 'a', '8' - *row};
 
                 if (play(state, pos)) {
                     print_last_info(state);
@@ -241,7 +241,7 @@ unsigned int interpreter(State* const state) {
                 puts("Introduza Jogada válida");
         }
 
-        printf("Player %d (%d) >> ", player, get_move_count(state));
+        printf("Player %d (%d) >> ", player, get_move_count(state) + 1);
     }
 
     return winner;

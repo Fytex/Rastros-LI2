@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include "game.h"
 #include "../data/state.h"
 
 /*
