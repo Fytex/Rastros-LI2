@@ -124,18 +124,17 @@ void append_move(State* const state, const Move move) {
  */
 
 void set_default_state(State* const state) {
-    const Position begin_pos = {.row = 3, .column = 4};
     Position pos;
 
     edit_current_player(state, 1);
     edit_move_count(state, 0);
-    edit_last_play(state, begin_pos);
+    edit_last_play(state, BEGIN_POS);
 
     for (pos.row = 0; pos.row < 8; ++pos.row)
         for (pos.column = 0; pos.column < 8; ++pos.column)
             edit_position_space(state, pos, Blank);
 
-    edit_position_space(state, begin_pos, White);
+    edit_position_space(state, BEGIN_POS, White);
 
 }
 

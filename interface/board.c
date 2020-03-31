@@ -81,3 +81,36 @@ void print_board(const State* const state, FILE* const file) {
         print_moves(state, file);
     }
 }
+
+
+/*
+ * Changes the state of the game to a previously done move, where we can start playing from.
+ */
+
+void edit_game_by_move(State* const state, const int move_count) {
+    Move move;
+
+    for (Position temp_pos = {.row = 0}; temp_pos.row < 8; ++temp_pos.row) {
+        for (temp_pos.column = 0; temp_pos.column < 8; ++temp_pos.column)
+            edit_position_space(state, temp_pos, Blank);
+    }
+
+    if (move_count) {
+
+        for (int idx = 0; idx < move_count; ++idx) {
+            move = get_move(state, idx);
+            edit_position_space(state, move.player1, Black);
+            edit_position_space(state, move.player2, Black);
+        }
+
+        edit_position_space(state, BEGIN_POS, Black);
+        edit_position_space(state, move.player2, White); // GCC already optimizes this
+        edit_last_play(state, move.player2);
+    } else {
+        edit_position_space(state, BEGIN_POS, White);
+        edit_last_play(state, BEGIN_POS);
+    }
+
+    edit_current_player(state, 1);
+    edit_move_count(state, move_count);
+}

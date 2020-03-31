@@ -46,11 +46,12 @@ void clear_stdin_buffer() {
 void help_terminal(){
 
     puts("Available Commands :\n\n"
-    "  >> gr <file>\t(Saves the current game to a file)\n"
-    "  >> ler <file>\t(Load the game from the file)\n"
-    "  >> movs\t(Lists all the plays)\n"
-    "  >> list\t(Lists all saved files)\n"
-    "  >> Q\t(Ends the game)\n");
+    "  >> gr <file>\t\t(Saves the current game to a file)\n"
+    "  >> ler <file>\t\t(Load the game from the file)\n"
+    "  >> pos <position>\t(Load the game from a previous position)\n"
+    "  >> movs\t\t(Lists all the plays)\n"
+    "  >> list\t\t(Lists all saved files)\n"
+    "  >> Q\t\t\t(Ends the game)\n");
 
 }
 
@@ -90,68 +91,6 @@ void display_in_terminal(const State* const state, void (* const func)()) {
 
 
 /*
- * Changes the state of the game to a previously done move, where we can start playing from.
- */
-void print_pos(State* const state, const char* pos) {
-    long int npos = strtol(pos,NULL,10);
-    int nnpos = (int) npos;
-    Position board_position;
-    int i;
-
-    for(i = 0; i < 8; i++)
-        for(int j = 0; j < 8; j++) {
-            board_position.row = i;
-            board_position.column = j;
-            edit_position_space(state, board_position, Blank);
-        }
-
-
-    if (nnpos >= state->move_count || nnpos < 0)
-        printf("Not a valid play.\n");
-
-    else {
-        if (nnpos == 0) {
-            board_position.row = 3;
-            board_position.column = 4;
-            edit_position_space(state, board_position, White);
-            edit_last_play(state, board_position);
-        }
-        else {
-            board_position.row = 3;
-            board_position.column = 4;
-            edit_position_space(state, board_position, Black);
-
-            for (i = 0; i < nnpos - 1; i++) {
-                board_position.row = state->moves[i].player1.row;
-                board_position.column = state->moves[i].player1.column;
-                edit_position_space(state, board_position, Black);
-                board_position.row = state->moves[i].player2.row;
-                board_position.column = state->moves[i].player2.column;
-                edit_position_space(state, board_position, Black);
-            }
-            board_position.row = state->moves[i].player1.row;
-            board_position.column = state->moves[i].player1.column;
-            edit_position_space(state, board_position, Black);
-            board_position.row = state->moves[i].player2.row;
-            board_position.column = state->moves[i].player2.column;
-            edit_position_space(state, board_position, White);
-            edit_last_play(state, board_position);
-        }
-
-        edit_move_count(state, nnpos);
-
-        edit_current_player(state, 1);
-
-        clear_terminal();
-
-        if (get_move_count(state) || get_current_player(state) == 2) // If neither first play nor first player
-            print_last_info(state);
-
-        print_board(state, stdout);
-    }
-}
-
-/*
  * Interpreter (Communication with terminal)
  */
 
@@ -186,21 +125,23 @@ unsigned int interpreter(State* const state) {
                     winner = game_finished(state);
 
                     if (winner) {
-                        printf("Congrats Player %d\n\nPress enter to go back to menu...", winner);
+                        printf("\nCongrats Player %d\n\nPress enter to go back to menu...", winner);
                         clear_stdin_buffer();
                         break;
                     }
 
                     player = swap_players(state);
                 } else
-                    puts("Insert a valid play\n");
+                    puts("\nInsert a valid play\n");
             }
 
             else if (!strcmp(command, "q"))
                 break;
 
-            else if (!strcmp(command, "gr") && argument)
+            else if (!strcmp(command, "gr") && argument) {
                 write_to_file(state, argument);
+                puts("\nFile created\n");
+            }
 
             else if (!strcmp(command, "ler") && argument) {
 
@@ -215,7 +156,7 @@ unsigned int interpreter(State* const state) {
                     player = swap_players(state);
                     print_board(state, stdout);
                 } else
-                    puts("File Not Found\n");
+                    puts("\nFile not found\n");
 
             }
 
@@ -234,11 +175,25 @@ unsigned int interpreter(State* const state) {
             else if (!strcmp(command, "list"))
                 display_in_terminal(state, print_dir_contents);
 
-            else if (!strcmp(command, "pos") && argument)
-                print_pos(state, argument);
+            else if (!strcmp(command, "pos") && argument) {
+                char* rest;
+                const int move_idx = (int) strtol(argument, &rest, 10);
+
+                if (!*rest && move_idx >= 0 && move_idx <= get_move_count(state)) {
+                    clear_terminal();
+                    edit_game_by_move(state, move_idx);
+
+                    if (move_idx)
+                        print_last_info(state);
+
+                    print_board(state, stdout);
+                }
+                else
+                    puts("\nInsert a valid position\n");
+            }
 
             else
-                puts("Introduza Jogada válida");
+                puts("\nInsert a valid play\n");
         }
 
         printf("Player %d (%d) >> ", player, get_move_count(state) + 1);

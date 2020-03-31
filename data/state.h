@@ -24,6 +24,11 @@ typedef struct {
 } Position;
 
 /**
+\brief Posição inicial no tabuleiro
+ */
+static Position BEGIN_POS = {.row = 3, .column = 4};
+
+/**
 \brief Tipo de dados da jogada.
 */
 typedef struct {

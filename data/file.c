@@ -33,7 +33,6 @@ void write_to_file(const State* const state, const char* const filename){
     print_board(state, file);
 
     fclose(file);
-    puts("File created\n");
 }
 
 
