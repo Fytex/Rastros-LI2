@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include "state.h"
 
+const Position BEGIN_POS = {.row = 3, .column = 4};
+
+
 /*
  * Returns last play of the state
  */
@@ -136,13 +139,4 @@ void set_default_state(State* const state) {
 
     edit_position_space(state, BEGIN_POS, White);
 
-}
-
-
-/*
- * Initialize State
- */
-
-State* initialize_state() {
-    return (State *) malloc(sizeof(State));;
 }

@@ -26,7 +26,7 @@ typedef struct {
 /**
 \brief Posição inicial no tabuleiro
  */
-static Position BEGIN_POS = {.row = 3, .column = 4};
+extern const Position BEGIN_POS;
 
 /**
 \brief Tipo de dados da jogada.
@@ -51,13 +51,6 @@ typedef struct {
     int move_count;
     unsigned int current_player;
 } State;
-
-/**
-\brief Inicializa o valor do estado
-Esta função inicializa o valor do estado. Isso implica o tabuleiro ser colocado na posição inicial e todos os campos do estado estarem com o valor por omissão.
-@returns O novo estado
-*/
-State* initialize_state();
 
 /**
 \brief Esta função troca o jogador a jogar.

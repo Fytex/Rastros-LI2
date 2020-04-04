@@ -24,10 +24,7 @@ void game_info() {
 int main() {
     int cmd, cmd_error=0;
     unsigned int winner;
-    State* state = initialize_state();
-
-    if (!state)
-        return 1;
+    State state;
 
     do {
         clear_terminal();
@@ -55,8 +52,8 @@ int main() {
         clear_terminal();
 
         if (cmd == '1') {
-            set_default_state(state);
-            winner = interpreter(state);
+            set_default_state(&state);
+            winner = interpreter(&state);
         }
 
         else if (cmd == '2') {
@@ -73,6 +70,5 @@ int main() {
 
     } while (1);
 
-    free(state); // Almost all OS do this when process finishes but lets take care by our own
     return 0;
 }

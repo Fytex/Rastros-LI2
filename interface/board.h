@@ -21,8 +21,8 @@ void print_board(const State* state, FILE* file);
 @param state Apontador para o estado
 @param file Apontador para o tipo de ficheiro aonde irá imprimir
 */
-void print_moves(const State* state, FILE *file);
+void print_moves(const State* state, FILE* file);
 
-void edit_game_by_move(State* state, int move_count);
+void edit_state_from_move(State* state, int move_count);
 
 #endif //RASTROS_LI2_BOARD_H

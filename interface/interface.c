@@ -94,12 +94,13 @@ void display_in_terminal(const State* const state, void (* const func)()) {
  * Interpreter (Communication with terminal)
  */
 
-unsigned int interpreter(State* const state) {
+unsigned int interpreter(State* state) {
 
     char line[BUF_SIZE];
     char col[2], row[2];
-    unsigned int winner=0, player=get_current_player(state);
+    unsigned int winner = 0, player = get_current_player(state);
     char *command, *argument;
+    int saved_count = 0;
 
 
     print_board(state, stdout);
@@ -119,6 +120,7 @@ unsigned int interpreter(State* const state) {
                 Position pos = {*col - 'a', '8' - *row};
 
                 if (play(state, pos)) {
+                    saved_count = 0; // Since the play is done we can get rid of the saved_count
                     print_last_info(state);
                     print_board(state, stdout);
 
@@ -131,7 +133,8 @@ unsigned int interpreter(State* const state) {
                     }
 
                     player = swap_players(state);
-                } else
+                }
+                else
                     puts("\nInsert a valid play\n");
             }
 
@@ -179,9 +182,15 @@ unsigned int interpreter(State* const state) {
                 char* rest;
                 const int move_idx = (int) strtol(argument, &rest, 10);
 
-                if (!*rest && move_idx >= 0 && move_idx <= get_move_count(state)) {
+                // Check's move_count from the game that has more moves
+                if (!*rest && move_idx >= 0 && move_idx <= (saved_count ? saved_count : get_move_count(state))) {
+
+                    if (!saved_count)
+                        saved_count = get_move_count(state);
+
+
                     clear_terminal();
-                    edit_game_by_move(state, move_idx);
+                    edit_state_from_move(state, move_idx);
 
                     if (move_idx)
                         print_last_info(state);

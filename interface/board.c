@@ -87,26 +87,57 @@ void print_board(const State* const state, FILE* const file) {
  * Changes the state of the game to a previously done move, where we can start playing from.
  */
 
-void edit_game_by_move(State* const state, const int move_count) {
+void edit_state_from_move(State* const state, const int move_count) {
     Move move;
+    Position pos;
+    int count = get_move_count(state);
 
-    for (Position temp_pos = {.row = 0}; temp_pos.row < 8; ++temp_pos.row) {
-        for (temp_pos.column = 0; temp_pos.column < 8; ++temp_pos.column)
-            edit_position_space(state, temp_pos, Blank);
+    if (count > move_count) {
+
+        edit_position_space(state, get_last_play(state), Blank);
+
+        for ( ; count > move_count;  count--) {
+
+            move = get_move(state, count - 1);
+            edit_position_space(state, move.player1, Blank);
+            edit_position_space(state, move.player2, Blank);
+
+        }
+        if (count)
+            pos = get_move(state, count - 1).player2;
+        else
+            pos = BEGIN_POS;
+
+        edit_position_space(state, pos, White);
+        edit_last_play(state, pos);
     }
 
-    if (move_count) {
+    else if (count < move_count) {
 
-        for (int idx = 0; idx < move_count; ++idx) {
-            move = get_move(state, idx);
+        if (!count)
+            edit_position_space(state, BEGIN_POS, Black);
+        else
+            edit_position_space(state, get_move(state, count - 1).player2, Black);
+
+        for ( ; count < move_count;  count++) {
+
+            move = get_move(state, count);
             edit_position_space(state, move.player1, Black);
             edit_position_space(state, move.player2, Black);
-        }
 
-        edit_position_space(state, BEGIN_POS, Black);
-        edit_position_space(state, move.player2, White); // GCC already optimizes this
+        }
+        edit_position_space(state, move.player2, White);
         edit_last_play(state, move.player2);
-    } else {
+    }
+
+    else if (move_count) {
+        move = get_move(state, move_count - 1);
+        edit_position_space(state, get_last_play(state), Blank);
+        edit_position_space(state, move.player2, White);
+        edit_last_play(state, move.player2);
+    }
+    else {
+        edit_position_space(state, get_last_play(state), Blank);
         edit_position_space(state, BEGIN_POS, White);
         edit_last_play(state, BEGIN_POS);
     }
