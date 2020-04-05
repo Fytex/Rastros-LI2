@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../data/state.h"
+#include "../linked_lists/linked.h"
 
 /*
  * Receives a space and prints it in terminal
@@ -144,4 +145,22 @@ void edit_state_from_move(State* const state, const int move_count) {
 
     edit_current_player(state, 1);
     edit_move_count(state, move_count);
+}
+
+void computer_move(State* const state,List* L){
+    int count;
+    unsigned int current_player = get_current_player(state);
+    Position last_play = get_last_play(state);
+    Position* pos = give_back_head(L);
+
+
+    edit_position_space(state,last_play,Black);
+    edit_position_space(state, *pos, White);
+    edit_last_play(state,*pos);
+
+    if (current_player == 2) {
+        Move move = {.player1 = last_play, .player2 = *pos};
+        append_move(state, move);
+
+    }
 }

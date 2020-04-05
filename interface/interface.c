@@ -5,6 +5,7 @@
 #include "../data/state.h"
 #include "../logic/game.h"
 #include "../data/file.h"
+#include "../linked_lists/linked.h"
 #include "board.h"
 
 #define BUF_SIZE 1024
@@ -199,6 +200,25 @@ unsigned int interpreter(State* state) {
                 }
                 else
                     puts("\nInsert a valid position\n");
+            }
+            else if (!strcmp(command, "jog")){
+                List* positions = NULL;
+                positions = create_pos_list(state);
+
+                computer_move(state,positions);
+
+                print_last_info(state);
+                print_board(state,stdout);
+
+                player = swap_players(state);
+
+                winner = game_finished(state);
+
+                if (winner) {
+                    printf("\nCongrats Player %d\n\nPress enter to go back to menu...", winner);
+                    clear_stdin_buffer();
+                    break;
+                }
             }
 
             else

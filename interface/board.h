@@ -8,6 +8,7 @@ Definição das funções que imprimem o estado do jogo.
 
 #include <stdio.h>
 #include "../data/state.h"
+#include "../linked_lists/linked.h"
 
 /**
 \brief Esta função imprime o tabuleiro.
@@ -24,5 +25,7 @@ void print_board(const State* state, FILE* file);
 void print_moves(const State* state, FILE* file);
 
 void edit_state_from_move(State* state, int move_count);
+
+void computer_move(State* const state,List* L);
 
 #endif //RASTROS_LI2_BOARD_H
