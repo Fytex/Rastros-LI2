@@ -8,21 +8,19 @@ List* create_list() {
 
 }
 
-List* head_insert(List* const L, const Position value) {
-
+List* head_insert(List* const L, void* value) {
     List* new = malloc(sizeof(List));
 
-    new->pos.column = value.column;
-    new->pos.row = value.row;
+    new->pos = value;
     new->next = L;
 
     return new;
 
 }
 
-Position* give_back_head(List* const L) {
+void* give_back_head(List* const L) {
 
-    return &(L->pos);
+    return (L->pos);
 
 }
 
@@ -51,14 +49,16 @@ List* create_pos_list (const State* const state){
     const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
     const Position last_play=get_last_play(state);
     List* position_list = NULL;
-    Position pos;
+
     position_list = create_list();
 
     for (int i=0; i < 8; ++i) {
-        pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
+        Position *pos;
+        pos->row = last_play.row + sum_pos[i][0];//(Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
+        pos->column = last_play.column + sum_pos[i][1];
 
-        if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
-            get_position_space(state, pos) == Blank) {
+        if (pos->row >= 0 && pos->row < 8 && pos->column >= 0 && pos->column < 8 &&
+            get_position_space(state, *pos) == Blank) {
 
             position_list = head_insert(position_list, pos);
         }
