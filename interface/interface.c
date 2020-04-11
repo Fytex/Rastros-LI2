@@ -203,7 +203,6 @@ unsigned int interpreter(State* state) {
             }
             else if (!strcmp(command, "jog")){
                 List* positions = NULL;
-                positions = create_pos_list(state);
 
                 computer_move(state,positions);
 

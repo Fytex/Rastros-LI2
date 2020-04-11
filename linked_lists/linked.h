@@ -10,9 +10,11 @@ typedef struct List{
 
 } List;
 
-List* create_pos_list(const State* state);
+List* create_list();
 
-void* give_back_head(List* L);
+void* get_head(List* L);
+
+List* head_insert(List* L, void* value);
 
 List* remove_head(List* L);
 

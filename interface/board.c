@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "../data/state.h"
-#include "../linked_lists/linked.h"
 
 /*
  * Receives a space and prints it in terminal
@@ -147,67 +145,3 @@ void edit_state_from_move(State* const state, const int move_count) {
     edit_current_player(state, 1);
     edit_move_count(state, move_count);
 }
-
-
-Position flood_fill(State* state,List* L, unsigned int player) {
-    Position* posf;
-    double d, d1;
-    int p = (int) player;
-    List* l = L;
-    Position* var = give_back_head(L);
-
-    d = sqrt(pow((14 - (7 * p)) - var->row, 2) + pow((-7 + (7 * p)) - var->column, 2));
-    posf = (Position*) give_back_head(l);
-    l = remove_head(L);
-
-    while (l->next != NULL){
-        var = (Position*) give_back_head(l);
-        d1 = sqrt(pow((14 - (7 * p)) - var->row, 2) + pow((-7 + (7 * p)) - var->column, 2));
-        if (d1 < d) {
-            d = d1;
-            posf = (Position*) give_back_head(l);
-        }
-
-        l = remove_head(l);
-    }
-
-    return *posf;
-}
-
-void computer_move(State* const state,List* L){
-    int count;
-    unsigned int current_player = get_current_player(state);
-    Position last_play = get_last_play(state);
-    Position pos = flood_fill(state, L, get_current_player(state));
-
-
-    edit_position_space(state,last_play,Black);
-    edit_position_space(state, pos, White);
-    edit_last_play(state,pos);
-
-    if (current_player == 2) {
-        Move move = {.player1 = last_play, .player2 = pos};
-        append_move(state, move);
-
-    }
-}
-
-/*
-void computer_move(State* const state,List* L){
-    int count;
-    unsigned int current_player = get_current_player(state);
-    Position last_play = get_last_play(state);
-    Position* pos = give_back_head(L);
-
-
-    edit_position_space(state,last_play,Black);
-    edit_position_space(state, *pos, White);
-    edit_last_play(state,*pos);
-
-    if (current_player == 2) {
-        Move move = {.player1 = last_play, .player2 = *pos};
-        append_move(state, move);
-
-    }
-}
- */

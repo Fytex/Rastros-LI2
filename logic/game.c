@@ -1,5 +1,7 @@
 #include <stdlib.h>
+#include <math.h>
 #include "../data/state.h"
+#include "../linked_lists/linked.h"
 
 /*
  * Checks if play is valid
@@ -78,4 +80,58 @@ unsigned int game_finished(const State* const state) {
     return get_current_player(state);
 }
 
+Position flood_fill(State* state, unsigned int player) {
+    Position* posf;
+    double d, d1;
+    int p = (int) player;
+    const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
+    const Position last_play=get_last_play(state);
+    Position positions[8],pos;
+    int length = 0;
+    List* position_list = NULL;
 
+    position_list = create_list();
+
+    for (int i=0; i < 8; ++i) {
+        pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
+
+
+        if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
+            get_position_space(state, pos) == Blank) {
+
+            positions[length] = pos;
+            position_list = head_insert(position_list, positions + length);
+            length++;
+        }
+
+    }
+
+    Position* var = get_head(position_list);
+
+    d = sqrt(pow((14 - (7 * p)) - var->row, 2) + pow((-7 + (7 * p)) - var->column, 2));
+    posf = (Position*) get_head(position_list);
+    position_list = remove_head(position_list);
+
+    while (position_list->next != NULL){
+        var = (Position*) get_head(position_list);
+        d1 = sqrt(pow((14 - (7 * p)) - var->row, 2) + pow((-7 + (7 * p)) - var->column, 2));
+        if (d1 < d) {
+            d = d1;
+            posf = var;
+        }
+
+        position_list = remove_head(position_list);
+    }
+    remove_head(position_list);
+
+    return *posf;
+}
+
+void computer_move(State* const state){
+    int count;
+    unsigned int current_player = get_current_player(state);
+    Position last_play = get_last_play(state);
+    Position pos = flood_fill(state, get_current_player(state));
+
+    make_move(state,pos);
+}
