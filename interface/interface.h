@@ -14,7 +14,7 @@ Definição da função que comunica com o terminal.
 @param state Apontador para o estado
 @returns O vencedor, ou se deu algum erro (caso 0)
 */
-unsigned int interpreter(State* state);
+void interpreter(State* state);
 
 
 void clear_terminal();

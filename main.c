@@ -23,7 +23,6 @@ void game_info() {
 
 int main() {
     int cmd, cmd_error=0;
-    unsigned int winner;
     State state;
 
     do {
@@ -53,7 +52,7 @@ int main() {
 
         if (cmd == '1') {
             set_default_state(&state);
-            winner = interpreter(&state);
+            interpreter(&state);
         }
 
         else if (cmd == '2') {

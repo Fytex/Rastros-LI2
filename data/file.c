@@ -71,7 +71,7 @@ int read_from_file(State* const state, const char* const filename){
         return 0;
 
     for(int row = 0; row < 8; ++row) {
-        fgets(file_line, BUFFER_LINE, file);
+        if (fgets(file_line, BUFFER_LINE, file)!= NULL)
         line_to_board(state, row, file_line);
     }
 

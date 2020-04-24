@@ -23,4 +23,8 @@ int play(State* state, Position pos);
 */
 unsigned int game_finished(const State* state);
 
+void computer_move(State* const state);
+
+void computer_move2(State* const state);
+
 #endif //RASTROS_LI2_GAME_H

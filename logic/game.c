@@ -128,10 +128,46 @@ Position flood_fill(State* state, unsigned int player) {
 }
 
 void computer_move(State* const state){
-    int count;
-    unsigned int current_player = get_current_player(state);
-    Position last_play = get_last_play(state);
     Position pos = flood_fill(state, get_current_player(state));
+    make_move(state,pos);
+}
 
+Position RandomJog (State* state){
+    const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
+    const Position last_play=get_last_play(state);
+    Position positions[8],pos;
+    int length = 0;
+
+    List* position_list = NULL;
+
+
+    position_list = create_list();
+
+    for (int i=0; i < 8; ++i) {
+        pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
+
+
+        if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
+            get_position_space(state, pos) == Blank) {
+
+            positions[length] = pos;
+            position_list = head_insert(position_list, positions + length);
+            length++;
+        }
+
+    }
+    int random = rand() % length;
+    Position* jogpos = get_head(position_list);
+
+    for (int j = 0 ; j< random ; j++)
+        *jogpos = positions[j];
+
+
+    return *jogpos;
+
+}
+
+void computer_move2 (State* const state){
+    Position pos = RandomJog(state);
     make_move(state,pos);
 }

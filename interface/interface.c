@@ -5,7 +5,6 @@
 #include "../data/state.h"
 #include "../logic/game.h"
 #include "../data/file.h"
-#include "../linked_lists/linked.h"
 #include "board.h"
 
 #define BUF_SIZE 1024
@@ -24,9 +23,12 @@ void lower_string(char* s) {
  */
 
 void clear_terminal() {
+    int value;
 
     // Executes command in terminal to clear (Compatible with Win and *nix)
-    system("cls || clear");
+    value = system("cls || clear");
+    if (value == -1)
+        printf ("\n\n\n\n\n\n\n\n\n");
 
 }
 
@@ -52,6 +54,9 @@ void help_terminal(){
     "  >> pos <position>\t(Load the game from a previous position)\n"
     "  >> movs\t\t(Lists all the plays)\n"
     "  >> list\t\t(Lists all saved files)\n"
+    "  >> jog\t\t(Allows to see play done before and to start playing from that position"
+    "  >> jog\t\t(Performs a move according to an algorithm"
+    "  >> jog2\t\t(Same as jog but with a different algorithm"
     "  >> Q\t\t\t(Ends the game)\n");
 
 }
@@ -95,7 +100,7 @@ void display_in_terminal(const State* const state, void (* const func)()) {
  * Interpreter (Communication with terminal)
  */
 
-unsigned int interpreter(State* state) {
+void interpreter(State* state) {
 
     char line[BUF_SIZE];
     char col[2], row[2];
@@ -134,20 +139,15 @@ unsigned int interpreter(State* state) {
                     }
 
                     player = swap_players(state);
-                }
-                else
+                } else
                     puts("\nInsert a valid play\n");
-            }
-
-            else if (!strcmp(command, "q"))
+            } else if (!strcmp(command, "q"))
                 break;
 
             else if (!strcmp(command, "gr") && argument) {
                 write_to_file(state, argument);
                 puts("\nFile created\n");
-            }
-
-            else if (!strcmp(command, "ler") && argument) {
+            } else if (!strcmp(command, "ler") && argument) {
 
                 if (read_from_file(state, argument)) { // updates state
 
@@ -162,25 +162,21 @@ unsigned int interpreter(State* state) {
                 } else
                     puts("\nFile not found\n");
 
-            }
-
-            else if (!strcmp(command, "movs")) {
+            } else if (!strcmp(command, "movs")) {
 
                 clear_terminal(); // Objective: Clear last play info
                 print_board(state, stdout);
                 print_moves(state, stdout);
                 puts("\n");
 
-            }
-
-            else if (!strcmp(command, "help"))
+            } else if (!strcmp(command, "help"))
                 display_in_terminal(state, help_terminal);
 
             else if (!strcmp(command, "list"))
                 display_in_terminal(state, print_dir_contents);
 
             else if (!strcmp(command, "pos") && argument) {
-                char* rest;
+                char *rest;
                 const int move_idx = (int) strtol(argument, &rest, 10);
 
                 // Check's move_count from the game that has more moves
@@ -197,17 +193,14 @@ unsigned int interpreter(State* state) {
                         print_last_info(state);
 
                     print_board(state, stdout);
-                }
-                else
+                } else
                     puts("\nInsert a valid position\n");
-            }
-            else if (!strcmp(command, "jog")){
-                List* positions = NULL;
+            } else if (!strcmp(command, "jog")) {
 
-                computer_move(state,positions);
+                computer_move(state);
 
                 print_last_info(state);
-                print_board(state,stdout);
+                print_board(state, stdout);
 
                 player = swap_players(state);
 
@@ -218,14 +211,28 @@ unsigned int interpreter(State* state) {
                     clear_stdin_buffer();
                     break;
                 }
-            }
+            } else if (!strcmp(command, "jog2")) {
 
-            else
+                computer_move2(state);
+
+                print_last_info(state);
+                print_board(state, stdout);
+
+                player = swap_players(state);
+
+                winner = game_finished(state);
+
+                if (winner) {
+                    printf("\nCongrats Player %d\n\nPress enter to go back to menu...", winner);
+                    clear_stdin_buffer();
+                    break;
+                }
+
+
+            } else
                 puts("\nInsert a valid play\n");
         }
 
         printf("Player %d (%d) >> ", player, get_move_count(state) + 1);
     }
-
-    return winner;
 }
