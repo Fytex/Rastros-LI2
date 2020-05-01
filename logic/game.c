@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <math.h>
 #include "../data/state.h"
 #include "../linked_lists/linked.h"
 
@@ -80,57 +79,6 @@ unsigned int game_finished(const State* const state) {
     return get_current_player(state);
 }
 
-Position flood_fill(State* state, unsigned int player) {
-    Position* posf;
-    double d, d1;
-    int p = (int) player;
-    const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
-    const Position last_play=get_last_play(state);
-    Position positions[8],pos;
-    int length = 0;
-    List* position_list = NULL;
-
-    position_list = create_list();
-
-    for (int i=0; i < 8; ++i) {
-        pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
-
-
-        if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
-            get_position_space(state, pos) == Blank) {
-
-            positions[length] = pos;
-            position_list = head_insert(position_list, positions + length);
-            length++;
-        }
-
-    }
-
-    Position* var = get_head(position_list);
-
-    d = sqrt(pow((14 - (7 * p)) - var->row, 2) + pow((-7 + (7 * p)) - var->column, 2));
-    posf = (Position*) get_head(position_list);
-    position_list = remove_head(position_list);
-
-    while (position_list->next != NULL){
-        var = (Position*) get_head(position_list);
-        d1 = sqrt(pow((14 - (7 * p)) - var->row, 2) + pow((-7 + (7 * p)) - var->column, 2));
-        if (d1 < d) {
-            d = d1;
-            posf = var;
-        }
-
-        position_list = remove_head(position_list);
-    }
-    remove_head(position_list);
-
-    return *posf;
-}
-
-void computer_move(State* const state){
-    Position pos = flood_fill(state, get_current_player(state));
-    make_move(state,pos);
-}
 
 Position RandomJog (State* state){
     const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
@@ -171,3 +119,85 @@ void computer_move2 (State* const state){
     Position pos = RandomJog(state);
     make_move(state,pos);
 }
+
+
+Position reads_flood_fill_matrix(int flood_fill_matrix[][8], Position pos, int count) {
+    const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
+
+    while(count != 1) {
+        for(int i = 0; i < 8; i++) {
+            if (pos.row + sum_pos[i][0] >= 0 && pos.row + sum_pos[i][0] < 8 && pos.column + sum_pos[i][1] >= 0 && pos.column + sum_pos[i][1] < 8 && flood_fill_matrix[pos.row + sum_pos[i][0]][pos.column + sum_pos[i][1]] == count - 1) {
+                pos.row = pos.row + sum_pos[i][0];
+                pos.column = pos.column + sum_pos[i][1];
+                break;
+            }
+        }
+        count--;
+    }
+    return pos;
+}
+
+
+Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int player) {
+    int count = 1;
+    const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
+    Position last_play[1];
+    last_play[0] = get_last_play(state);
+    Position positions[64], pos;
+    Position* play;
+    int length = 0;
+    List* position_list1 = NULL;
+    List* position_list2 = NULL;
+
+    position_list1 = create_list();
+    position_list2 = create_list();
+
+    position_list1 = head_insert (position_list1, last_play);
+
+    while (position_list1->next != NULL) {
+        while (position_list1->next != NULL) {
+            play = get_head(position_list1);
+
+            for (int i = 0; i < 8; ++i) {
+                pos = (Position) {.row = play->row + sum_pos[i][0], .column = play->column + sum_pos[i][1]};
+
+                if (pos.column == (7 * (player - 1)) && pos.row == 7 - (7 * (player - 1))) {
+                    flood_fill_matrix[pos.row][pos.column] = count;
+                    return reads_flood_fill_matrix(flood_fill_matrix, pos, count);
+                }
+
+                if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
+                    flood_fill_matrix[pos.row][pos.column] == 0) {
+
+                    positions[length] = pos;
+                    position_list2 = head_insert(position_list2, positions + length);
+                    flood_fill_matrix[pos.row][pos.column] = count;
+                    length++;
+                }
+            }
+
+            position_list1 = remove_head(position_list1);
+        }
+
+        position_list1 = position_list2;
+        position_list2 = clear_list();
+        count++;
+    }
+    return RandomJog(state);
+}
+
+void computer_move(State* const state){
+    int flood_fill_matrix[8][8];
+
+    for(int i = 0; i < 8; i++) {
+        for(int j = 0; j < 8; j++){
+            if (state->board[i][j] == Blank)
+                flood_fill_matrix[i][j] = 0;
+            else flood_fill_matrix[i][j] = -1;
+        }
+    }
+    Position pos = flood_fill(state, flood_fill_matrix, get_current_player(state));
+    make_move(state,pos);
+}
+
+

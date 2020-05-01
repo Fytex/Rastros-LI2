@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="state_8c" kind="file" language="C++">
+    <compoundname>state.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="state_8h" local="yes">state.h</includes>
+    <incdepgraph>
+      <node id="22">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21">
+        <label>data/state.c</label>
+        <link refid="state_8c"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>state.h</label>
+        <link refid="state_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="state_8c_1ad46554c100e50ddc3e0bb288f010b0c1" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>const Position BEGIN_POS</definition>
+        <argsstring></argsstring>
+        <name>BEGIN_POS</name>
+        <initializer>= {.row = 3, .column = 4}</initializer>
+        <briefdescription>
+<para>Posição inicial no tabuleiro. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="4" column="1" bodyfile="data/state.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="state_8c_1a93ea236c0587e55935ce89f634aee707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position get_last_play</definition>
+        <argsstring>(const State *const state)</argsstring>
+        <name>get_last_play</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Obtém a última jogada realizada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A última jogada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="11" column="1" bodyfile="data/state.c" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a2dd4064d3e27db59ca36be4c38c13e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edit_last_play</definition>
+        <argsstring>(State *const state, const Position pos)</argsstring>
+        <name>edit_last_play</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Altera a coordenada da última jogada realizada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenadas da última jogada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="20" column="1" bodyfile="data/state.c" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a79b6be8ac04faf828b2c8f99abec4ab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structMove" kindref="compound">Move</ref></type>
+        <definition>Move get_move</definition>
+        <argsstring>(const State *const state, const int idx)</argsstring>
+        <name>get_move</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Obtém uma certa jogada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número da jogada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A jogada para esse dado valor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="29" column="1" bodyfile="data/state.c" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1acbc0bfb31fc79c1b384b8faf1ebca10b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edit_move</definition>
+        <argsstring>(State *const state, const int idx, const Move move)</argsstring>
+        <name>edit_move</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="structMove" kindref="compound">Move</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Altera a jogada na posição indicada do array de jogadas do estado. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posição a alterar no array de jogadas </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Jogada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="38" column="1" bodyfile="data/state.c" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a3aea8e35e40abd7da4e782a72865ce10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int get_current_player</definition>
+        <argsstring>(const State *const state)</argsstring>
+        <name>get_current_player</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Obtém o jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O jogador atual </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="47" column="1" bodyfile="data/state.c" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1ab4c5f80f0378e0ab019914f7ec95fe28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_move_count</definition>
+        <argsstring>(const State *const state)</argsstring>
+        <name>get_move_count</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Obtém o número de jogadas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O número de jogadas </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="56" column="1" bodyfile="data/state.c" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a1cd416f80decc990d14b068477026eff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edit_move_count</definition>
+        <argsstring>(State *const state, const int count)</argsstring>
+        <name>edit_move_count</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Altera o contador do número de jogadas realizadas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de jogadas realizadas </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="65" column="1" bodyfile="data/state.c" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1ae9b98fdb92c583f7dc1174fb5b4db4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref></type>
+        <definition>Space get_position_space</definition>
+        <argsstring>(const State *const state, const Position pos)</argsstring>
+        <name>get_position_space</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Obtém o tipo de espaço do tabuleiro para uma dada coordenada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O tipo de espaço da coordenada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="74" column="1" bodyfile="data/state.c" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1ad7c16da442029e5013a927c39e9ae5c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edit_position_space</definition>
+        <argsstring>(State *const state, const Position pos, const Space space)</argsstring>
+        <name>edit_position_space</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref></type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+<para>Altera o tipo de espaço numa dada coordenada do tabuleiro. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tipo de espaço </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="83" column="1" bodyfile="data/state.c" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a993a5e8c3d12502e97ed5d130e0874b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void edit_current_player</definition>
+        <argsstring>(State *const state, const unsigned int player)</argsstring>
+        <name>edit_current_player</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Altera o jogador a jogar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Jogador para o qual altera </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="92" column="1" bodyfile="data/state.c" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1afbe3cd64aad518a5ef7376d312c601bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int swap_players</definition>
+        <argsstring>(State *const state)</argsstring>
+        <name>swap_players</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Troca o jogador a jogar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O próximo jogador a jogar </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="101" column="1" bodyfile="data/state.c" bodystart="101" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a56251f44dbc980eb83a75e05368a1c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void append_move</definition>
+        <argsstring>(State *const state, const Move move)</argsstring>
+        <name>append_move</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structMove" kindref="compound">Move</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Adiciona uma jogada no array do estado com a lista de jogadas realizadas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Jogada a adicionar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="117" column="1" bodyfile="data/state.c" bodystart="117" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="state_8c_1a91d9f60e290b14f119b83ffa00e02b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_default_state</definition>
+        <argsstring>(State *const state)</argsstring>
+        <name>set_default_state</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Altera o estado do jogo para o estado inicial. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.c" line="129" column="1" bodyfile="data/state.c" bodystart="129" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="state_8h" kindref="compound">state.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="state_8h_1ad46554c100e50ddc3e0bb288f010b0c1" kindref="member">BEGIN_POS</ref><sp/>=<sp/>{.row<sp/>=<sp/>3,<sp/>.column<sp/>=<sp/>4};</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Returns<sp/>last<sp/>play<sp/>of<sp/>the<sp/>state</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state-&gt;last_play;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Edits<sp/>last<sp/>play<sp/>of<sp/>the<sp/>state</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>state-&gt;last_play<sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>Returns<sp/>the<sp/>move<sp/>in<sp/>that<sp/>index<sp/>position<sp/>from<sp/>moves&apos;<sp/>array</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="structMove" kindref="compound">Move</ref><sp/><ref refid="state_8h_1a8747aeb99529569b0fa1b1cb9f9fe346" kindref="member">get_move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state-&gt;moves[idx];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>Edits<sp/>the<sp/>move<sp/>in<sp/>that<sp/>index<sp/>position<sp/>from<sp/>moves&apos;<sp/>array</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a61b82f0b611dd301bed2dba194f64424" kindref="member">edit_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>state-&gt;moves[idx]<sp/>=<sp/>move;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>Returns<sp/>current<sp/>player<sp/>of<sp/>the<sp/>state</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" kindref="member">get_current_player</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state-&gt;current_player;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*<sp/>Returns<sp/>the<sp/>moves&apos;<sp/>count<sp/>of<sp/>the<sp/>state</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ad3485fbb9ac9fab7fb2c0887442cd4d5" kindref="member">get_move_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state-&gt;move_count;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/>Edit<sp/>the<sp/>moves&apos;<sp/>count<sp/>of<sp/>the<sp/>state</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>state-&gt;move_count<sp/>=<sp/>count;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/>Returns<sp/>the<sp/>space<sp/>in<sp/>the<sp/>boarder&apos;s<sp/>position</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/><ref refid="state_8h_1a9af3e6eb7aa64afbb564251578579fc5" kindref="member">get_position_space</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state-&gt;board[pos.row][pos.column];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*<sp/>Edits<sp/>the<sp/>space<sp/>in<sp/>the<sp/>boarder&apos;s<sp/>position</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/>space){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>state-&gt;board[pos.row][pos.column]<sp/>=<sp/>space;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/>*<sp/>Edit<sp/>current<sp/>player</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>state-&gt;current_player<sp/>=<sp/>player;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/>Swap<sp/>current<sp/>player<sp/>in<sp/>state<sp/>and<sp/>returns<sp/>new<sp/>player</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a8f908f2df8056cc97a448282382fd540" kindref="member">swap_players</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>XOR<sp/>(Binary<sp/>Operation<sp/>-<sp/>Simple<sp/>and<sp/>efficient<sp/>way<sp/>to<sp/>change<sp/>from<sp/>player<sp/>1<sp/>to<sp/>2<sp/>and<sp/>vice-versa)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_player<sp/>=<sp/>state-&gt;current_player<sp/>^<sp/>(unsigned)<sp/>3;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(state,<sp/>next_player);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>next_player;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/>*<sp/>Add<sp/>a<sp/>move<sp/>to<sp/>moves&apos;<sp/>array<sp/>and<sp/>increments<sp/>move_count</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1aad9dc5f36b2d4fb3feba1f250d1680cc" kindref="member">append_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/><ref refid="state_8h_1ad3485fbb9ac9fab7fb2c0887442cd4d5" kindref="member">get_move_count</ref>(state);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a61b82f0b611dd301bed2dba194f64424" kindref="member">edit_move</ref>(state,<sp/>count,<sp/>move);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(state,<sp/>++count);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>Sets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>given<sp/>state<sp/>to<sp/>their<sp/>defaults</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a94e97019246bbb8156c79b8b0579b2a6" kindref="member">set_default_state</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(state,<sp/>1);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(state,<sp/>0);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>BEGIN_POS);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(pos.row<sp/>=<sp/>0;<sp/>pos.row<sp/>&lt;<sp/>8;<sp/>++pos.row)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(pos.column<sp/>=<sp/>0;<sp/>pos.column<sp/>&lt;<sp/>8;<sp/>++pos.column)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(state,<sp/>pos,<sp/>Blank);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(state,<sp/>BEGIN_POS,<sp/>White);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="data/state.c"/>
+  </compounddef>
+</doxygen>

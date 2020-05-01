@@ -1,6 +1,6 @@
 /**
 @file game.h
-Definição das funções para jogar e terminar o jogo.
+Definição das funções para jogar e terminar o jogo
 */
 
 #ifndef RASTROS_LI2_GAME_H
@@ -23,8 +23,16 @@ int play(State* state, Position pos);
 */
 unsigned int game_finished(const State* state);
 
+/**
+\brief Função para o computador fazer uma jogada
+@param state Apontador para o estado
+*/
 void computer_move(State* const state);
 
+/**
+\brief Função para o computador fazer uma jogada, estratégia diferente da anterior
+@param state Apontador para o estado
+*/
 void computer_move2(State* const state);
 
 #endif //RASTROS_LI2_GAME_H

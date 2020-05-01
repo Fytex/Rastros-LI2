@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Rastros-LI2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What&apos;s<sp/>the<sp/>language?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>game<sp/>is<sp/>developed<sp/>in<sp/>C.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What&apos;s<sp/>this<sp/>game?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Rastros<sp/>is<sp/>a<sp/>Maths&apos;<sp/>game<sp/>that<sp/>was<sp/>created<sp/>in<sp/>1992.<sp/>It&apos;s<sp/>a<sp/>game<sp/>where<sp/>both<sp/>players<sp/>try<sp/>to<sp/>take<sp/>the<sp/>*ball*<sp/>to<sp/>their<sp/>own<sp/>*goal*<sp/>or<sp/>put<sp/>the<sp/>enemy<sp/>in<sp/>the<sp/>corner<sp/>(blocking<sp/>the<sp/>enemy<sp/>so<sp/>when<sp/>its<sp/>their<sp/>turn<sp/>they<sp/>don&apos;t<sp/>have<sp/>a<sp/>space<sp/>to<sp/>play).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>generate<sp/>the<sp/>documentation<sp/>its<sp/>necessary<sp/>to<sp/>install<sp/>doxygen<sp/>and<sp/>then<sp/>execute<sp/>the<sp/>following<sp/>command:<sp/>&apos;doxygen&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Collaborators</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Cristiano<sp/>Pereira<sp/>(CJGNP)<sp/>N.º<sp/>a93726</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Pedro<sp/>Paulo<sp/>Tavares<sp/>(Fytex)<sp/>N.º<sp/>a93227</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Tiago<sp/>Daniel<sp/>Costa<sp/>(tiago885)<sp/>N.º<sp/>a93322</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Group&amp;Shift</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Group:<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Shift:<sp/>2</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

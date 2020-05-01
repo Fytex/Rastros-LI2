@@ -41,6 +41,12 @@ List* remove_head(List* const L) {
 
 }
 
+
+List* clear_list() {
+   return create_list();
+}
+
+
 int empty_list (const List* const L){
 
     return L ? 1 : 0;

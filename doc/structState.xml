@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structState" kind="struct" language="C++" prot="public">
+    <compoundname>State</compoundname>
+    <includes refid="state_8h" local="no">state.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structState_1a40a2af0e5f8ed06f7ead12cff2c23c49" prot="public" static="no" mutable="no">
+        <type><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref></type>
+        <definition>Space State::board[8][8]</definition>
+        <argsstring>[8][8]</argsstring>
+        <name>board</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.h" line="48" column="1" bodyfile="data/state.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structState_1a3f6a64d7daf33ca88bb256ced24906f9" prot="public" static="no" mutable="no">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position State::last_play</definition>
+        <argsstring></argsstring>
+        <name>last_play</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.h" line="49" column="1" bodyfile="data/state.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structState_1a9f2c6e182f5062c98a9b23276c8dd4ae" prot="public" static="no" mutable="no">
+        <type><ref refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" kindref="member">Moves</ref></type>
+        <definition>Moves State::moves</definition>
+        <argsstring></argsstring>
+        <name>moves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.h" line="50" column="1" bodyfile="data/state.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structState_1a2ebf2a07995abe50b4cf476c5ee190a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int State::move_count</definition>
+        <argsstring></argsstring>
+        <name>move_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.h" line="51" column="1" bodyfile="data/state.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structState_1ace4c5cff51e2987aa03142bc846eaf6b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int State::current_player</definition>
+        <argsstring></argsstring>
+        <name>current_player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/state.h" line="52" column="1" bodyfile="data/state.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tipo de dados do estado do jogo. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>Position</label>
+        <link refid="structPosition"/>
+      </node>
+      <node id="8">
+        <label>State</label>
+        <link refid="structState"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>moves</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>last_play</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Move</label>
+        <link refid="structMove"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>player1</edgelabel>
+          <edgelabel>player2</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/state.h" line="47" column="1" bodyfile="data/state.h" bodystart="47" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structState_1a40a2af0e5f8ed06f7ead12cff2c23c49" prot="public" virt="non-virtual"><scope>State</scope><name>board</name></member>
+      <member refid="structState_1ace4c5cff51e2987aa03142bc846eaf6b" prot="public" virt="non-virtual"><scope>State</scope><name>current_player</name></member>
+      <member refid="structState_1a3f6a64d7daf33ca88bb256ced24906f9" prot="public" virt="non-virtual"><scope>State</scope><name>last_play</name></member>
+      <member refid="structState_1a2ebf2a07995abe50b4cf476c5ee190a2" prot="public" virt="non-virtual"><scope>State</scope><name>move_count</name></member>
+      <member refid="structState_1a9f2c6e182f5062c98a9b23276c8dd4ae" prot="public" virt="non-virtual"><scope>State</scope><name>moves</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

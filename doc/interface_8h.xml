@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="interface_8h" kind="file" language="C++">
+    <compoundname>interface.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="state_8h" local="yes">../data/state.h</includes>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="55">
+        <label>../data/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+      <node id="53">
+        <label>interface/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="interface_8h_1a1ea2d736a2aaee6d23a2182e38c10540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void interpreter</definition>
+        <argsstring>(State *state)</argsstring>
+        <name>interpreter</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Esta função interage com o terminal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O vencedor, ou se deu algum erro (caso 0) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interface/interface.h" line="17" column="1" bodyfile="interface/interface.c" bodystart="103" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_8h_1af0e8e5346802ba4161c023d8a3da403d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clear_terminal</definition>
+        <argsstring>()</argsstring>
+        <name>clear_terminal</name>
+        <briefdescription>
+<para>Limpa a janela do terminal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interface/interface.h" line="22" column="1" bodyfile="interface/interface.c" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_8h_1a83c562733a5753bc24b3891c17cd1e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clear_stdin_buffer</definition>
+        <argsstring>()</argsstring>
+        <name>clear_stdin_buffer</name>
+        <briefdescription>
+<para>Limpa o stdin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interface/interface.h" line="27" column="1" bodyfile="interface/interface.c" bodystart="40" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição da função que comunica com o terminal </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>RASTROS_LI2_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RASTROS_LI2_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../data/state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8h_1a1ea2d736a2aaee6d23a2182e38c10540" kindref="member">interpreter</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8h_1af0e8e5346802ba4161c023d8a3da403d" kindref="member">clear_terminal</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8h_1a83c562733a5753bc24b3891c17cd1e18" kindref="member">clear_stdin_buffer</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_INTERFACE_H</highlight></codeline>
+    </programlisting>
+    <location file="interface/interface.h"/>
+  </compounddef>
+</doxygen>

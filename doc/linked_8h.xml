@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="linked_8h" kind="file" language="C++">
+    <compoundname>linked.h</compoundname>
+    <includes refid="state_8h" local="yes">../data/state.h</includes>
+    <includedby refid="board_8h" local="yes">interface/board.h</includedby>
+    <includedby refid="linked_8c" local="yes">linked_lists/linked.c</includedby>
+    <includedby refid="game_8c" local="yes">logic/game.c</includedby>
+    <incdepgraph>
+      <node id="63">
+        <label>../data/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+      <node id="62">
+        <label>linked_lists/linked.h</label>
+        <link refid="linked_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="65">
+        <label>interface/board.h</label>
+        <link refid="board_8h"/>
+      </node>
+      <node id="64">
+        <label>linked_lists/linked.h</label>
+        <link refid="linked_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structList" prot="public">List</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="linked_8h_1ab2926f8a4255847074664d6549d3a1ee" prot="public" static="no">
+        <type>struct <ref refid="structList" kindref="compound">List</ref></type>
+        <definition>typedef struct List  List</definition>
+        <argsstring></argsstring>
+        <name>List</name>
+        <briefdescription>
+<para>Tipo de dados de uma lista ligada. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="19" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structList" kindref="compound">List</ref> *</type>
+        <definition>List* create_list</definition>
+        <argsstring>()</argsstring>
+        <name>create_list</name>
+        <briefdescription>
+<para>Cria uma lista ligada. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="24" column="1" bodyfile="linked_lists/linked.c" bodystart="4" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* get_head</definition>
+        <argsstring>(List *L)</argsstring>
+        <name>get_head</name>
+        <param>
+          <type><ref refid="structList" kindref="compound">List</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Obtém a cabeça de uma lista ligada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para uma lista ligada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="30" column="1" bodyfile="linked_lists/linked.c" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structList" kindref="compound">List</ref> *</type>
+        <definition>List* head_insert</definition>
+        <argsstring>(List *L, void *value)</argsstring>
+        <name>head_insert</name>
+        <param>
+          <type><ref refid="structList" kindref="compound">List</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Insere um elemento à cabeça de uma lista ligada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para uma lista ligada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o elemento a adicionar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A lista ligada depois de adicionar o elemento à cabeça </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="38" column="1" bodyfile="linked_lists/linked.c" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structList" kindref="compound">List</ref> *</type>
+        <definition>List* remove_head</definition>
+        <argsstring>(List *L)</argsstring>
+        <name>remove_head</name>
+        <param>
+          <type><ref refid="structList" kindref="compound">List</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Remove o elemento na cabeça de uma lista ligada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para uma lista ligada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A lista ligada depois de remover a cabeça </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="45" column="1" bodyfile="linked_lists/linked.c" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="linked_8h_1a62982117b57c4042447b0951772f7652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structList" kindref="compound">List</ref> *</type>
+        <definition>List* clear_list</definition>
+        <argsstring>()</argsstring>
+        <name>clear_list</name>
+        <briefdescription>
+<para>Limpa a informação de uma lista ligada, tornando-a vazia. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="50" column="1" bodyfile="linked_lists/linked.c" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int empty_list</definition>
+        <argsstring>(const List *L)</argsstring>
+        <name>empty_list</name>
+        <param>
+          <type>const <ref refid="structList" kindref="compound">List</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Confirma se a lista é vazia ou não. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para uma lista ligada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linked_lists/linked.h" line="56" column="1" bodyfile="linked_lists/linked.c" bodystart="50" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição das funções que criam e alteram listas ligadas </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>RASTROS_LI2_LINKED_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RASTROS_LI2_LINKED_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../data/state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pos;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}<sp/><ref refid="linked_8h_1ab2926f8a4255847074664d6549d3a1ee" kindref="member">List</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/>L,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a62982117b57c4042447b0951772f7652" kindref="member">clear_list</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_LINKED_H</highlight></codeline>
+    </programlisting>
+    <location file="linked_lists/linked.h"/>
+  </compounddef>
+</doxygen>

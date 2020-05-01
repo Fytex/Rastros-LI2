@@ -1,13 +1,13 @@
 /**
 @file state.h
-Definição do estado e das funções que o manipulam.
+Definição do estado e das funções que o manipulam
 */
 
 #ifndef RASTROS_LI2_STATE_H
 #define RASTROS_LI2_STATE_H
 
 /**
-\brief Tipo de espaço no tabuleiro.
+\brief Tipo de espaço no tabuleiro
 */
 typedef enum {
     Blank = '.',
@@ -16,7 +16,7 @@ typedef enum {
 } Space;
 
 /**
-\brief Tipo de dados das coordenadas no tabuleiro.
+\brief Tipo de dados das coordenadas no tabuleiro
 */
 typedef struct {
     int column;
@@ -29,7 +29,7 @@ typedef struct {
 extern const Position BEGIN_POS;
 
 /**
-\brief Tipo de dados da jogada.
+\brief Tipo de dados da jogada
 */
 typedef struct {
     Position player1;
@@ -37,12 +37,12 @@ typedef struct {
 } Move;
 
 /**
-\brief Tipo de dados para as jogadas.
+\brief Tipo de dados para as jogadas
 */
 typedef Move Moves[32];
 
 /**
-\brief Tipo de dados do estado do jogo.
+\brief Tipo de dados do estado do jogo
 */
 typedef struct {
     Space board[8][8];
@@ -53,35 +53,35 @@ typedef struct {
 } State;
 
 /**
-\brief Esta função troca o jogador a jogar.
+\brief Troca o jogador a jogar
 @param state Apontador para o estado
 @returns O próximo jogador a jogar
 */
 unsigned int swap_players(State* state);
 
 /**
-\brief Esta função obtém o jogador atual
+\brief Obtém o jogador atual
 @param state Apontador para o estado 
 @returns O jogador atual
 */
 unsigned int get_current_player(const State* state);
 
 /**
-\brief Esta função obtém o número de jogadas
+\brief Obtém o número de jogadas
 @param state Apontador para o estado 
 @returns O número de jogadas
 */
 int get_move_count(const State* state);
 
 /**
-\brief Esta função obtém a última jogada realizada
+\brief Obtém a última jogada realizada
 @param state Apontador para o estado 
 @returns A última jogada
 */
 Position get_last_play(const State* state);
 
 /**
-\brief Esta função obtém uma certa jogada
+\brief Obtém uma certa jogada
 @param state Apontador para o estado 
 @param idx Número da jogada
 @returns A jogada para esse dado valor
@@ -89,7 +89,7 @@ Position get_last_play(const State* state);
 Move get_move(const State* state, int idx);
 
 /**
-\brief Esta função obtém o tipo de espaço do tabuleiro para uma dada coordenada
+\brief Obtém o tipo de espaço do tabuleiro para uma dada coordenada
 @param state Apontador para o estado 
 @param pos Coordenada
 @returns O tipo de espaço da coordenada
@@ -97,7 +97,7 @@ Move get_move(const State* state, int idx);
 Space get_position_space(const State* state, Position pos);
 
 /**
-\brief Esta função altera o tipo de espaço numa dada coordenada do tabuleiro
+\brief Altera o tipo de espaço numa dada coordenada do tabuleiro
 @param state Apontador para o estado
 @param pos Coordenada
 @param space Tipo de espaço
@@ -105,41 +105,45 @@ Space get_position_space(const State* state, Position pos);
 void edit_position_space(State* state, Position pos, Space space);
 
 /**
-\brief Esta função altera o jogador a jogar
+\brief Altera o jogador a jogar
 @param state Apontador para o estado
 @param player Jogador para o qual altera
 */
 void edit_current_player(State* state, unsigned int player);
 
 /**
-\brief Esta função adiciona uma jogada no array do estado com a lista de jogadas realizadas
+\brief Adiciona uma jogada no array do estado com a lista de jogadas realizadas
 @param state Apontador para o estado
 @param move Jogada a adicionar
 */
 void append_move(State* state, Move move);
 
 /**
-\brief Esta função altera a coordenada da última jogada realizada
+\brief Altera a coordenada da última jogada realizada
 @param state Apontador para o estado
 @param pos Coordenadas da última jogada
 */
 void edit_last_play(State* state, Position pos);
 
 /**
-\brief Esta função altera o contador do número de jogadas realizadas
+\brief Altera o contador do número de jogadas realizadas
 @param state Apontador para o estado
 @param count Número de jogadas realizadas
 */
 void edit_move_count(State* state, int count);
 
 /**
-\brief Esta função altera a jogada na posição indicada do array de jogadas do estado
+\brief Altera a jogada na posição indicada do array de jogadas do estado
 @param state Apontador para o estado
 @param idx Posição a alterar no array de jogadas
 @param move Jogada
 */
 void edit_move(State* state, int idx, Move move);
 
+/**
+\brief Altera o estado do jogo para o estado inicial
+@param state Apontador para o estado
+*/
 void set_default_state(State* state);
 
 #endif //RASTROS_LI2_STATE_H

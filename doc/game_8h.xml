@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="game_8h" kind="file" language="C++">
+    <compoundname>game.h</compoundname>
+    <includes refid="state_8h" local="yes">../data/state.h</includes>
+    <includedby refid="interface_8c" local="yes">interface/interface.c</includedby>
+    <incdepgraph>
+      <node id="72">
+        <label>logic/game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>../data/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="game_8h_1a6542229192098fbce8231b34a7aa732c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int play</definition>
+        <argsstring>(State *state, Position pos)</argsstring>
+        <name>play</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Função para jogar o jogo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenadas de uma jogada a realizar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Se foi realizada a jogada ou não </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic/game.h" line="17" column="1" bodyfile="logic/game.c" bodystart="46" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1afbd54c47a49e784fa85df4208468b595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int game_finished</definition>
+        <argsstring>(const State *state)</argsstring>
+        <name>game_finished</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Função para verificar se o jogo está terminado e quem ganhou. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O vencedor, 0 se ainda não terminou </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic/game.h" line="24" column="1" bodyfile="logic/game.c" bodystart="61" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a55e8ed0ae86cf800ead50f70d2c0b2d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void computer_move</definition>
+        <argsstring>(State *const state)</argsstring>
+        <name>computer_move</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *const</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Função para o computador fazer uma jogada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic/game.h" line="30" column="1" bodyfile="logic/game.c" bodystart="205" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1ac993a0941042386cf04f8fc19a8c3549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void computer_move2</definition>
+        <argsstring>(State *const state)</argsstring>
+        <name>computer_move2</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *const</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Função para o computador fazer uma jogada, estratégia diferente da anterior. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic/game.h" line="36" column="1" bodyfile="logic/game.c" bodystart="119" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição das funções para jogar e terminar o jogo </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>RASTROS_LI2_GAME_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RASTROS_LI2_GAME_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../data/state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a6542229192098fbce8231b34a7aa732c" kindref="member">play</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1afbd54c47a49e784fa85df4208468b595" kindref="member">game_finished</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kindref="member">computer_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1ac993a0941042386cf04f8fc19a8c3549" kindref="member">computer_move2</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_GAME_H</highlight></codeline>
+    </programlisting>
+    <location file="logic/game.h"/>
+  </compounddef>
+</doxygen>

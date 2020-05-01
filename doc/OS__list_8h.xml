@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="OS__list_8h" kind="file" language="C++">
+    <compoundname>OS_list.h</compoundname>
+    <includedby refid="file_8c" local="yes">data/file.c</includedby>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="OS__list_8h_1ac1c4c995fab4b5218117a6d2bd9de6df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_OS_dir_contents</definition>
+        <argsstring>(const char *dir)</argsstring>
+        <name>print_OS_dir_contents</name>
+        <param>
+          <type>const char *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Imprime os ficheiros em saves/. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/list_contents/OS_list.h" line="12" column="1" bodyfile="data/list_contents/OS_list.c" bodystart="51" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição da função que imprime os ficheiros em saves/ dependendo do sistema operativo </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>RASTROS_LI2_OS_LIST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RASTROS_LI2_OS_LIST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="OS__list_8h_1ac1c4c995fab4b5218117a6d2bd9de6df" kindref="member">print_OS_dir_contents</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>dir);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_OS_LIST_H</highlight></codeline>
+    </programlisting>
+    <location file="data/list_contents/OS_list.h"/>
+  </compounddef>
+</doxygen>
