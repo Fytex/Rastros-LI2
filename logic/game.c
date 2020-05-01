@@ -126,10 +126,13 @@ Position reads_flood_fill_matrix(int flood_fill_matrix[][8], Position pos, int c
 
     while(count != 1) {
         for(int i = 0; i < 8; i++) {
-            if (pos.row + sum_pos[i][0] >= 0 && pos.row + sum_pos[i][0] < 8 && pos.column + sum_pos[i][1] >= 0 && pos.column + sum_pos[i][1] < 8 && flood_fill_matrix[pos.row + sum_pos[i][0]][pos.column + sum_pos[i][1]] == count - 1) {
-                pos.row = pos.row + sum_pos[i][0];
-                pos.column = pos.column + sum_pos[i][1];
-                break;
+            if (pos.row + sum_pos[i][0] >= 0 && pos.row + sum_pos[i][0] < 8 && pos.column + sum_pos[i][1] >= 0 &&
+                pos.column + sum_pos[i][1] < 8 &&
+                flood_fill_matrix[pos.row + sum_pos[i][0]][pos.column + sum_pos[i][1]] == count - 1) {
+
+                    pos.row = pos.row + sum_pos[i][0];
+                    pos.column = pos.column + sum_pos[i][1];
+                    break;
             }
         }
         count--;
@@ -161,7 +164,7 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
             for (int i = 0; i < 8; ++i) {
                 pos = (Position) {.row = play->row + sum_pos[i][0], .column = play->column + sum_pos[i][1]};
 
-                if (pos.column == (7 * (player - 1)) && pos.row == 7 - (7 * (player - 1))) {
+                if ((unsigned) pos.column == (7 * (player - 1)) && (unsigned) pos.row == 7 - (7 * (player - 1))) {
                     flood_fill_matrix[pos.row][pos.column] = count;
                     return reads_flood_fill_matrix(flood_fill_matrix, pos, count);
                 }
