@@ -26,7 +26,7 @@ void write_to_file(const State* const state, const char* const filename){
 
     mkdir(DIR, 0777); // Creates directory if not exists giving permission to every user
 
-    strncat(directory, filename, DIR_MAX);
+    strncat(directory, filename, DIR_MAX - 1);
 
     file = fopen(directory, "w");
 
@@ -63,7 +63,7 @@ int read_from_file(State* const state, const char* const filename){
     Position pos1, pos2;
     Move move;
 
-    strncat(directory, filename, DIR_MAX);
+    strncat(directory, filename, DIR_MAX - 1);
 
     file = fopen(directory, "r");
 
