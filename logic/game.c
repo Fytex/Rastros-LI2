@@ -80,6 +80,10 @@ unsigned int game_finished(const State* const state) {
 }
 
 
+/*
+ * Gives a random position
+ */
+
 Position RandomJog (State* state){
     const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
     const Position last_play=get_last_play(state);
@@ -115,11 +119,20 @@ Position RandomJog (State* state){
 
 }
 
+
+/*
+ * Does a random computer move
+ */
+
 void computer_move2 (State* const state){
     Position pos = RandomJog(state);
     make_move(state,pos);
 }
 
+
+/*
+ * Reads the flood fill matrix, giving a position where to play in order to reach the objetive faster.
+ */
 
 Position reads_flood_fill_matrix(int flood_fill_matrix[][8], Position pos, int count) {
     const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
@@ -140,6 +153,10 @@ Position reads_flood_fill_matrix(int flood_fill_matrix[][8], Position pos, int c
     return pos;
 }
 
+
+/*
+ * Creates the flood fill matrix on a given state of the game, returning to best position to reach the objetive,.
+ */
 
 Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int player) {
     int count = 1;
@@ -186,8 +203,13 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
         position_list2 = clear_list();
         count++;
     }
-    return RandomJog(state);
+    return RandomJog(state); //in case of being impossible to reach the objetive, does a random play
 }
+
+
+/*
+ * Does a computer move using the flood fill method
+ */
 
 void computer_move(State* const state){
     int flood_fill_matrix[8][8];
