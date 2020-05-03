@@ -4,31 +4,31 @@
     <compoundname>Move</compoundname>
     <includes refid="state_8h" local="no">state.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structMove_1abd95c78fcfe275f416eb19dba4452cca" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structMove_1a9a0b3012032fb6be78ce5670f07725da" prot="public" static="no" mutable="no">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
-        <definition>Position Move::player1</definition>
+        <definition>Move::player1</definition>
         <argsstring></argsstring>
         <name>player1</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;player1&apos; contém a jogada do jogador 1 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="35" column="1" bodyfile="projeto/data/state.h" bodystart="35" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="43" column="1" bodyfile="projeto/data/state.h" bodystart="43" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structMove_1ab8155f78b4e25c2743e2792e77a5271e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structMove_1a513faaa3f26fc4226171a97925aafd82" prot="public" static="no" mutable="no">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
-        <definition>Position Move::player2</definition>
+        <definition>Move::player2</definition>
         <argsstring></argsstring>
         <name>player2</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;player2&apos; contém a jogada do jogador 2 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="36" column="1" bodyfile="projeto/data/state.h" bodystart="36" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="44" column="1" bodyfile="projeto/data/state.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,10 +49,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="projeto/data/state.h" line="34" column="1" bodyfile="projeto/data/state.h" bodystart="34" bodyend="37"/>
+    <location file="projeto/data/state.h" line="42" column="1" bodyfile="projeto/data/state.h" bodystart="42" bodyend="45"/>
     <listofallmembers>
-      <member refid="structMove_1abd95c78fcfe275f416eb19dba4452cca" prot="public" virt="non-virtual"><scope>Move</scope><name>player1</name></member>
-      <member refid="structMove_1ab8155f78b4e25c2743e2792e77a5271e" prot="public" virt="non-virtual"><scope>Move</scope><name>player2</name></member>
+      <member refid="structMove_1a9a0b3012032fb6be78ce5670f07725da" prot="public" virt="non-virtual"><scope>Move</scope><name>player1</name></member>
+      <member refid="structMove_1a513faaa3f26fc4226171a97925aafd82" prot="public" virt="non-virtual"><scope>Move</scope><name>player2</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

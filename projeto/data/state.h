@@ -6,17 +6,20 @@ Definição do estado e das funções que o manipulam
 #ifndef RASTROS_LI2_STATE_H
 #define RASTROS_LI2_STATE_H
 
-/**
-\brief Tipo de espaço no tabuleiro
-*/
+/*!É uma enumeração das possiveis casas do tabuleiro*/
 typedef enum {
-    Blank = '.',
-    Black = '#',
-    White = '*'
+    Blank = '.', /*!< Reprensenta uma casa vazia*/
+    Black = '#', /*!< Reprensenta uma casa ocupada*/
+    White = '*'  /*!< Reprensenta a casa atual*/
 } Space;
 
 /**
-\brief Tipo de dados das coordenadas no tabuleiro
+ * @struct Position
+ * @brief Tipo de dados das coordenadas no tabuleiro
+ * @var Position::column
+ * Membro 'column' contém a coordenada y
+ * @var Position::row
+ * Membro 'row' contém a coordenada x
 */
 typedef struct {
     int column;
@@ -29,7 +32,12 @@ typedef struct {
 extern const Position BEGIN_POS;
 
 /**
-\brief Tipo de dados da jogada
+ * @struct Move
+ * @brief Tipo de dados da jogada
+ * @var Move::player1
+ * Membro 'player1' contém a jogada do jogador 1
+ * @var Move::player2
+ * Membro 'player2' contém a jogada do jogador 2
 */
 typedef struct {
     Position player1;
@@ -41,6 +49,20 @@ typedef struct {
 */
 typedef Move Moves[32];
 
+/**
+ * @struct State
+ * @brief Tipo de dados do estado do jogo
+ * @var State::board
+ * Membro 'board' contém o tabuleiro do jogo
+ * @var State::last_play
+ * Membro 'last_play' contém a última jogada feita
+ * @var State:moves
+ * Membro 'moves' contém todas as jogadas realizadas
+ * @var State::move_count
+ * Membro 'count' contém o número de jogadas realizadas
+ * @var State::current_player
+ * Membro 'current_player' contém o jogador que irá jogar a próxima jogada
+*/
 /**
 \brief Tipo de dados do estado do jogo
 */

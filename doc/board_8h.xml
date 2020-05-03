@@ -8,27 +8,27 @@
     <includedby refid="file_8c" local="yes">projeto/data/file.c</includedby>
     <includedby refid="interface_8c" local="yes">projeto/interface/interface.c</includedby>
     <incdepgraph>
-      <node id="42">
+      <node id="38">
         <label>../linked_lists/linked.h</label>
         <link refid="linked_8h"/>
-        <childnode refid="41" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="37">
         <label>../data/state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="39">
+      <node id="35">
         <label>projeto/interface/board.h</label>
         <link refid="board_8h"/>
-        <childnode refid="40" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
       </node>
-      <node id="40">
+      <node id="36">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/interface/board.h" line="18" column="1" bodyfile="projeto/interface/board.c" bodystart="41" bodyend="83"/>
+        <location file="projeto/interface/board.h" line="18" column="1" bodyfile="projeto/interface/board.c" bodystart="45" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="board_8h_1a6552cf500e76e33b8438df2aeae4bf7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/interface/board.h" line="25" column="1" bodyfile="projeto/interface/board.c" bodystart="17" bodyend="34"/>
+        <location file="projeto/interface/board.h" line="25" column="1" bodyfile="projeto/interface/board.c" bodystart="21" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="board_8h_1a09fd2bb064e465593c84b9cb3d94712d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -139,7 +139,43 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/interface/board.h" line="32" column="1" bodyfile="projeto/interface/board.c" bodystart="90" bodyend="147"/>
+        <location file="projeto/interface/board.h" line="32" column="1" bodyfile="projeto/interface/board.c" bodystart="94" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="board_8h_1aa62dede2a58830af1feff1ac5b672383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void type_space</definition>
+        <argsstring>(const Space p, FILE *const file)</argsstring>
+        <name>type_space</name>
+        <param>
+          <type>const <ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>FILE *const</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Dá print de um espaço no ecrã </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o tipo de ficheiro aonde irá imprimir </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/interface/board.h" line="39" column="1" bodyfile="projeto/interface/board.c" bodystart="9" bodyend="15"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -161,7 +197,9 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="board_8h_1a09fd2bb064e465593c84b9cb3d94712d" kindref="member">edit_state_from_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>move_count);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_BOARD_H</highlight></codeline>
+<codeline lineno="39"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="board_8h_1aa62dede2a58830af1feff1ac5b672383" kindref="member">type_space</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/>p,<sp/>FILE*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>file);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_BOARD_H</highlight></codeline>
     </programlisting>
     <location file="projeto/interface/board.h"/>
   </compounddef>

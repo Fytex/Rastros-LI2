@@ -9,7 +9,12 @@
 #include "../data/state.h"
 
 /**
-\brief Tipo de dados de uma lista ligada
+ * @struct List
+ * @brief Tipo de dados de uma lista ligada
+ * @var List::pos
+ * Membro 'pos' contém a informação do nodo
+ * @var List::next
+ * Membro 'next' contém a informação do resto da lista ligada
 */
 typedef struct List{
 
@@ -26,6 +31,7 @@ List* create_list();
 /**
 \brief Obtém a cabeça de uma lista ligada
  @param L Apontador para uma lista ligada
+ @returns A cabeça da lista ligada
 */
 void* get_head(List* L);
 
@@ -54,6 +60,7 @@ List* clear_list (List* L);
 /**
 \brief Confirma se a lista é vazia ou não
  @param L Apontador para uma lista ligada
+ @returns Se é verdadeiro ou falso
 */
 int empty_list(const List* L);
 

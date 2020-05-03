@@ -14,6 +14,10 @@ void type_space(const Space p, FILE* const file) {
 
 }
 
+/*
+ * Prints moves already done
+ */
+
 void print_moves(const State* const state, FILE* const file){
     const int move_count = get_move_count(state);
     int count = 0;

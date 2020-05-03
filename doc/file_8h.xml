@@ -5,17 +5,52 @@
     <includes refid="state_8h" local="yes">state.h</includes>
     <includedby refid="interface_8c" local="yes">projeto/interface/interface.c</includedby>
     <incdepgraph>
-      <node id="14">
+      <node id="10">
         <label>state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="13">
+      <node id="9">
         <label>projeto/data/file.h</label>
         <link refid="file_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="file_8h_1a612428373724b228e831e6887b2304f8" prot="public" static="no">
+        <name>DIR_MAX</name>
+        <initializer>261</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maior comprimento possivel do nome do ficheiro de destino </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/data/file.h" line="12" column="9" bodyfile="projeto/data/file.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" prot="public" static="no">
+        <name>BUFFER_LINE</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer de uma linha </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/data/file.h" line="15" column="9" bodyfile="projeto/data/file.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" prot="public" static="no">
+        <name>DIR</name>
+        <initializer>&quot;saves/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Directoria onde irá gravar os ficheiros </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/data/file.h" line="18" column="9" bodyfile="projeto/data/file.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="file_8h_1a01e535f927226cbc7f8d7b925956e218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -51,7 +86,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/file.h" line="16" column="1" bodyfile="projeto/data/file.c" bodystart="22" bodyend="37"/>
+        <location file="projeto/data/file.h" line="25" column="1" bodyfile="projeto/data/file.c" bodystart="22" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="file_8h_1a84af0931257df58e9c4ffe1825d00ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -88,7 +123,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/file.h" line="24" column="1" bodyfile="projeto/data/file.c" bodystart="58" bodyend="108"/>
+        <location file="projeto/data/file.h" line="33" column="1" bodyfile="projeto/data/file.c" bodystart="64" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="file_8h_1a2d393e2e7c7bcad431678dad8ddde0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -101,7 +136,54 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/file.h" line="29" column="1" bodyfile="projeto/data/file.c" bodystart="115" bodyend="117"/>
+        <location file="projeto/data/file.h" line="38" column="1" bodyfile="projeto/data/file.c" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="file_8h_1a3da8408b674c1d394889268969e7e0b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void line_to_board</definition>
+        <argsstring>(State *state, const int row, const char *const line)</argsstring>
+        <name>line_to_board</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const char *const</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Converte uma linha de caracteres no tipo de casa do tabuleiro nessa linha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha do tabuleiro </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha de caracteres </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/data/file.h" line="46" column="1" bodyfile="projeto/data/file.c" bodystart="44" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -115,13 +197,21 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="state_8h" kindref="compound">state.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a01e535f927226cbc7f8d7b925956e218" kindref="member">write_to_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a84af0931257df58e9c4ffe1825d00ab1" kindref="member">read_from_file</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a2d393e2e7c7bcad431678dad8ddde0bc" kindref="member">print_dir_contents</ref>();</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_FILE_H</highlight></codeline>
+<codeline lineno="12" refid="file_8h_1a612428373724b228e831e6887b2304f8" refkind="member"><highlight class="preprocessor">#define<sp/>DIR_MAX<sp/>261<sp/>//<sp/>255<sp/>(File<sp/>name)<sp/>+<sp/>6<sp/>(saves/)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" refkind="member"><highlight class="preprocessor">#define<sp/>BUFFER_LINE<sp/>11<sp/>//<sp/>Each<sp/>line<sp/>from<sp/>file<sp/>contains<sp/>a<sp/>max<sp/>of<sp/>10<sp/>chars<sp/>+<sp/>1<sp/>(End<sp/>of<sp/>string)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" refkind="member"><highlight class="preprocessor">#define<sp/>DIR<sp/>&quot;saves/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a01e535f927226cbc7f8d7b925956e218" kindref="member">write_to_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a84af0931257df58e9c4ffe1825d00ab1" kindref="member">read_from_file</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a2d393e2e7c7bcad431678dad8ddde0bc" kindref="member">print_dir_contents</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a3da8408b674c1d394889268969e7e0b8" kindref="member">line_to_board</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_FILE_H</highlight></codeline>
     </programlisting>
     <location file="projeto/data/file.h"/>
   </compounddef>

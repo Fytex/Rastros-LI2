@@ -1,44 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
   <compound refid="structList" kind="struct"><name>List</name>
-    <member refid="structList_1a669e3623d578abb990bebefd5e1a8911" kind="variable"><name>pos</name></member>
-    <member refid="structList_1aa395a364263b11a52818d9ab2d1ad768" kind="variable"><name>next</name></member>
+    <member refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" kind="variable"><name>pos</name></member>
+    <member refid="structList_1af83740bdee3301b9627bcc401f1bda1a" kind="variable"><name>next</name></member>
   </compound>
   <compound refid="structMove" kind="struct"><name>Move</name>
-    <member refid="structMove_1abd95c78fcfe275f416eb19dba4452cca" kind="variable"><name>player1</name></member>
-    <member refid="structMove_1ab8155f78b4e25c2743e2792e77a5271e" kind="variable"><name>player2</name></member>
+    <member refid="structMove_1a9a0b3012032fb6be78ce5670f07725da" kind="variable"><name>player1</name></member>
+    <member refid="structMove_1a513faaa3f26fc4226171a97925aafd82" kind="variable"><name>player2</name></member>
   </compound>
   <compound refid="structPosition" kind="struct"><name>Position</name>
-    <member refid="structPosition_1a7bf46f67257b7fd5d6ced23095d15846" kind="variable"><name>column</name></member>
-    <member refid="structPosition_1a224d714110152e1fca26b2437253f56a" kind="variable"><name>row</name></member>
+    <member refid="structPosition_1a061f9745ee889476a341863230c32196" kind="variable"><name>column</name></member>
+    <member refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kind="variable"><name>row</name></member>
   </compound>
   <compound refid="structState" kind="struct"><name>State</name>
-    <member refid="structState_1a40a2af0e5f8ed06f7ead12cff2c23c49" kind="variable"><name>board</name></member>
-    <member refid="structState_1a3f6a64d7daf33ca88bb256ced24906f9" kind="variable"><name>last_play</name></member>
+    <member refid="structState_1a1379f9c5d5e4e988db0cc468e4511165" kind="variable"><name>board</name></member>
+    <member refid="structState_1a9069d9bffebe87f1b1941c8bde8a5fd6" kind="variable"><name>last_play</name></member>
     <member refid="structState_1a9f2c6e182f5062c98a9b23276c8dd4ae" kind="variable"><name>moves</name></member>
-    <member refid="structState_1a2ebf2a07995abe50b4cf476c5ee190a2" kind="variable"><name>move_count</name></member>
-    <member refid="structState_1ace4c5cff51e2987aa03142bc846eaf6b" kind="variable"><name>current_player</name></member>
-  </compound>
-  <compound refid="CMakeCCompilerId_8c" kind="file"><name>CMakeCCompilerId.c</name>
-    <member refid="CMakeCCompilerId_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
-    <member refid="CMakeCCompilerId_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
-    <member refid="CMakeCCompilerId_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
-    <member refid="CMakeCCompilerId_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
-    <member refid="CMakeCCompilerId_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
-    <member refid="CMakeCCompilerId_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
-    <member refid="CMakeCCompilerId_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
-    <member refid="CMakeCCompilerId_8c_1a07f8e5783674099cd7f5110e22a78cdb" kind="define"><name>C_DIALECT</name></member>
-    <member refid="CMakeCCompilerId_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
-    <member refid="CMakeCCompilerId_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
-    <member refid="CMakeCCompilerId_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
-    <member refid="CMakeCCompilerId_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
-    <member refid="CMakeCCompilerId_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
-  </compound>
-  <compound refid="flood__fill_8c" kind="file"><name>flood_fill.c</name>
-    <member refid="flood__fill_8c_1a7789a5e61fdaa67dd602b1fb0487ee2e" kind="function"><name>arithmeticJog</name></member>
-    <member refid="flood__fill_8c_1aa72f4012829ed74e440b2619099b7c26" kind="function"><name>reads_flood_fill_matrix</name></member>
-    <member refid="flood__fill_8c_1a1fe9158f725b6e9e199c68c6ded85fdc" kind="function"><name>flood_fill</name></member>
-    <member refid="flood__fill_8c_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kind="function"><name>computer_move</name></member>
+    <member refid="structState_1a3e3a12012fbe68ee005aa60977d57859" kind="variable"><name>move_count</name></member>
+    <member refid="structState_1a17ffca262a9336716f192d2978187b5f" kind="variable"><name>current_player</name></member>
   </compound>
   <compound refid="file_8c" kind="file"><name>file.c</name>
     <member refid="file_8c_1a612428373724b228e831e6887b2304f8" kind="define"><name>DIR_MAX</name></member>
@@ -50,9 +29,13 @@
     <member refid="file_8c_1a2d393e2e7c7bcad431678dad8ddde0bc" kind="function"><name>print_dir_contents</name></member>
   </compound>
   <compound refid="file_8h" kind="file"><name>file.h</name>
+    <member refid="file_8h_1a612428373724b228e831e6887b2304f8" kind="define"><name>DIR_MAX</name></member>
+    <member refid="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" kind="define"><name>BUFFER_LINE</name></member>
+    <member refid="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" kind="define"><name>DIR</name></member>
     <member refid="file_8h_1a01e535f927226cbc7f8d7b925956e218" kind="function"><name>write_to_file</name></member>
     <member refid="file_8h_1a84af0931257df58e9c4ffe1825d00ab1" kind="function"><name>read_from_file</name></member>
     <member refid="file_8h_1a2d393e2e7c7bcad431678dad8ddde0bc" kind="function"><name>print_dir_contents</name></member>
+    <member refid="file_8h_1a3da8408b674c1d394889268969e7e0b8" kind="function"><name>line_to_board</name></member>
   </compound>
   <compound refid="OS__list_8c" kind="file"><name>OS_list.c</name>
     <member refid="OS__list_8c_1a630970d15f1a15767ad019cd64d61a59" kind="function"><name>print_OS_dir_contents</name></member>
@@ -107,6 +90,7 @@
     <member refid="board_8h_1a7923bf2f7e8a769e82e9b91727908af1" kind="function"><name>print_board</name></member>
     <member refid="board_8h_1a6552cf500e76e33b8438df2aeae4bf7b" kind="function"><name>print_moves</name></member>
     <member refid="board_8h_1a09fd2bb064e465593c84b9cb3d94712d" kind="function"><name>edit_state_from_move</name></member>
+    <member refid="board_8h_1aa62dede2a58830af1feff1ac5b672383" kind="function"><name>type_space</name></member>
   </compound>
   <compound refid="interface_8c" kind="file"><name>interface.c</name>
     <member refid="interface_8c_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
@@ -119,9 +103,14 @@
     <member refid="interface_8c_1a1ea2d736a2aaee6d23a2182e38c10540" kind="function"><name>interpreter</name></member>
   </compound>
   <compound refid="interface_8h" kind="file"><name>interface.h</name>
+    <member refid="interface_8h_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
     <member refid="interface_8h_1a1ea2d736a2aaee6d23a2182e38c10540" kind="function"><name>interpreter</name></member>
     <member refid="interface_8h_1af0e8e5346802ba4161c023d8a3da403d" kind="function"><name>clear_terminal</name></member>
     <member refid="interface_8h_1a83c562733a5753bc24b3891c17cd1e18" kind="function"><name>clear_stdin_buffer</name></member>
+    <member refid="interface_8h_1a06b0a439cf89007a6077a72bc03e4a52" kind="function"><name>display_in_terminal</name></member>
+    <member refid="interface_8h_1adb3017ab58a465c68e608200a4c206a1" kind="function"><name>print_last_info</name></member>
+    <member refid="interface_8h_1a835757b518be097d6d2da74f22131d6b" kind="function"><name>help_terminal</name></member>
+    <member refid="interface_8h_1a5226fbaebab0cf2ef3e2e73740e857a9" kind="function"><name>lower_string</name></member>
   </compound>
   <compound refid="linked_8c" kind="file"><name>linked.c</name>
     <member refid="linked_8c_1a4859d0b217430d5fe5fee2a31477704a" kind="function"><name>create_list</name></member>
@@ -157,6 +146,12 @@
     <member refid="game_8h_1afbd54c47a49e784fa85df4208468b595" kind="function"><name>game_finished</name></member>
     <member refid="game_8h_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kind="function"><name>computer_move</name></member>
     <member refid="game_8h_1ac993a0941042386cf04f8fc19a8c3549" kind="function"><name>computer_move2</name></member>
+    <member refid="game_8h_1a1fe9158f725b6e9e199c68c6ded85fdc" kind="function"><name>flood_fill</name></member>
+    <member refid="game_8h_1aa72f4012829ed74e440b2619099b7c26" kind="function"><name>reads_flood_fill_matrix</name></member>
+    <member refid="game_8h_1a7789a5e61fdaa67dd602b1fb0487ee2e" kind="function"><name>arithmeticJog</name></member>
+    <member refid="game_8h_1adddaa10848d93d837cfa1239a9bf100b" kind="function"><name>randomJog</name></member>
+    <member refid="game_8h_1a6610b6fb6fdf8433d473acbc7cb2f286" kind="function"><name>make_move</name></member>
+    <member refid="game_8h_1a5402eab2f5fe19fc6307d2d9922daf37" kind="function"><name>check_move</name></member>
   </compound>
   <compound refid="main_8c" kind="file"><name>main.c</name>
     <member refid="main_8c_1a1132ae9fa9248f526aa8098431fe3565" kind="function"><name>game_info</name></member>
@@ -165,14 +160,6 @@
   <compound refid="README_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="md_README" kind="page"><name>md_README</name>
-  </compound>
-  <compound refid="dir_f942a7a73394fda25d4213a70555b3f8" kind="dir"><name>cmake-build-debug/CMakeFiles/3.15.3</name>
-  </compound>
-  <compound refid="dir_95e29a8b8ee7c54052c171a88bb95675" kind="dir"><name>cmake-build-debug</name>
-  </compound>
-  <compound refid="dir_f89abcb304c928c7d889aa5625570de5" kind="dir"><name>cmake-build-debug/CMakeFiles</name>
-  </compound>
-  <compound refid="dir_44ea9ed243d3740341f2efeb45271ac4" kind="dir"><name>cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC</name>
   </compound>
   <compound refid="dir_72d6d4d139fc2809cfa24345fee1c786" kind="dir"><name>projeto/data</name>
   </compound>

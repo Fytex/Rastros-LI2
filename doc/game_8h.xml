@@ -5,14 +5,14 @@
     <includes refid="state_8h" local="yes">../data/state.h</includes>
     <includedby refid="interface_8c" local="yes">projeto/interface/interface.c</includedby>
     <incdepgraph>
-      <node id="74">
+      <node id="70">
         <label>../data/state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="73">
+      <node id="69">
         <label>projeto/logic/game.h</label>
         <link refid="game_8h"/>
-        <childnode refid="74" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/logic/game.h" line="30" column="1" bodyfile="flood_fill.c" bodystart="136" bodyend="148"/>
+        <location file="projeto/logic/game.h" line="30" column="1" bodyfile="projeto/logic/game.c" bodystart="267" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="game_8h_1ac993a0941042386cf04f8fc19a8c3549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,6 +130,240 @@
         </inbodydescription>
         <location file="projeto/logic/game.h" line="36" column="1" bodyfile="projeto/logic/game.c" bodystart="127" bodyend="130"/>
       </memberdef>
+      <memberdef kind="function" id="game_8h_1a1fe9158f725b6e9e199c68c6ded85fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position flood_fill</definition>
+        <argsstring>(State *state, int flood_fill_matrix[][8], unsigned int player)</argsstring>
+        <name>flood_fill</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flood_fill_matrix</declname>
+          <array>[][8]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Função que corre o algoritmo flood fill. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flood_fill_matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matriz usada no flood fill </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Jogador que irá fazer a jogada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A jogada que será feita </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/logic/game.h" line="45" column="1" bodyfile="projeto/logic/game.c" bodystart="213" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1aa72f4012829ed74e440b2619099b7c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position reads_flood_fill_matrix</definition>
+        <argsstring>(int flood_fill_matrix[][8], Position pos, int count)</argsstring>
+        <name>reads_flood_fill_matrix</name>
+        <param>
+          <type>int</type>
+          <declname>flood_fill_matrix</declname>
+          <array>[][8]</array>
+        </param>
+        <param>
+          <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Função que analisa a matriz. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flood_fill_matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matriz usada no flood fill </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posição da casa objetivo </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Distância da posição atual </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A jogada que será feita </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/logic/game.h" line="54" column="1" bodyfile="projeto/logic/game.c" bodystart="188" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a7789a5e61fdaa67dd602b1fb0487ee2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position arithmeticJog</definition>
+        <argsstring>(State *state, unsigned int player)</argsstring>
+        <name>arithmeticJog</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Função que procura a posição adjacente mais próxima do objetivo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Jogador atual </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A jogada que será feita </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/logic/game.h" line="62" column="1" bodyfile="projeto/logic/game.c" bodystart="135" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1adddaa10848d93d837cfa1239a9bf100b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position randomJog</definition>
+        <argsstring>(State *state)</argsstring>
+        <name>randomJog</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Função que dá uma posição aleatória adjacente para jogar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A jogada que será feita </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/logic/game.h" line="69" column="1" bodyfile="projeto/logic/game.c" bodystart="87" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a6610b6fb6fdf8433d473acbc7cb2f286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void make_move</definition>
+        <argsstring>(State *const state, const Position pos)</argsstring>
+        <name>make_move</name>
+        <param>
+          <type><ref refid="structState" kindref="compound">State</ref> *const</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Função que faz a jogada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posição onde irá jogar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/logic/game.h" line="76" column="1" bodyfile="projeto/logic/game.c" bodystart="22" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a5402eab2f5fe19fc6307d2d9922daf37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int check_move</definition>
+        <argsstring>(const State *const state, const Position pos)</argsstring>
+        <name>check_move</name>
+        <param>
+          <type>const <ref refid="structState" kindref="compound">State</ref> *const</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structPosition" kindref="compound">Position</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Confirma se é uma jogada válida. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Jogada a confirmar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Se é possivel ou não </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/logic/game.h" line="84" column="1" bodyfile="projeto/logic/game.c" bodystart="9" bodyend="16"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -142,7 +376,7 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../data/state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a6542229192098fbce8231b34a7aa732c" kindref="member">play</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="17"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a6542229192098fbce8231b34a7aa732c" kindref="member">play</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" kindref="member">pos</ref>);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1afbd54c47a49e784fa85df4208468b595" kindref="member">game_finished</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
@@ -150,7 +384,19 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1ac993a0941042386cf04f8fc19a8c3549" kindref="member">computer_move2</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_GAME_H</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="game_8h_1a1fe9158f725b6e9e199c68c6ded85fdc" kindref="member">flood_fill</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[][8]<sp/>,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="game_8h_1aa72f4012829ed74e440b2619099b7c26" kindref="member">reads_flood_fill_matrix</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[][8],<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" kindref="member">pos</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="game_8h_1a7789a5e61fdaa67dd602b1fb0487ee2e" kindref="member">arithmeticJog</ref><sp/>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="game_8h_1adddaa10848d93d837cfa1239a9bf100b" kindref="member">randomJog</ref><sp/>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a6610b6fb6fdf8433d473acbc7cb2f286" kindref="member">make_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" kindref="member">pos</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a5402eab2f5fe19fc6307d2d9922daf37" kindref="member">check_move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" kindref="member">pos</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_GAME_H</highlight></codeline>
     </programlisting>
     <location file="projeto/logic/game.h"/>
   </compounddef>

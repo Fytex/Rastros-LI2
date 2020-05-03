@@ -9,53 +9,53 @@
     <includes refid="board_8h" local="yes">../interface/board.h</includes>
     <includes refid="OS__list_8h" local="yes">list_contents/OS_list.h</includes>
     <incdepgraph>
-      <node id="7">
+      <node id="3">
         <label>sys/stat.h</label>
       </node>
-      <node id="10">
+      <node id="6">
         <label>../linked_lists/linked.h</label>
         <link refid="linked_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="2">
         <label>string.h</label>
       </node>
-      <node id="11">
+      <node id="7">
         <label>list_contents/OS_list.h</label>
         <link refid="OS__list_8h"/>
       </node>
-      <node id="8">
+      <node id="4">
         <label>state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="4">
+      <node id="0">
         <label>projeto/data/file.c</label>
         <link refid="file_8c"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="1" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>../interface/board.h</label>
-        <link refid="board_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
       </node>
       <node id="5">
+        <label>../interface/board.h</label>
+        <link refid="board_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -149,12 +149,34 @@
           <declname>line</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Converte uma linha de caracteres no tipo de casa do tabuleiro nessa linha. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha do tabuleiro </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha de caracteres </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/file.c" line="42" column="1" bodyfile="projeto/data/file.c" bodystart="42" bodyend="55"/>
+        <location file="projeto/data/file.c" line="44" column="1" bodyfile="projeto/data/file.c" bodystart="44" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="file_8c_1ae55b07651ff5a55d103021c2a368a900" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -191,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/file.c" line="58" column="1" bodyfile="projeto/data/file.c" bodystart="58" bodyend="108"/>
+        <location file="projeto/data/file.c" line="64" column="1" bodyfile="projeto/data/file.c" bodystart="64" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a2d393e2e7c7bcad431678dad8ddde0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -204,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/file.c" line="115" column="1" bodyfile="projeto/data/file.c" bodystart="115" bodyend="117"/>
+        <location file="projeto/data/file.c" line="121" column="1" bodyfile="projeto/data/file.c" bodystart="121" bodyend="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -235,12 +257,12 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a01e535f927226cbc7f8d7b925956e218" kindref="member">write_to_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>filename){</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>directory[DIR_MAX]<sp/>=<sp/>DIR;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>directory[<ref refid="file_8h_1a612428373724b228e831e6887b2304f8" kindref="member">DIR_MAX</ref>]<sp/>=<sp/><ref refid="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" kindref="member">DIR</ref>;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*file;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir(DIR,<sp/>0777);<sp/></highlight><highlight class="comment">//<sp/>Creates<sp/>directory<sp/>if<sp/>not<sp/>exists<sp/>giving<sp/>permission<sp/>to<sp/>every<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir(<ref refid="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" kindref="member">DIR</ref>,<sp/>0777);<sp/></highlight><highlight class="comment">//<sp/>Creates<sp/>directory<sp/>if<sp/>not<sp/>exists<sp/>giving<sp/>permission<sp/>to<sp/>every<sp/>user</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/>DIR_MAX<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/><ref refid="file_8h_1a612428373724b228e831e6887b2304f8" kindref="member">DIR_MAX</ref><sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>fopen(directory,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
@@ -251,84 +273,90 @@
 <codeline lineno="37"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>line_to_board(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>line){</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col<sp/>=<sp/>0;<sp/>col<sp/>&lt;<sp/>8;<sp/>++col){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>Convertes<sp/>caracters<sp/>in<sp/>the<sp/>typer<sp/>of<sp/>space<sp/>in<sp/>the<sp/>board</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a3da8408b674c1d394889268969e7e0b8" kindref="member">line_to_board</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>line){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" kindref="member">pos</ref>;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/>row,<sp/>.column<sp/>=<sp/>col};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col<sp/>=<sp/>0;<sp/>col<sp/>&lt;<sp/>8;<sp/>++col){</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(line[col]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>||<sp/>line[col]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(state,<sp/>pos,<sp/>Blank);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(state,<sp/>pos,<sp/>line[col]);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a84af0931257df58e9c4ffe1825d00ab1" kindref="member">read_from_file</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>filename){</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>file_line[BUFFER_LINE];</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>directory[DIR_MAX]<sp/>=<sp/>DIR;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count=0;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*<sp/>file;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos1,<sp/>pos2;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/>DIR_MAX<sp/>-<sp/>1);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>fopen(directory,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file)</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>8;<sp/>++row)<sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets(file_line,<sp/>BUFFER_LINE,<sp/>file)!=<sp/>NULL)</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_to_board(state,<sp/>row,<sp/>file_line);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(state,<sp/>2);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets(file_line,<sp/>BUFFER_LINE,<sp/>file))<sp/>{<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>file<sp/>doesn&apos;t<sp/>end<sp/>(and<sp/>skips<sp/>one<sp/>line)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>fgets(file_line,<sp/>BUFFER_LINE,<sp/>file);<sp/>++count)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.<ref refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kindref="member">row</ref><sp/>=<sp/>row,<sp/>.column<sp/>=<sp/>col};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(line[col]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>||<sp/>line[col]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(state,<sp/>pos,<sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ae885c31e41fc9fcb8ac14496dc4346df" kindref="member">Blank</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(state,<sp/>pos,<sp/>line[col]);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/>Reads<sp/>information<sp/>from<sp/>a<sp/>file</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a84af0931257df58e9c4ffe1825d00ab1" kindref="member">read_from_file</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>filename){</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>file_line[<ref refid="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" kindref="member">BUFFER_LINE</ref>];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>directory[<ref refid="file_8h_1a612428373724b228e831e6887b2304f8" kindref="member">DIR_MAX</ref>]<sp/>=<sp/><ref refid="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" kindref="member">DIR</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count=0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*<sp/>file;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos1,<sp/>pos2;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/><ref refid="file_8h_1a612428373724b228e831e6887b2304f8" kindref="member">DIR_MAX</ref><sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>fopen(directory,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>8;<sp/>++row)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets(file_line,<sp/><ref refid="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" kindref="member">BUFFER_LINE</ref>,<sp/>file)!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="file_8h_1a3da8408b674c1d394889268969e7e0b8" kindref="member">line_to_board</ref>(state,<sp/>row,<sp/>file_line);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_line[6])<sp/>{<sp/></highlight><highlight class="comment">//<sp/>file_line[6]<sp/>is<sp/>&apos;\0&apos;<sp/>if<sp/>no<sp/>second<sp/>Position<sp/>in<sp/>Move</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos1<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal"><sp/>-<sp/>file_line[5],<sp/>.column<sp/>=<sp/>file_line[4]<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos2<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal"><sp/>-<sp/>file_line[8],<sp/>.column<sp/>=<sp/>file_line[7]<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>move<sp/>=<sp/>(<ref refid="structMove" kindref="compound">Move</ref>)<sp/>{.player1<sp/>=<sp/>pos1,<sp/>.player2<sp/>=<sp/>pos2};</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a61b82f0b611dd301bed2dba194f64424" kindref="member">edit_move</ref>(state,<sp/>count,<sp/>move);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>pos2);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos1<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal"><sp/>-<sp/>file_line[5],<sp/>.column<sp/>=<sp/>file_line[4]<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>pos1);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(state,<sp/>1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(state,<sp/>2);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets(file_line,<sp/><ref refid="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" kindref="member">BUFFER_LINE</ref>,<sp/>file))<sp/>{<sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>file<sp/>doesn&apos;t<sp/>end<sp/>(and<sp/>skips<sp/>one<sp/>line)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>fgets(file_line,<sp/><ref refid="file_8h_1a0a4169ac33881cca85ac18de3c0f04eb" kindref="member">BUFFER_LINE</ref>,<sp/>file);<sp/>++count)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_line[6])<sp/>{<sp/></highlight><highlight class="comment">//<sp/>file_line[6]<sp/>is<sp/>&apos;\0&apos;<sp/>if<sp/>no<sp/>second<sp/>Position<sp/>in<sp/>Move</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos1<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.<ref refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kindref="member">row</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal"><sp/>-<sp/>file_line[5],<sp/>.column<sp/>=<sp/>file_line[4]<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos2<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.<ref refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kindref="member">row</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal"><sp/>-<sp/>file_line[8],<sp/>.column<sp/>=<sp/>file_line[7]<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>move<sp/>=<sp/>(<ref refid="structMove" kindref="compound">Move</ref>)<sp/>{.<ref refid="structMove_1a9a0b3012032fb6be78ce5670f07725da" kindref="member">player1</ref><sp/>=<sp/>pos1,<sp/>.player2<sp/>=<sp/>pos2};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a61b82f0b611dd301bed2dba194f64424" kindref="member">edit_move</ref>(state,<sp/>count,<sp/>move);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>pos2);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos2<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/>3,<sp/>.column<sp/>=<sp/>4};<sp/></highlight><highlight class="comment">//<sp/>pos2<sp/>is<sp/>in<sp/>reality<sp/>the<sp/>first<sp/>position<sp/>of<sp/>the<sp/>game</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>pos2);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(state,<sp/>count);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos1<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.<ref refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kindref="member">row</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal"><sp/>-<sp/>file_line[5],<sp/>.column<sp/>=<sp/>file_line[4]<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>pos1);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(state,<sp/>1);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos2<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.<ref refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kindref="member">row</ref><sp/>=<sp/>3,<sp/>.column<sp/>=<sp/>4};<sp/></highlight><highlight class="comment">//<sp/>pos2<sp/>is<sp/>in<sp/>reality<sp/>the<sp/>first<sp/>position<sp/>of<sp/>the<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(state,<sp/>pos2);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="112"><highlight class="comment"><sp/>*<sp/>Prints<sp/>every<sp/>file<sp/>in<sp/>/saves<sp/>(ls<sp/>command)</highlight></codeline>
-<codeline lineno="113"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a2d393e2e7c7bcad431678dad8ddde0bc" kindref="member">print_dir_contents</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="OS__list_8h_1ac1c4c995fab4b5218117a6d2bd9de6df" kindref="member">print_OS_dir_contents</ref>(DIR);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(file);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(state,<sp/>count);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/>Prints<sp/>every<sp/>file<sp/>in<sp/>/saves<sp/>(ls<sp/>command)</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="file_8h_1a2d393e2e7c7bcad431678dad8ddde0bc" kindref="member">print_dir_contents</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="OS__list_8h_1ac1c4c995fab4b5218117a6d2bd9de6df" kindref="member">print_OS_dir_contents</ref>(<ref refid="file_8h_1a6c8de73bb604d91743c7f6f356eb171e" kindref="member">DIR</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="projeto/data/file.c"/>
   </compounddef>

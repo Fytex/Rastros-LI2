@@ -4,31 +4,31 @@
     <compoundname>State</compoundname>
     <includes refid="state_8h" local="no">state.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structState_1a40a2af0e5f8ed06f7ead12cff2c23c49" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structState_1a1379f9c5d5e4e988db0cc468e4511165" prot="public" static="no" mutable="no">
         <type><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref></type>
-        <definition>Space State::board[8][8]</definition>
+        <definition>State::board</definition>
         <argsstring>[8][8]</argsstring>
         <name>board</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;board&apos; contém o tabuleiro do jogo </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="48" column="1" bodyfile="projeto/data/state.h" bodystart="48" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="70" column="1" bodyfile="projeto/data/state.h" bodystart="70" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structState_1a3f6a64d7daf33ca88bb256ced24906f9" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structState_1a9069d9bffebe87f1b1941c8bde8a5fd6" prot="public" static="no" mutable="no">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
-        <definition>Position State::last_play</definition>
+        <definition>State::last_play</definition>
         <argsstring></argsstring>
         <name>last_play</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;last_play&apos; contém a última jogada feita </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="49" column="1" bodyfile="projeto/data/state.h" bodystart="49" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="71" column="1" bodyfile="projeto/data/state.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structState_1a9f2c6e182f5062c98a9b23276c8dd4ae" prot="public" static="no" mutable="no">
         <type><ref refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" kindref="member">Moves</ref></type>
@@ -41,33 +41,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="50" column="1" bodyfile="projeto/data/state.h" bodystart="50" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="72" column="1" bodyfile="projeto/data/state.h" bodystart="72" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structState_1a2ebf2a07995abe50b4cf476c5ee190a2" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structState_1a3e3a12012fbe68ee005aa60977d57859" prot="public" static="no" mutable="no">
         <type>int</type>
-        <definition>int State::move_count</definition>
+        <definition>State::move_count</definition>
         <argsstring></argsstring>
         <name>move_count</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;count&apos; contém o número de jogadas realizadas </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="51" column="1" bodyfile="projeto/data/state.h" bodystart="51" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="73" column="1" bodyfile="projeto/data/state.h" bodystart="73" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structState_1ace4c5cff51e2987aa03142bc846eaf6b" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structState_1a17ffca262a9336716f192d2978187b5f" prot="public" static="no" mutable="no">
         <type>unsigned int</type>
-        <definition>unsigned int State::current_player</definition>
+        <definition>State::current_player</definition>
         <argsstring></argsstring>
         <name>current_player</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;current_player&apos; contém o jogador que irá jogar a próxima jogada </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="52" column="1" bodyfile="projeto/data/state.h" bodystart="52" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="74" column="1" bodyfile="projeto/data/state.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,12 +98,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="projeto/data/state.h" line="47" column="1" bodyfile="projeto/data/state.h" bodystart="47" bodyend="53"/>
+    <location file="projeto/data/state.h" line="69" column="1" bodyfile="projeto/data/state.h" bodystart="69" bodyend="75"/>
     <listofallmembers>
-      <member refid="structState_1a40a2af0e5f8ed06f7ead12cff2c23c49" prot="public" virt="non-virtual"><scope>State</scope><name>board</name></member>
-      <member refid="structState_1ace4c5cff51e2987aa03142bc846eaf6b" prot="public" virt="non-virtual"><scope>State</scope><name>current_player</name></member>
-      <member refid="structState_1a3f6a64d7daf33ca88bb256ced24906f9" prot="public" virt="non-virtual"><scope>State</scope><name>last_play</name></member>
-      <member refid="structState_1a2ebf2a07995abe50b4cf476c5ee190a2" prot="public" virt="non-virtual"><scope>State</scope><name>move_count</name></member>
+      <member refid="structState_1a1379f9c5d5e4e988db0cc468e4511165" prot="public" virt="non-virtual"><scope>State</scope><name>board</name></member>
+      <member refid="structState_1a17ffca262a9336716f192d2978187b5f" prot="public" virt="non-virtual"><scope>State</scope><name>current_player</name></member>
+      <member refid="structState_1a9069d9bffebe87f1b1941c8bde8a5fd6" prot="public" virt="non-virtual"><scope>State</scope><name>last_play</name></member>
+      <member refid="structState_1a3e3a12012fbe68ee005aa60977d57859" prot="public" virt="non-virtual"><scope>State</scope><name>move_count</name></member>
       <member refid="structState_1a9f2c6e182f5062c98a9b23276c8dd4ae" prot="public" virt="non-virtual"><scope>State</scope><name>moves</name></member>
     </listofallmembers>
   </compounddef>

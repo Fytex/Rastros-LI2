@@ -37,7 +37,9 @@ void write_to_file(const State* const state, const char* const filename){
 }
 
 
-
+/*
+ * Convertes caracters in the typer of space in the board
+ */
 
 void line_to_board(State* state, const int row, const char* const line){
     Position pos;
@@ -54,6 +56,10 @@ void line_to_board(State* state, const int row, const char* const line){
     }
 }
 
+
+/*
+ * Reads information from a file
+ */
 
 int read_from_file(State* const state, const char* const filename){
     char file_line[BUFFER_LINE];

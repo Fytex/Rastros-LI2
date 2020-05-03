@@ -31,4 +31,11 @@ void print_moves(const State* state, FILE* file);
 */
 void edit_state_from_move(State* state, int move_count);
 
+/**
+\brief Dá print de um espaço no ecrã
+@param state Apontador para o estado
+@param file Apontador para o tipo de ficheiro aonde irá imprimir
+*/
+void type_space(const Space p, FILE* const file);
+
 #endif //RASTROS_LI2_BOARD_H

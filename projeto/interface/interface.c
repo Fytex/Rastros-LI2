@@ -7,6 +7,7 @@
 #include "../data/file.h"
 #include "board.h"
 
+/* Buffer size */
 #define BUF_SIZE 1024
 
 /*

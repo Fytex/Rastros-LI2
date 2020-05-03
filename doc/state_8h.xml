@@ -14,39 +14,39 @@
     <includedby refid="game_8c" local="yes">projeto/logic/game.c</includedby>
     <includedby refid="main_8c" local="yes">projeto/main.c</includedby>
     <invincdepgraph>
-      <node id="33">
+      <node id="29">
         <label>projeto/interface/interface.h</label>
         <link refid="interface_8h"/>
       </node>
-      <node id="30">
+      <node id="26">
         <label>projeto/linked_lists/linked.h</label>
         <link refid="linked_8h"/>
-        <childnode refid="29" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="28">
+      <node id="24">
         <label>projeto/data/state.h</label>
         <link refid="state_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
       </node>
-      <node id="31">
+      <node id="27">
         <label>projeto/data/file.h</label>
         <link refid="file_8h"/>
       </node>
-      <node id="29">
+      <node id="25">
         <label>projeto/interface/board.h</label>
         <link refid="board_8h"/>
       </node>
-      <node id="32">
+      <node id="28">
         <label>projeto/logic/game.h</label>
         <link refid="game_8h"/>
       </node>
@@ -63,7 +63,7 @@
           <briefdescription>
           </briefdescription>
           <detaileddescription>
-          </detaileddescription>
+<para>Reprensenta uma casa vazia </para>          </detaileddescription>
         </enumvalue>
         <enumvalue id="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ac1e9bce8242f443c54c7405223d616cd" prot="public">
           <name>Black</name>
@@ -71,7 +71,7 @@
           <briefdescription>
           </briefdescription>
           <detaileddescription>
-          </detaileddescription>
+<para>Reprensenta uma casa ocupada </para>          </detaileddescription>
         </enumvalue>
         <enumvalue id="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ab548046646b36c12aa6ba841de500094" prot="public">
           <name>White</name>
@@ -79,15 +79,15 @@
           <briefdescription>
           </briefdescription>
           <detaileddescription>
-          </detaileddescription>
+<para>Reprensenta a casa atual </para>          </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Tipo de espaço no tabuleiro. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>É uma enumeração das possiveis casas do tabuleiro </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="12" column="1" bodyfile="projeto/data/state.h" bodystart="12" bodyend="16"/>
+        <location file="projeto/data/state.h" line="10" column="1" bodyfile="projeto/data/state.h" bodystart="10" bodyend="14"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="42" column="1" bodyfile="projeto/data/state.h" bodystart="42" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="50" column="1" bodyfile="projeto/data/state.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="29" column="1" bodyfile="projeto/data/state.c" bodystart="4" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="32" column="1" bodyfile="projeto/data/state.c" bodystart="4" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -145,7 +145,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="60" column="1" bodyfile="projeto/data/state.c" bodystart="101" bodyend="110"/>
+        <location file="projeto/data/state.h" line="82" column="1" bodyfile="projeto/data/state.c" bodystart="101" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -171,7 +171,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="67" column="1" bodyfile="projeto/data/state.c" bodystart="47" bodyend="49"/>
+        <location file="projeto/data/state.h" line="89" column="1" bodyfile="projeto/data/state.c" bodystart="47" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1ad3485fbb9ac9fab7fb2c0887442cd4d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -197,7 +197,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="74" column="1" bodyfile="projeto/data/state.c" bodystart="56" bodyend="58"/>
+        <location file="projeto/data/state.h" line="96" column="1" bodyfile="projeto/data/state.c" bodystart="56" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
@@ -223,7 +223,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="81" column="1" bodyfile="projeto/data/state.c" bodystart="11" bodyend="13"/>
+        <location file="projeto/data/state.h" line="103" column="1" bodyfile="projeto/data/state.c" bodystart="11" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a8747aeb99529569b0fa1b1cb9f9fe346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structMove" kindref="compound">Move</ref></type>
@@ -260,7 +260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="89" column="1" bodyfile="projeto/data/state.c" bodystart="29" bodyend="31"/>
+        <location file="projeto/data/state.h" line="111" column="1" bodyfile="projeto/data/state.c" bodystart="29" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a9af3e6eb7aa64afbb564251578579fc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref></type>
@@ -297,7 +297,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="97" column="1" bodyfile="projeto/data/state.c" bodystart="74" bodyend="76"/>
+        <location file="projeto/data/state.h" line="119" column="1" bodyfile="projeto/data/state.c" bodystart="74" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a54484320c5ebf53280f267fc90421b69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -344,7 +344,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="105" column="1" bodyfile="projeto/data/state.c" bodystart="83" bodyend="85"/>
+        <location file="projeto/data/state.h" line="127" column="1" bodyfile="projeto/data/state.c" bodystart="83" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a916544e632eb481b193022e4ba387e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -380,7 +380,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="112" column="1" bodyfile="projeto/data/state.c" bodystart="92" bodyend="94"/>
+        <location file="projeto/data/state.h" line="134" column="1" bodyfile="projeto/data/state.c" bodystart="92" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1aad9dc5f36b2d4fb3feba1f250d1680cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -416,7 +416,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="119" column="1" bodyfile="projeto/data/state.c" bodystart="117" bodyend="122"/>
+        <location file="projeto/data/state.h" line="141" column="1" bodyfile="projeto/data/state.c" bodystart="117" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1ae597828ee4e1694789bbc85af75df1b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -452,7 +452,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="126" column="1" bodyfile="projeto/data/state.c" bodystart="20" bodyend="22"/>
+        <location file="projeto/data/state.h" line="148" column="1" bodyfile="projeto/data/state.c" bodystart="20" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a1079c12d44377b654024bd5961fcaa21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -488,7 +488,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="133" column="1" bodyfile="projeto/data/state.c" bodystart="65" bodyend="67"/>
+        <location file="projeto/data/state.h" line="155" column="1" bodyfile="projeto/data/state.c" bodystart="65" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a61b82f0b611dd301bed2dba194f64424" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -535,7 +535,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="141" column="1" bodyfile="projeto/data/state.c" bodystart="38" bodyend="40"/>
+        <location file="projeto/data/state.h" line="163" column="1" bodyfile="projeto/data/state.c" bodystart="38" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="state_8h_1a94e97019246bbb8156c79b8b0579b2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -560,7 +560,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="147" column="1" bodyfile="projeto/data/state.c" bodystart="129" bodyend="142"/>
+        <location file="projeto/data/state.h" line="169" column="1" bodyfile="projeto/data/state.c" bodystart="129" bodyend="142"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -572,61 +572,61 @@
 <codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>RASTROS_LI2_STATE_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RASTROS_LI2_STATE_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>Blank<sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>Black<sp/>=<sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>White<sp/>=<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">}<sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref>;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="structPosition" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>column;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">}<sp/><ref refid="structPosition" kindref="compound">Position</ref>;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="state_8h_1ad46554c100e50ddc3e0bb288f010b0c1" kindref="member">BEGIN_POS</ref>;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="structMove" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>player1;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>player2;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal">}<sp/><ref refid="structMove" kindref="compound">Move</ref>;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/><ref refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" kindref="member">Moves</ref>[32];</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="structState" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/>board[8][8];</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>last_play;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" kindref="member">Moves</ref><sp/>moves;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>move_count;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_player;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}<sp/><ref refid="structState" kindref="compound">State</ref>;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a8f908f2df8056cc97a448282382fd540" kindref="member">swap_players</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" kindref="member">get_current_player</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ad3485fbb9ac9fab7fb2c0887442cd4d5" kindref="member">get_move_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><ref refid="structMove" kindref="compound">Move</ref><sp/><ref refid="state_8h_1a8747aeb99529569b0fa1b1cb9f9fe346" kindref="member">get_move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx);</highlight></codeline>
+<codeline lineno="10" refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ae885c31e41fc9fcb8ac14496dc4346df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ae885c31e41fc9fcb8ac14496dc4346df" kindref="member">Blank</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="12" refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ac1e9bce8242f443c54c7405223d616cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ac1e9bce8242f443c54c7405223d616cd" kindref="member">Black</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="13" refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ab548046646b36c12aa6ba841de500094" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8ab548046646b36c12aa6ba841de500094" kindref="member">White</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}<sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="structPosition" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="structPosition_1a061f9745ee889476a341863230c32196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structPosition_1a061f9745ee889476a341863230c32196" kindref="member">column</ref>;</highlight></codeline>
+<codeline lineno="26" refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" kindref="member">row</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/><ref refid="structPosition" kindref="compound">Position</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="state_8h_1ad46554c100e50ddc3e0bb288f010b0c1" kindref="member">BEGIN_POS</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structMove" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43" refid="structMove_1a9a0b3012032fb6be78ce5670f07725da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structMove_1a9a0b3012032fb6be78ce5670f07725da" kindref="member">player1</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structMove_1a513faaa3f26fc4226171a97925aafd82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structMove_1a513faaa3f26fc4226171a97925aafd82" kindref="member">player2</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="structMove" kindref="compound">Move</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/><ref refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" kindref="member">Moves</ref>[32];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structState" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70" refid="structState_1a1379f9c5d5e4e988db0cc468e4511165" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/>board[8][8];</highlight></codeline>
+<codeline lineno="71" refid="structState_1a9069d9bffebe87f1b1941c8bde8a5fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structState_1a9069d9bffebe87f1b1941c8bde8a5fd6" kindref="member">last_play</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="state_8h_1a56a7a8f227c1cea3009cfd9997db57f1" kindref="member">Moves</ref><sp/>moves;</highlight></codeline>
+<codeline lineno="73" refid="structState_1a3e3a12012fbe68ee005aa60977d57859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structState_1a3e3a12012fbe68ee005aa60977d57859" kindref="member">move_count</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structState_1a17ffca262a9336716f192d2978187b5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structState_1a17ffca262a9336716f192d2978187b5f" kindref="member">current_player</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><ref refid="structState" kindref="compound">State</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a8f908f2df8056cc97a448282382fd540" kindref="member">swap_players</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" kindref="member">get_current_player</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/><ref refid="state_8h_1a9af3e6eb7aa64afbb564251578579fc5" kindref="member">get_position_space</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos,<sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/>space);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1aad9dc5f36b2d4fb3feba1f250d1680cc" kindref="member">append_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move);</highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ad3485fbb9ac9fab7fb2c0887442cd4d5" kindref="member">get_move_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="structMove" kindref="compound">Move</ref><sp/><ref refid="state_8h_1a8747aeb99529569b0fa1b1cb9f9fe346" kindref="member">get_move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/><ref refid="state_8h_1a9af3e6eb7aa64afbb564251578579fc5" kindref="member">get_position_space</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a61b82f0b611dd301bed2dba194f64424" kindref="member">edit_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move);</highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a54484320c5ebf53280f267fc90421b69" kindref="member">edit_position_space</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos,<sp/><ref refid="state_8h_1ab11a1dda34491acff014ddfc9e6bafb8" kindref="member">Space</ref><sp/>space);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a916544e632eb481b193022e4ba387e4d" kindref="member">edit_current_player</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1aad9dc5f36b2d4fb3feba1f250d1680cc" kindref="member">append_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move);</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a94e97019246bbb8156c79b8b0579b2a6" kindref="member">set_default_state</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_STATE_H</highlight></codeline>
+<codeline lineno="148"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1ae597828ee4e1694789bbc85af75df1b9" kindref="member">edit_last_play</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a1079c12d44377b654024bd5961fcaa21" kindref="member">edit_move_count</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a61b82f0b611dd301bed2dba194f64424" kindref="member">edit_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="state_8h_1a94e97019246bbb8156c79b8b0579b2a6" kindref="member">set_default_state</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_STATE_H</highlight></codeline>
     </programlisting>
     <location file="projeto/data/state.h"/>
   </compounddef>

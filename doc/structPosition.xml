@@ -4,41 +4,41 @@
     <compoundname>Position</compoundname>
     <includes refid="state_8h" local="no">state.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structPosition_1a7bf46f67257b7fd5d6ced23095d15846" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structPosition_1a061f9745ee889476a341863230c32196" prot="public" static="no" mutable="no">
         <type>int</type>
-        <definition>int Position::column</definition>
+        <definition>Position::column</definition>
         <argsstring></argsstring>
         <name>column</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;column&apos; contém a coordenada y </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="22" column="1" bodyfile="projeto/data/state.h" bodystart="22" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="25" column="1" bodyfile="projeto/data/state.h" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structPosition_1a224d714110152e1fca26b2437253f56a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" prot="public" static="no" mutable="no">
         <type>int</type>
-        <definition>int Position::row</definition>
+        <definition>Position::row</definition>
         <argsstring></argsstring>
         <name>row</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;row&apos; contém a coordenada x </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/data/state.h" line="23" column="1" bodyfile="projeto/data/state.h" bodystart="23" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="26" column="1" bodyfile="projeto/data/state.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Tipo de dados das coordenadas no tabuleiro. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="projeto/data/state.h" line="21" column="1" bodyfile="projeto/data/state.h" bodystart="21" bodyend="24"/>
+    <location file="projeto/data/state.h" line="24" column="1" bodyfile="projeto/data/state.h" bodystart="24" bodyend="27"/>
     <listofallmembers>
-      <member refid="structPosition_1a7bf46f67257b7fd5d6ced23095d15846" prot="public" virt="non-virtual"><scope>Position</scope><name>column</name></member>
-      <member refid="structPosition_1a224d714110152e1fca26b2437253f56a" prot="public" virt="non-virtual"><scope>Position</scope><name>row</name></member>
+      <member refid="structPosition_1a061f9745ee889476a341863230c32196" prot="public" virt="non-virtual"><scope>Position</scope><name>column</name></member>
+      <member refid="structPosition_1a3175ca87f78b2b1aa1791dd9a958ae10" prot="public" virt="non-virtual"><scope>Position</scope><name>row</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -4,31 +4,31 @@
     <compoundname>List</compoundname>
     <includes refid="linked_8h" local="no">linked.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structList_1a669e3623d578abb990bebefd5e1a8911" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structList_1a6ec71a60bfa3755601f58acb43568e3a" prot="public" static="no" mutable="no">
         <type>void *</type>
-        <definition>void* List::pos</definition>
+        <definition>List::pos</definition>
         <argsstring></argsstring>
         <name>pos</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;pos&apos; contém a informação do nodo </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/linked_lists/linked.h" line="16" column="1" bodyfile="projeto/linked_lists/linked.h" bodystart="16" bodyend="-1"/>
+        <location file="projeto/linked_lists/linked.h" line="21" column="1" bodyfile="projeto/linked_lists/linked.h" bodystart="21" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structList_1aa395a364263b11a52818d9ab2d1ad768" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structList_1af83740bdee3301b9627bcc401f1bda1a" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structList" kindref="compound">List</ref> *</type>
-        <definition>struct List* List::next</definition>
+        <definition>List::next</definition>
         <argsstring></argsstring>
         <name>next</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Membro &apos;next&apos; contém a informação do resto da lista ligada </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="projeto/linked_lists/linked.h" line="17" column="1" bodyfile="projeto/linked_lists/linked.h" bodystart="17" bodyend="-1"/>
+        <location file="projeto/linked_lists/linked.h" line="22" column="1" bodyfile="projeto/linked_lists/linked.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -44,10 +44,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="projeto/linked_lists/linked.h" line="14" column="1" bodyfile="projeto/linked_lists/linked.h" bodystart="14" bodyend="19"/>
+    <location file="projeto/linked_lists/linked.h" line="19" column="1" bodyfile="projeto/linked_lists/linked.h" bodystart="19" bodyend="24"/>
     <listofallmembers>
-      <member refid="structList_1aa395a364263b11a52818d9ab2d1ad768" prot="public" virt="non-virtual"><scope>List</scope><name>next</name></member>
-      <member refid="structList_1a669e3623d578abb990bebefd5e1a8911" prot="public" virt="non-virtual"><scope>List</scope><name>pos</name></member>
+      <member refid="structList_1af83740bdee3301b9627bcc401f1bda1a" prot="public" virt="non-virtual"><scope>List</scope><name>next</name></member>
+      <member refid="structList_1a6ec71a60bfa3755601f58acb43568e3a" prot="public" virt="non-virtual"><scope>List</scope><name>pos</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
