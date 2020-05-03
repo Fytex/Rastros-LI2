@@ -24,4 +24,6 @@ To generate the documentation its necessary to install doxygen and then execute 
 
 Group: 1
 
-Shift: 2
+Shift: PL2
+
+Course : MIEI
