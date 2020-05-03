@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/state.h" line="22" column="1" bodyfile="data/state.h" bodystart="22" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="22" column="1" bodyfile="projeto/data/state.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structPosition_1a224d714110152e1fca26b2437253f56a" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,14 +28,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/state.h" line="23" column="1" bodyfile="data/state.h" bodystart="23" bodyend="-1"/>
+        <location file="projeto/data/state.h" line="23" column="1" bodyfile="projeto/data/state.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Tipo de dados das coordenadas no tabuleiro. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="data/state.h" line="21" column="1" bodyfile="data/state.h" bodystart="21" bodyend="24"/>
+    <location file="projeto/data/state.h" line="21" column="1" bodyfile="projeto/data/state.h" bodystart="21" bodyend="24"/>
     <listofallmembers>
       <member refid="structPosition_1a7bf46f67257b7fd5d6ced23095d15846" prot="public" virt="non-virtual"><scope>Position</scope><name>column</name></member>
       <member refid="structPosition_1a224d714110152e1fca26b2437253f56a" prot="public" virt="non-virtual"><scope>Position</scope><name>row</name></member>

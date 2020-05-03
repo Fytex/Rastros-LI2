@@ -108,9 +108,12 @@ Position randomJog (State* state){
     int random = rand() % length;
     Position* jogpos = get_head(position_list);
 
-    for (int j = 0 ; j< random ; j++)
-        *jogpos = positions[j];
+    for (int j = 0 ; j< random ; j++) {
+        jogpos = get_head(position_list);
+        position_list = remove_head(position_list);
+    }
 
+    position_list = clear_list(position_list);
 
     return *jogpos;
 
@@ -209,15 +212,14 @@ Position reads_flood_fill_matrix(int flood_fill_matrix[][8], Position pos, int c
 Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int player) {
     int count = 1;
     const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
-    Position last_play[1];
-    last_play[0] = get_last_play(state);
+    Position last_play = get_last_play(state);
     Position positions[64], pos;
     Position* play;
     int length = 0;
     List* position_list1 = create_list();
     List* position_list2 = create_list();
 
-    position_list1 = head_insert (position_list1, last_play);
+    position_list1 = head_insert (position_list1, &last_play);
 
     while (position_list1 != NULL) {
         while (position_list1 != NULL) {
@@ -228,11 +230,12 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
 
                 if ((unsigned) pos.column == (7 * (player - 1)) && (unsigned) pos.row == 7 - (7 * (player - 1))) {
                     flood_fill_matrix[pos.row][pos.column] = count;
+
+                    position_list1 = clear_list(position_list1);
+                    position_list2 = clear_list(position_list2);
+
                     return reads_flood_fill_matrix(flood_fill_matrix, pos, count);
                 }
-
-                if ((unsigned) pos.row == (7 * (player - 1)) && (unsigned) pos.column == 7 - (7 * (player - 1)))
-                    flood_fill_matrix[pos.row][pos.column] = -1;
 
                 else if (pos.row >= 0 && pos.row < 8 && pos.column >= 0 && pos.column < 8 &&
                     flood_fill_matrix[pos.row][pos.column] == 0) {
@@ -249,7 +252,7 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
 
         position_list1 = position_list2;
         position_list2 = create_list();
-        count++;
+        ++count;
     }
 
     return arithmeticJog(state, player); //in case of being impossible to reach the objetive, does an arithmetic calculation
@@ -262,11 +265,13 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
 
 void computer_move(State* const state){
     int flood_fill_matrix[8][8];
+    int player = get_current_player(state);
 
     for(int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++){
-            if (state->board[i][j] == Blank)
+            if ((i != (7 * (player - 1)) || j != 7 - (7 * (player - 1))) && state->board[i][j] == Blank)
                 flood_fill_matrix[i][j] = 0;
+
             else flood_fill_matrix[i][j] = -1;
         }
     }

@@ -3,31 +3,31 @@
   <compounddef id="linked_8h" kind="file" language="C++">
     <compoundname>linked.h</compoundname>
     <includes refid="state_8h" local="yes">../data/state.h</includes>
-    <includedby refid="board_8h" local="yes">interface/board.h</includedby>
-    <includedby refid="linked_8c" local="yes">linked_lists/linked.c</includedby>
-    <includedby refid="game_8c" local="yes">logic/game.c</includedby>
+    <includedby refid="board_8h" local="yes">projeto/interface/board.h</includedby>
+    <includedby refid="linked_8c" local="yes">projeto/linked_lists/linked.c</includedby>
+    <includedby refid="game_8c" local="yes">projeto/logic/game.c</includedby>
     <incdepgraph>
-      <node id="63">
-        <label>../data/state.h</label>
-        <link refid="state_8h"/>
-      </node>
-      <node id="62">
-        <label>linked_lists/linked.h</label>
-        <link refid="linked_8h"/>
-        <childnode refid="63" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="65">
-        <label>interface/board.h</label>
-        <link refid="board_8h"/>
-      </node>
       <node id="64">
-        <label>linked_lists/linked.h</label>
+        <label>projeto/linked_lists/linked.h</label>
         <link refid="linked_8h"/>
         <childnode refid="65" relation="include">
         </childnode>
+      </node>
+      <node id="65">
+        <label>../data/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="66">
+        <label>projeto/linked_lists/linked.h</label>
+        <link refid="linked_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>projeto/interface/board.h</label>
+        <link refid="board_8h"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structList" prot="public">List</innerclass>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="19" column="1"/>
+        <location file="projeto/linked_lists/linked.h" line="19" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="24" column="1" bodyfile="linked_lists/linked.c" bodystart="4" bodyend="12"/>
+        <location file="projeto/linked_lists/linked.h" line="24" column="1" bodyfile="projeto/linked_lists/linked.c" bodystart="4" bodyend="10"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="30" column="1" bodyfile="linked_lists/linked.c" bodystart="24" bodyend="28"/>
+        <location file="projeto/linked_lists/linked.h" line="30" column="1" bodyfile="projeto/linked_lists/linked.c" bodystart="22" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structList" kindref="compound">List</ref> *</type>
@@ -120,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="38" column="1" bodyfile="linked_lists/linked.c" bodystart="14" bodyend="22"/>
+        <location file="projeto/linked_lists/linked.h" line="38" column="1" bodyfile="projeto/linked_lists/linked.c" bodystart="12" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structList" kindref="compound">List</ref> *</type>
@@ -146,7 +146,33 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="45" column="1" bodyfile="linked_lists/linked.c" bodystart="30" bodyend="41"/>
+        <location file="projeto/linked_lists/linked.h" line="45" column="1" bodyfile="projeto/linked_lists/linked.c" bodystart="28" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="linked_8h_1a6df33bdc0f163281cf3b226f7748cad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structList" kindref="compound">List</ref> *</type>
+        <definition>List* clear_list</definition>
+        <argsstring>(List *L)</argsstring>
+        <name>clear_list</name>
+        <param>
+          <type><ref refid="structList" kindref="compound">List</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+<para>Remove o elemento na cabeça de uma lista ligada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para uma lista ligada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A lista ligada depois de limpar a informação </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="projeto/linked_lists/linked.h" line="52" column="1" bodyfile="projeto/linked_lists/linked.c" bodystart="41" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -171,7 +197,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="51" column="1" bodyfile="linked_lists/linked.c" bodystart="43" bodyend="47"/>
+        <location file="projeto/linked_lists/linked.h" line="58" column="1" bodyfile="projeto/linked_lists/linked.c" bodystart="49" bodyend="53"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -200,10 +226,12 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_LINKED_H</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a6df33bdc0f163281cf3b226f7748cad9" kindref="member">clear_list</ref><sp/>(<ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_LINKED_H</highlight></codeline>
     </programlisting>
-    <location file="linked_lists/linked.h"/>
+    <location file="projeto/linked_lists/linked.h"/>
   </compounddef>
 </doxygen>

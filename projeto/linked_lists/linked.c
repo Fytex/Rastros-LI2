@@ -38,6 +38,14 @@ List* remove_head(List* const L) {
 
 }
 
+List*  clear_list (List* L) {
+
+    while (L != NULL)
+        L = remove_head(L);
+
+    return L;
+}
+
 int empty_list (const List* const L){
 
     return L ? 1 : 0;

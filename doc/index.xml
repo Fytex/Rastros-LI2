@@ -34,6 +34,12 @@
     <member refid="CMakeCCompilerId_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
     <member refid="CMakeCCompilerId_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="flood__fill_8c" kind="file"><name>flood_fill.c</name>
+    <member refid="flood__fill_8c_1a7789a5e61fdaa67dd602b1fb0487ee2e" kind="function"><name>arithmeticJog</name></member>
+    <member refid="flood__fill_8c_1aa72f4012829ed74e440b2619099b7c26" kind="function"><name>reads_flood_fill_matrix</name></member>
+    <member refid="flood__fill_8c_1a1fe9158f725b6e9e199c68c6ded85fdc" kind="function"><name>flood_fill</name></member>
+    <member refid="flood__fill_8c_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kind="function"><name>computer_move</name></member>
+  </compound>
   <compound refid="file_8c" kind="file"><name>file.c</name>
     <member refid="file_8c_1a612428373724b228e831e6887b2304f8" kind="define"><name>DIR_MAX</name></member>
     <member refid="file_8c_1a0a4169ac33881cca85ac18de3c0f04eb" kind="define"><name>BUFFER_LINE</name></member>
@@ -122,6 +128,7 @@
     <member refid="linked_8c_1ab9b410d6fea01244d5d765ee3f86d012" kind="function"><name>head_insert</name></member>
     <member refid="linked_8c_1a7906e3011ed4a64a7330bde89e4feda0" kind="function"><name>get_head</name></member>
     <member refid="linked_8c_1a6209581b2c176218c89cb75f334fbc69" kind="function"><name>remove_head</name></member>
+    <member refid="linked_8c_1a6df33bdc0f163281cf3b226f7748cad9" kind="function"><name>clear_list</name></member>
     <member refid="linked_8c_1a7e71778dd41783b93e9d41e6796b5213" kind="function"><name>empty_list</name></member>
   </compound>
   <compound refid="linked_8h" kind="file"><name>linked.h</name>
@@ -130,6 +137,7 @@
     <member refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kind="function"><name>get_head</name></member>
     <member refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kind="function"><name>head_insert</name></member>
     <member refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kind="function"><name>remove_head</name></member>
+    <member refid="linked_8h_1a6df33bdc0f163281cf3b226f7748cad9" kind="function"><name>clear_list</name></member>
     <member refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kind="function"><name>empty_list</name></member>
   </compound>
   <compound refid="game_8c" kind="file"><name>game.c</name>
@@ -166,14 +174,16 @@
   </compound>
   <compound refid="dir_44ea9ed243d3740341f2efeb45271ac4" kind="dir"><name>cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC</name>
   </compound>
-  <compound refid="dir_472fafaf0f039b9e6b043966c1ef7dbf" kind="dir"><name>data</name>
+  <compound refid="dir_72d6d4d139fc2809cfa24345fee1c786" kind="dir"><name>projeto/data</name>
   </compound>
-  <compound refid="dir_b31d54d5631803016a26f28213a41162" kind="dir"><name>interface</name>
+  <compound refid="dir_3924cb794333f3827dc4f454bbc6e9ca" kind="dir"><name>projeto/interface</name>
   </compound>
-  <compound refid="dir_ea5ca36fc7beffb6a048079f0a6091b0" kind="dir"><name>linked_lists</name>
+  <compound refid="dir_6e2b1bb48cfb39c2390cb60b879a9e39" kind="dir"><name>projeto/linked_lists</name>
   </compound>
-  <compound refid="dir_b68836426651c691d15e8ce60b055874" kind="dir"><name>data/list_contents</name>
+  <compound refid="dir_6d22bba2c21c92b5387a2c0c86e32a20" kind="dir"><name>projeto/data/list_contents</name>
   </compound>
-  <compound refid="dir_0f9694b8de2575528c6c0ae9f79dda65" kind="dir"><name>logic</name>
+  <compound refid="dir_9aed3e724a98e0e08878e2eb37f766cc" kind="dir"><name>projeto/logic</name>
+  </compound>
+  <compound refid="dir_7e5d7e004b344f685f59d01929914aa0" kind="dir"><name>projeto</name>
   </compound>
 </doxygenindex>

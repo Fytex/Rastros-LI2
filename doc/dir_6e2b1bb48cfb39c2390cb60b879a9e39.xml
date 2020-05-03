@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
-  <compounddef id="dir_ea5ca36fc7beffb6a048079f0a6091b0" kind="dir">
-    <compoundname>linked_lists</compoundname>
+  <compounddef id="dir_6e2b1bb48cfb39c2390cb60b879a9e39" kind="dir">
+    <compoundname>projeto/linked_lists</compoundname>
     <innerfile refid="linked_8c">linked.c</innerfile>
     <innerfile refid="linked_8h">linked.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="linked_lists/"/>
+    <location file="projeto/linked_lists/"/>
   </compounddef>
 </doxygen>

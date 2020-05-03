@@ -6,27 +6,27 @@
     <includes refid="state_8h" local="yes">../data/state.h</includes>
     <includes refid="linked_8h" local="yes">../linked_lists/linked.h</includes>
     <incdepgraph>
-      <node id="66">
-        <label>logic/game.c</label>
-        <link refid="game_8c"/>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-      </node>
-      <node id="67">
+      <node id="69">
         <label>stdlib.h</label>
       </node>
-      <node id="68">
+      <node id="71">
+        <label>../linked_lists/linked.h</label>
+        <link refid="linked_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
         <label>../data/state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="69">
-        <label>../linked_lists/linked.h</label>
-        <link refid="linked_8h"/>
-        <childnode refid="68" relation="include">
+      <node id="68">
+        <label>projeto/logic/game.c</label>
+        <link refid="game_8c"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="9" column="1" bodyfile="logic/game.c" bodystart="9" bodyend="16"/>
+        <location file="projeto/logic/game.c" line="9" column="1" bodyfile="projeto/logic/game.c" bodystart="9" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1a6610b6fb6fdf8433d473acbc7cb2f286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="22" column="1" bodyfile="logic/game.c" bodystart="22" bodyend="38"/>
+        <location file="projeto/logic/game.c" line="22" column="1" bodyfile="projeto/logic/game.c" bodystart="22" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1a78bc18cb927e8cee737b552691da5d5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="45" column="1" bodyfile="logic/game.c" bodystart="45" bodyend="53"/>
+        <location file="projeto/logic/game.c" line="45" column="1" bodyfile="projeto/logic/game.c" bodystart="45" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1a69062e4256ea65a0e8d4d5bf9e090965" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -134,7 +134,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="60" column="1" bodyfile="logic/game.c" bodystart="60" bodyend="80"/>
+        <location file="projeto/logic/game.c" line="60" column="1" bodyfile="projeto/logic/game.c" bodystart="60" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1adddaa10848d93d837cfa1239a9bf100b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="87" column="1" bodyfile="logic/game.c" bodystart="87" bodyend="117"/>
+        <location file="projeto/logic/game.c" line="87" column="1" bodyfile="projeto/logic/game.c" bodystart="87" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1ac993a0941042386cf04f8fc19a8c3549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -176,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="124" column="1" bodyfile="logic/game.c" bodystart="124" bodyend="127"/>
+        <location file="projeto/logic/game.c" line="127" column="1" bodyfile="projeto/logic/game.c" bodystart="127" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1a7789a5e61fdaa67dd602b1fb0487ee2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="132" column="1" bodyfile="logic/game.c" bodystart="132" bodyend="178"/>
+        <location file="projeto/logic/game.c" line="135" column="1" bodyfile="projeto/logic/game.c" bodystart="135" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1aa72f4012829ed74e440b2619099b7c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="185" column="1" bodyfile="logic/game.c" bodystart="185" bodyend="202"/>
+        <location file="projeto/logic/game.c" line="188" column="1" bodyfile="projeto/logic/game.c" bodystart="188" bodyend="205"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1a1fe9158f725b6e9e199c68c6ded85fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structPosition" kindref="compound">Position</ref></type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="209" column="1" bodyfile="logic/game.c" bodystart="209" bodyend="256"/>
+        <location file="projeto/logic/game.c" line="212" column="1" bodyfile="projeto/logic/game.c" bodystart="212" bodyend="260"/>
       </memberdef>
       <memberdef kind="function" id="game_8c_1a55e8ed0ae86cf800ead50f70d2c0b2d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +274,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.c" line="263" column="1" bodyfile="logic/game.c" bodystart="263" bodyend="275"/>
+        <location file="projeto/logic/game.c" line="267" column="1" bodyfile="projeto/logic/game.c" bodystart="267" bodyend="281"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -392,174 +392,180 @@
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>random<sp/>=<sp/>rand()<sp/>%<sp/>length;</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/>jogpos<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0<sp/>;<sp/>j&lt;<sp/>random<sp/>;<sp/>j++)</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*jogpos<sp/>=<sp/>positions[j];</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*jogpos;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0<sp/>;<sp/>j&lt;<sp/>random<sp/>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogpos<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1a6df33bdc0f163281cf3b226f7748cad9" kindref="member">clear_list</ref>(position_list);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*jogpos;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="121"><highlight class="comment"><sp/>*<sp/>Does<sp/>a<sp/>random<sp/>computer<sp/>move</highlight></codeline>
-<codeline lineno="122"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1ac993a0941042386cf04f8fc19a8c3549" kindref="member">computer_move2</ref><sp/>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state){</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos<sp/>=<sp/>randomJog(state);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>make_move(state,pos);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="130"><highlight class="comment"><sp/>*<sp/>Choses<sp/>the<sp/>adjacent<sp/>position<sp/>that<sp/>is<sp/>near<sp/>from<sp/>the<sp/>objetive</highlight></codeline>
-<codeline lineno="131"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/>arithmeticJog<sp/>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player){</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d,<sp/>d1;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/>jogpos;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/>jogpos1;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum_pos[8][2]<sp/>=<sp/>{{1,<sp/>1},<sp/>{1,<sp/>0},<sp/>{1,<sp/>-1},<sp/>{0,<sp/>1},<sp/>{0,<sp/>-1},<sp/>{-1,<sp/>1},<sp/>{-1,<sp/>0},<sp/>{-1,<sp/>-1}};</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>last_play=<ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(state);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>positions[8],pos;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>8;<sp/>++i)<sp/>{</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/>last_play.row<sp/>+<sp/>sum_pos[i][0],<sp/>.column<sp/>=<sp/>last_play.column<sp/>+<sp/>sum_pos[i][1]};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/>Does<sp/>a<sp/>random<sp/>computer<sp/>move</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1ac993a0941042386cf04f8fc19a8c3549" kindref="member">computer_move2</ref><sp/>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state){</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos<sp/>=<sp/>randomJog(state);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>make_move(state,pos);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/>*<sp/>Choses<sp/>the<sp/>adjacent<sp/>position<sp/>that<sp/>is<sp/>near<sp/>from<sp/>the<sp/>objetive</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/>arithmeticJog<sp/>(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player){</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d,<sp/>d1;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/>jogpos;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/>jogpos1;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum_pos[8][2]<sp/>=<sp/>{{1,<sp/>1},<sp/>{1,<sp/>0},<sp/>{1,<sp/>-1},<sp/>{0,<sp/>1},<sp/>{0,<sp/>-1},<sp/>{-1,<sp/>1},<sp/>{-1,<sp/>0},<sp/>{-1,<sp/>-1}};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>last_play=<ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(state);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>positions[8],pos;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos.row<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.row<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>pos.column<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.column<sp/>&lt;<sp/>8<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a9af3e6eb7aa64afbb564251578579fc5" kindref="member">get_position_space</ref>(state,<sp/>pos)<sp/>==<sp/>Blank)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>8;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/>last_play.row<sp/>+<sp/>sum_pos[i][0],<sp/>.column<sp/>=<sp/>last_play.column<sp/>+<sp/>sum_pos[i][1]};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>positions[length]<sp/>=<sp/>pos;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(position_list,<sp/>positions<sp/>+<sp/>length);</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length++;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>jogpos<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list);</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>d<sp/>=<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;column)<sp/>*<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;column)</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;row)<sp/>*<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;row);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos.row<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.row<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>pos.column<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.column<sp/>&lt;<sp/>8<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state_8h_1a9af3e6eb7aa64afbb564251578579fc5" kindref="member">get_position_space</ref>(state,<sp/>pos)<sp/>==<sp/>Blank)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>positions[length]<sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(position_list,<sp/>positions<sp/>+<sp/>length);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length++;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>jogpos<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list);</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list);</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(position_list<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogpos1<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d1<sp/>=<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;column)<sp/>*<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;column)</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;row)<sp/>*<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;row);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d1<sp/>&lt;<sp/>d)<sp/>{</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/>=<sp/>d1;</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogpos<sp/>=<sp/>jogpos1;</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*jogpos;</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>d<sp/>=<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;column)<sp/>*<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;column)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;row)<sp/>*<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos-&gt;row);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(position_list<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogpos1<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d1<sp/>=<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;column)<sp/>*<sp/>((7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;column)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;row)<sp/>*<sp/>(7<sp/>-<sp/>(7<sp/>*<sp/>((int)<sp/>player<sp/>-<sp/>1))<sp/>-<sp/>jogpos1-&gt;row);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d1<sp/>&lt;<sp/>d)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/>=<sp/>d1;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogpos<sp/>=<sp/>jogpos1;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*jogpos;</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="182"><highlight class="comment"><sp/>*<sp/>Reads<sp/>the<sp/>flood<sp/>fill<sp/>matrix,<sp/>giving<sp/>a<sp/>position<sp/>where<sp/>to<sp/>play<sp/>in<sp/>order<sp/>to<sp/>reach<sp/>the<sp/>objetive<sp/>faster.</highlight></codeline>
-<codeline lineno="183"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/>reads_flood_fill_matrix(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[][8],<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)<sp/>{</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum_pos[8][2]<sp/>=<sp/>{{1,<sp/>1},<sp/>{1,<sp/>0},<sp/>{1,<sp/>-1},<sp/>{0,<sp/>1},<sp/>{0,<sp/>-1},<sp/>{-1,<sp/>1},<sp/>{-1,<sp/>0},<sp/>{-1,<sp/>-1}};</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/>*<sp/>Reads<sp/>the<sp/>flood<sp/>fill<sp/>matrix,<sp/>giving<sp/>a<sp/>position<sp/>where<sp/>to<sp/>play<sp/>in<sp/>order<sp/>to<sp/>reach<sp/>the<sp/>objetive<sp/>faster.</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(count<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos.row<sp/>+<sp/>sum_pos[i][0]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.row<sp/>+<sp/>sum_pos[i][0]<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>pos.column<sp/>+<sp/>sum_pos[i][1]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.column<sp/>+<sp/>sum_pos[i][1]<sp/>&lt;<sp/>8<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row<sp/>+<sp/>sum_pos[i][0]][pos.column<sp/>+<sp/>sum_pos[i][1]]<sp/>==<sp/>count<sp/>-<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.row<sp/>=<sp/>pos.row<sp/>+<sp/>sum_pos[i][0];</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.column<sp/>=<sp/>pos.column<sp/>+<sp/>sum_pos[i][1];</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count--;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos;</highlight></codeline>
-<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="206"><highlight class="comment"><sp/>*<sp/>Creates<sp/>the<sp/>flood<sp/>fill<sp/>matrix<sp/>on<sp/>a<sp/>given<sp/>state<sp/>of<sp/>the<sp/>game,<sp/>returning<sp/>to<sp/>best<sp/>position<sp/>to<sp/>reach<sp/>the<sp/>objetive,.</highlight></codeline>
-<codeline lineno="207"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/>flood_fill(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[][8]<sp/>,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player)<sp/>{</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum_pos[8][2]<sp/>=<sp/>{{1,<sp/>1},<sp/>{1,<sp/>0},<sp/>{1,<sp/>-1},<sp/>{0,<sp/>1},<sp/>{0,<sp/>-1},<sp/>{-1,<sp/>1},<sp/>{-1,<sp/>0},<sp/>{-1,<sp/>-1}};</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>last_play[1];</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>last_play[0]<sp/>=<sp/><ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(state);</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>positions[64],<sp/>pos;</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/><ref refid="game_8h_1a6542229192098fbce8231b34a7aa732c" kindref="member">play</ref>;</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref><sp/>(position_list1,<sp/>last_play);</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(position_list1<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(position_list1<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>play<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list1);</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>++i)<sp/>{</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/>play-&gt;row<sp/>+<sp/>sum_pos[i][0],<sp/>.column<sp/>=<sp/>play-&gt;column<sp/>+<sp/>sum_pos[i][1]};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/>reads_flood_fill_matrix(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[][8],<sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum_pos[8][2]<sp/>=<sp/>{{1,<sp/>1},<sp/>{1,<sp/>0},<sp/>{1,<sp/>-1},<sp/>{0,<sp/>1},<sp/>{0,<sp/>-1},<sp/>{-1,<sp/>1},<sp/>{-1,<sp/>0},<sp/>{-1,<sp/>-1}};</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(count<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos.row<sp/>+<sp/>sum_pos[i][0]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.row<sp/>+<sp/>sum_pos[i][0]<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>pos.column<sp/>+<sp/>sum_pos[i][1]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.column<sp/>+<sp/>sum_pos[i][1]<sp/>&lt;<sp/>8<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row<sp/>+<sp/>sum_pos[i][0]][pos.column<sp/>+<sp/>sum_pos[i][1]]<sp/>==<sp/>count<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.row<sp/>=<sp/>pos.row<sp/>+<sp/>sum_pos[i][0];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos.column<sp/>=<sp/>pos.column<sp/>+<sp/>sum_pos[i][1];</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count--;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/>*<sp/>Creates<sp/>the<sp/>flood<sp/>fill<sp/>matrix<sp/>on<sp/>a<sp/>given<sp/>state<sp/>of<sp/>the<sp/>game,<sp/>returning<sp/>to<sp/>best<sp/>position<sp/>to<sp/>reach<sp/>the<sp/>objetive,.</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/>flood_fill(<ref refid="structState" kindref="compound">State</ref>*<sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[][8]<sp/>,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum_pos[8][2]<sp/>=<sp/>{{1,<sp/>1},<sp/>{1,<sp/>0},<sp/>{1,<sp/>-1},<sp/>{0,<sp/>1},<sp/>{0,<sp/>-1},<sp/>{-1,<sp/>1},<sp/>{-1,<sp/>0},<sp/>{-1,<sp/>-1}};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>last_play[1];</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>last_play[0]<sp/>=<sp/><ref refid="state_8h_1ad1c74abd11d33ea2dd874f499cfb0667" kindref="member">get_last_play</ref>(state);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>positions[64],<sp/>pos;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref>*<sp/><ref refid="game_8h_1a6542229192098fbce8231b34a7aa732c" kindref="member">play</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref><sp/>(position_list1,<sp/>last_play);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(position_list1<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(position_list1<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>play<sp/>=<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(position_list1);</highlight></codeline>
 <codeline lineno="228"><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>pos.column<sp/>==<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1))<sp/>&amp;&amp;<sp/>(unsigned)<sp/>pos.row<sp/>==<sp/>7<sp/>-<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1)))<sp/>{</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>=<sp/>count;</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reads_flood_fill_matrix(flood_fill_matrix,<sp/>pos,<sp/>count);</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>pos.row<sp/>==<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1))<sp/>&amp;&amp;<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>pos.column<sp/>==<sp/>7<sp/>-<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1)))</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos.row<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.row<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>pos.column<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.column<sp/>&lt;<sp/>8<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>==<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>positions[length]<sp/>=<sp/>pos;</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(position_list2,<sp/>positions<sp/>+<sp/>length);</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>=<sp/>count;</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length++;</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"></highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list1);</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/>position_list2;</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>arithmeticJog(state,<sp/>player);<sp/></highlight><highlight class="comment">//in<sp/>case<sp/>of<sp/>being<sp/>impossible<sp/>to<sp/>reach<sp/>the<sp/>objetive,<sp/>does<sp/>an<sp/>arithmetic<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>{.row<sp/>=<sp/>play-&gt;row<sp/>+<sp/>sum_pos[i][0],<sp/>.column<sp/>=<sp/>play-&gt;column<sp/>+<sp/>sum_pos[i][1]};</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>pos.column<sp/>==<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1))<sp/>&amp;&amp;<sp/>(unsigned)<sp/>pos.row<sp/>==<sp/>7<sp/>-<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1)))<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>=<sp/>count;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1a6df33bdc0f163281cf3b226f7748cad9" kindref="member">clear_list</ref>(position_list1);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a6df33bdc0f163281cf3b226f7748cad9" kindref="member">clear_list</ref>(position_list2);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reads_flood_fill_matrix(flood_fill_matrix,<sp/>pos,<sp/>count);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos.row<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.row<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>pos.column<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>pos.column<sp/>&lt;<sp/>8<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>positions[length]<sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(position_list2,<sp/>positions<sp/>+<sp/>length);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[pos.row][pos.column]<sp/>=<sp/>count;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length++;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(position_list1);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list1<sp/>=<sp/>position_list2;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position_list2<sp/>=<sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++count;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="260"><highlight class="comment"><sp/>*<sp/>Does<sp/>a<sp/>computer<sp/>move<sp/>using<sp/>the<sp/>flood<sp/>fill<sp/>method</highlight></codeline>
-<codeline lineno="261"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>arithmeticJog(state,<sp/>player);<sp/></highlight><highlight class="comment">//in<sp/>case<sp/>of<sp/>being<sp/>impossible<sp/>to<sp/>reach<sp/>the<sp/>objetive,<sp/>does<sp/>an<sp/>arithmetic<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
 <codeline lineno="262"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kindref="member">computer_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state){</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[8][8];</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>8;<sp/>j++){</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state-&gt;board[i][j]<sp/>==<sp/>Blank)</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[i][j]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>flood_fill_matrix[i][j]<sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos<sp/>=<sp/>flood_fill(state,<sp/>flood_fill_matrix,<sp/><ref refid="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" kindref="member">get_current_player</ref>(state));</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>make_move(state,pos);</highlight></codeline>
-<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"></highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/>*<sp/>Does<sp/>a<sp/>computer<sp/>move<sp/>using<sp/>the<sp/>flood<sp/>fill<sp/>method</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kindref="member">computer_move</ref>(<ref refid="structState" kindref="compound">State</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>state){</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flood_fill_matrix[8][8];</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player<sp/>=<sp/><ref refid="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" kindref="member">get_current_player</ref>(state);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>8;<sp/>j++){</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i<sp/>!=<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1))<sp/>||<sp/>j<sp/>!=<sp/>7<sp/>-<sp/>(7<sp/>*<sp/>(player<sp/>-<sp/>1)))<sp/>&amp;&amp;<sp/>state-&gt;board[i][j]<sp/>==<sp/>Blank)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flood_fill_matrix[i][j]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>flood_fill_matrix[i][j]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos<sp/>=<sp/>flood_fill(state,<sp/>flood_fill_matrix,<sp/><ref refid="state_8h_1a22e343ddcfb0725f681ce545cb3c6548" kindref="member">get_current_player</ref>(state));</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>make_move(state,pos);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="logic/game.c"/>
+    <location file="projeto/logic/game.c"/>
   </compounddef>
 </doxygen>

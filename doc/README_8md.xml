@@ -33,7 +33,9 @@
 <codeline></codeline>
 <codeline><highlight class="normal">Group:<sp/>1</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Shift:<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">Shift:<sp/>PL2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Course<sp/>:<sp/>MIEI</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

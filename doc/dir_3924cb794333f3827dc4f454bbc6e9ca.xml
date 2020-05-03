@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
-  <compounddef id="dir_b31d54d5631803016a26f28213a41162" kind="dir">
-    <compoundname>interface</compoundname>
+  <compounddef id="dir_3924cb794333f3827dc4f454bbc6e9ca" kind="dir">
+    <compoundname>projeto/interface</compoundname>
     <innerfile refid="board_8c">board.c</innerfile>
     <innerfile refid="board_8h">board.h</innerfile>
     <innerfile refid="interface_8c">interface.c</innerfile>
@@ -10,6 +10,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="interface/"/>
+    <location file="projeto/interface/"/>
   </compounddef>
 </doxygen>

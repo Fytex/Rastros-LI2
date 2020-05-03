@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
-  <compounddef id="dir_0f9694b8de2575528c6c0ae9f79dda65" kind="dir">
-    <compoundname>logic</compoundname>
-    <innerfile refid="game_8c">game.c</innerfile>
-    <innerfile refid="game_8h">game.h</innerfile>
+  <compounddef id="dir_6d22bba2c21c92b5387a2c0c86e32a20" kind="dir">
+    <compoundname>projeto/data/list_contents</compoundname>
+    <innerfile refid="OS__list_8c">OS_list.c</innerfile>
+    <innerfile refid="OS__list_8h">OS_list.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="logic/"/>
+    <location file="projeto/data/list_contents/"/>
   </compounddef>
 </doxygen>
