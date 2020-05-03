@@ -90,10 +90,7 @@ Position randomJog (State* state){
     Position positions[8],pos;
     int length = 0;
 
-    List* position_list = NULL;
-
-
-    position_list = create_list();
+    List* position_list = create_list();
 
     for (int i=0; i < 8; ++i) {
         pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
@@ -141,10 +138,7 @@ Position arithmeticJog (State* state, unsigned int player){
     Position positions[8],pos;
     int length = 0;
 
-    List* position_list = NULL;
-
-
-    position_list = create_list();
+    List* position_list = create_list();
 
     for (int i=0; i < 8; ++i) {
         pos = (Position) {.row = last_play.row + sum_pos[i][0], .column = last_play.column + sum_pos[i][1]};
@@ -167,7 +161,7 @@ Position arithmeticJog (State* state, unsigned int player){
 
     position_list = remove_head(position_list);
 
-    while (position_list->next != NULL) {
+    while (position_list != NULL) {
         jogpos1 = get_head(position_list);
         d1 = ((7 * ((int) player - 1)) - jogpos1->column) * ((7 * ((int) player - 1)) - jogpos1->column)
             + (7 - (7 * ((int) player - 1)) - jogpos1->row) * (7 - (7 * ((int) player - 1)) - jogpos1->row);
@@ -220,16 +214,13 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
     Position positions[64], pos;
     Position* play;
     int length = 0;
-    List* position_list1 = NULL;
-    List* position_list2 = NULL;
-
-    position_list1 = create_list();
-    position_list2 = create_list();
+    List* position_list1 = create_list();
+    List* position_list2 = create_list();
 
     position_list1 = head_insert (position_list1, last_play);
 
-    while (position_list1->next != NULL) {
-        while (position_list1->next != NULL) {
+    while (position_list1 != NULL) {
+        while (position_list1 != NULL) {
             play = get_head(position_list1);
 
             for (int i = 0; i < 8; ++i) {
@@ -257,9 +248,10 @@ Position flood_fill(State* state, int flood_fill_matrix[][8] ,unsigned int playe
         }
 
         position_list1 = position_list2;
-        position_list2 = clear_list();
+        position_list2 = create_list();
         count++;
     }
+
     return arithmeticJog(state, player); //in case of being impossible to reach the objetive, does an arithmetic calculation
 }
 

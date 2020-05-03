@@ -122,7 +122,6 @@
     <member refid="linked_8c_1ab9b410d6fea01244d5d765ee3f86d012" kind="function"><name>head_insert</name></member>
     <member refid="linked_8c_1a7906e3011ed4a64a7330bde89e4feda0" kind="function"><name>get_head</name></member>
     <member refid="linked_8c_1a6209581b2c176218c89cb75f334fbc69" kind="function"><name>remove_head</name></member>
-    <member refid="linked_8c_1a62982117b57c4042447b0951772f7652" kind="function"><name>clear_list</name></member>
     <member refid="linked_8c_1a7e71778dd41783b93e9d41e6796b5213" kind="function"><name>empty_list</name></member>
   </compound>
   <compound refid="linked_8h" kind="file"><name>linked.h</name>
@@ -131,7 +130,6 @@
     <member refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kind="function"><name>get_head</name></member>
     <member refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kind="function"><name>head_insert</name></member>
     <member refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kind="function"><name>remove_head</name></member>
-    <member refid="linked_8h_1a62982117b57c4042447b0951772f7652" kind="function"><name>clear_list</name></member>
     <member refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kind="function"><name>empty_list</name></member>
   </compound>
   <compound refid="game_8c" kind="file"><name>game.c</name>
@@ -139,8 +137,9 @@
     <member refid="game_8c_1a6610b6fb6fdf8433d473acbc7cb2f286" kind="function"><name>make_move</name></member>
     <member refid="game_8c_1a78bc18cb927e8cee737b552691da5d5b" kind="function"><name>play</name></member>
     <member refid="game_8c_1a69062e4256ea65a0e8d4d5bf9e090965" kind="function"><name>game_finished</name></member>
-    <member refid="game_8c_1a08f4eaf99053727e47a8212765555ec6" kind="function"><name>RandomJog</name></member>
+    <member refid="game_8c_1adddaa10848d93d837cfa1239a9bf100b" kind="function"><name>randomJog</name></member>
     <member refid="game_8c_1ac993a0941042386cf04f8fc19a8c3549" kind="function"><name>computer_move2</name></member>
+    <member refid="game_8c_1a7789a5e61fdaa67dd602b1fb0487ee2e" kind="function"><name>arithmeticJog</name></member>
     <member refid="game_8c_1aa72f4012829ed74e440b2619099b7c26" kind="function"><name>reads_flood_fill_matrix</name></member>
     <member refid="game_8c_1a1fe9158f725b6e9e199c68c6ded85fdc" kind="function"><name>flood_fill</name></member>
     <member refid="game_8c_1a55e8ed0ae86cf800ead50f70d2c0b2d8" kind="function"><name>computer_move</name></member>

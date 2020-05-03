@@ -6,32 +6,32 @@
     <includes refid="state_8h" local="yes">data/state.h</includes>
     <includes refid="interface_8h" local="yes">interface/interface.h</includes>
     <incdepgraph>
-      <node id="76">
+      <node id="75">
         <label>stdlib.h</label>
       </node>
-      <node id="77">
+      <node id="76">
         <label>data/state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="75">
+      <node id="74">
         <label>main.c</label>
         <link refid="main_8c"/>
+        <childnode refid="75" relation="include">
+        </childnode>
         <childnode refid="76" relation="include">
         </childnode>
         <childnode refid="77" relation="include">
         </childnode>
+      </node>
+      <node id="77">
+        <label>interface/interface.h</label>
+        <link refid="interface_8h"/>
         <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
         </childnode>
       </node>
       <node id="78">
-        <label>interface/interface.h</label>
-        <link refid="interface_8h"/>
-        <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
-        </childnode>
-      </node>
-      <node id="79">
         <label>stdio.h</label>
       </node>
     </incdepgraph>

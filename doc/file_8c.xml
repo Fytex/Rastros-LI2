@@ -240,7 +240,7 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir(DIR,<sp/>0777);<sp/></highlight><highlight class="comment">//<sp/>Creates<sp/>directory<sp/>if<sp/>not<sp/>exists<sp/>giving<sp/>permission<sp/>to<sp/>every<sp/>user</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/>DIR_MAX);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/>DIR_MAX<sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>fopen(directory,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
@@ -277,7 +277,7 @@
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/>pos1,<sp/>pos2;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structMove" kindref="compound">Move</ref><sp/>move;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/>DIR_MAX);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>strncat(directory,<sp/>filename,<sp/>DIR_MAX<sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>fopen(directory,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>

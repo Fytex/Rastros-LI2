@@ -45,11 +45,6 @@ List* head_insert(List* L, void* value);
 List* remove_head(List* L);
 
 /**
-\brief Limpa a informação de uma lista ligada, tornando-a vazia
-*/
-List* clear_list();
-
-/**
 \brief Confirma se a lista é vazia ou não
  @param L Apontador para uma lista ligada
 */

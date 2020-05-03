@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="24" column="1" bodyfile="linked_lists/linked.c" bodystart="4" bodyend="13"/>
+        <location file="linked_lists/linked.h" line="24" column="1" bodyfile="linked_lists/linked.c" bodystart="4" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="30" column="1" bodyfile="linked_lists/linked.c" bodystart="25" bodyend="29"/>
+        <location file="linked_lists/linked.h" line="30" column="1" bodyfile="linked_lists/linked.c" bodystart="24" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structList" kindref="compound">List</ref> *</type>
@@ -120,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="38" column="1" bodyfile="linked_lists/linked.c" bodystart="15" bodyend="23"/>
+        <location file="linked_lists/linked.h" line="38" column="1" bodyfile="linked_lists/linked.c" bodystart="14" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structList" kindref="compound">List</ref> *</type>
@@ -146,20 +146,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="45" column="1" bodyfile="linked_lists/linked.c" bodystart="31" bodyend="42"/>
-      </memberdef>
-      <memberdef kind="function" id="linked_8h_1a62982117b57c4042447b0951772f7652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structList" kindref="compound">List</ref> *</type>
-        <definition>List* clear_list</definition>
-        <argsstring>()</argsstring>
-        <name>clear_list</name>
-        <briefdescription>
-<para>Limpa a informação de uma lista ligada, tornando-a vazia. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="linked_lists/linked.h" line="50" column="1" bodyfile="linked_lists/linked.c" bodystart="45" bodyend="47"/>
+        <location file="linked_lists/linked.h" line="45" column="1" bodyfile="linked_lists/linked.c" bodystart="30" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -184,7 +171,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.h" line="56" column="1" bodyfile="linked_lists/linked.c" bodystart="50" bodyend="54"/>
+        <location file="linked_lists/linked.h" line="51" column="1" bodyfile="linked_lists/linked.c" bodystart="43" bodyend="47"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -213,11 +200,9 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a62982117b57c4042447b0951772f7652" kindref="member">clear_list</ref>();</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_LINKED_H</highlight></codeline>
+<codeline lineno="51"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>L);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//RASTROS_LI2_LINKED_H</highlight></codeline>
     </programlisting>
     <location file="linked_lists/linked.h"/>
   </compounddef>

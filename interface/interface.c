@@ -54,9 +54,8 @@ void help_terminal(){
     "  >> pos <position>\t(Load the game from a previous position)\n"
     "  >> movs\t\t(Lists all the plays)\n"
     "  >> list\t\t(Lists all saved files)\n"
-    "  >> jog\t\t(Allows to see play done before and to start playing from that position"
-    "  >> jog\t\t(Performs a move according to an algorithm"
-    "  >> jog2\t\t(Same as jog but with a different algorithm"
+    "  >> jog\t\t(Performs a move according to an algorithm)\n"
+    "  >> jog2\t\t(Same as jog but with a different algorithm)\n"
     "  >> Q\t\t\t(Ends the game)\n");
 
 }

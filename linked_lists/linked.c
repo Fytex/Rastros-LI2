@@ -3,12 +3,9 @@
 
 List* create_list() {
 
-    List* l = malloc(sizeof(List));
+    List* l = NULL;
 
-    l->pos = NULL;
-    l->next = NULL;
-
-   return l;
+    return l;
 
 }
 
@@ -40,12 +37,6 @@ List* remove_head(List* const L) {
     return pointer;
 
 }
-
-
-List* clear_list() {
-   return create_list();
-}
-
 
 int empty_list (const List* const L){
 

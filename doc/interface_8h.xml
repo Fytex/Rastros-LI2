@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="interface/interface.h" line="17" column="1" bodyfile="interface/interface.c" bodystart="103" bodyend="238"/>
+        <location file="interface/interface.h" line="17" column="1" bodyfile="interface/interface.c" bodystart="102" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="interface_8h_1af0e8e5346802ba4161c023d8a3da403d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

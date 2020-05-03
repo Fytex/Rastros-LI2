@@ -5,13 +5,13 @@
     <includes refid="state_8h" local="yes">../data/state.h</includes>
     <includedby refid="interface_8c" local="yes">interface/interface.c</includedby>
     <incdepgraph>
-      <node id="72">
+      <node id="71">
         <label>logic/game.h</label>
         <link refid="game_8h"/>
-        <childnode refid="73" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
       </node>
-      <node id="73">
+      <node id="72">
         <label>../data/state.h</label>
         <link refid="state_8h"/>
       </node>
@@ -52,7 +52,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.h" line="17" column="1" bodyfile="logic/game.c" bodystart="46" bodyend="54"/>
+        <location file="logic/game.h" line="17" column="1" bodyfile="logic/game.c" bodystart="45" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="game_8h_1afbd54c47a49e784fa85df4208468b595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.h" line="24" column="1" bodyfile="logic/game.c" bodystart="61" bodyend="81"/>
+        <location file="logic/game.h" line="24" column="1" bodyfile="logic/game.c" bodystart="60" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="game_8h_1a55e8ed0ae86cf800ead50f70d2c0b2d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.h" line="30" column="1" bodyfile="logic/game.c" bodystart="205" bodyend="217"/>
+        <location file="logic/game.h" line="30" column="1" bodyfile="logic/game.c" bodystart="263" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="game_8h_1ac993a0941042386cf04f8fc19a8c3549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -128,7 +128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logic/game.h" line="36" column="1" bodyfile="logic/game.c" bodystart="119" bodyend="122"/>
+        <location file="logic/game.h" line="36" column="1" bodyfile="logic/game.c" bodystart="124" bodyend="127"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

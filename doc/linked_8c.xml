@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.c" line="4" column="1" bodyfile="linked_lists/linked.c" bodystart="4" bodyend="13"/>
+        <location file="linked_lists/linked.c" line="4" column="1" bodyfile="linked_lists/linked.c" bodystart="4" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="linked_8c_1ab9b410d6fea01244d5d765ee3f86d012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structList" kindref="compound">List</ref> *</type>
@@ -76,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.c" line="15" column="1" bodyfile="linked_lists/linked.c" bodystart="15" bodyend="23"/>
+        <location file="linked_lists/linked.c" line="14" column="1" bodyfile="linked_lists/linked.c" bodystart="14" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="linked_8c_1a7906e3011ed4a64a7330bde89e4feda0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.c" line="25" column="1" bodyfile="linked_lists/linked.c" bodystart="25" bodyend="29"/>
+        <location file="linked_lists/linked.c" line="24" column="1" bodyfile="linked_lists/linked.c" bodystart="24" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="linked_8c_1a6209581b2c176218c89cb75f334fbc69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structList" kindref="compound">List</ref> *</type>
@@ -127,20 +127,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.c" line="31" column="1" bodyfile="linked_lists/linked.c" bodystart="31" bodyend="42"/>
-      </memberdef>
-      <memberdef kind="function" id="linked_8c_1a62982117b57c4042447b0951772f7652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structList" kindref="compound">List</ref> *</type>
-        <definition>List* clear_list</definition>
-        <argsstring>()</argsstring>
-        <name>clear_list</name>
-        <briefdescription>
-<para>Limpa a informação de uma lista ligada, tornando-a vazia. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="linked_lists/linked.c" line="45" column="1" bodyfile="linked_lists/linked.c" bodystart="45" bodyend="47"/>
+        <location file="linked_lists/linked.c" line="30" column="1" bodyfile="linked_lists/linked.c" bodystart="30" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="linked_8c_1a7e71778dd41783b93e9d41e6796b5213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -165,7 +152,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="linked_lists/linked.c" line="50" column="1" bodyfile="linked_lists/linked.c" bodystart="50" bodyend="54"/>
+        <location file="linked_lists/linked.c" line="43" column="1" bodyfile="linked_lists/linked.c" bodystart="43" bodyend="47"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -180,53 +167,46 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>l<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structList" kindref="compound">List</ref>));</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>l-&gt;pos<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>l-&gt;next<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structList" kindref="compound">List</ref>));</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">-&gt;pos<sp/>=<sp/>value;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">-&gt;next<sp/>=<sp/>L;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>L-&gt;pos;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>pointer<sp/>=<sp/>L;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(L)<sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointer<sp/>=<sp/>L-&gt;next;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(L);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pointer;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>l<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a2a160cb964358a6e2631964d5d699ae5" kindref="member">head_insert</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structList" kindref="compound">List</ref>));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">-&gt;pos<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">-&gt;next<sp/>=<sp/>L;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="linked_8h_1a289cc1406d79ac5ccae8e0e478c7608c" kindref="member">get_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>L-&gt;pos;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1aedb37e674c83adca8234ab8a6d5bb667" kindref="member">remove_head</ref>(<ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/>pointer<sp/>=<sp/>L;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(L)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointer<sp/>=<sp/>L-&gt;next;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(L);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pointer;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L){</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><ref refid="structList" kindref="compound">List</ref>*<sp/><ref refid="linked_8h_1a62982117b57c4042447b0951772f7652" kindref="member">clear_list</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a4859d0b217430d5fe5fee2a31477704a" kindref="member">create_list</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>L<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linked_8h_1a84c81d92afe4ad7e74bd5d4dc9277029" kindref="member">empty_list</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structList" kindref="compound">List</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>L){</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>L<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="linked_lists/linked.c"/>
   </compounddef>
