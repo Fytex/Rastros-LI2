@@ -187,19 +187,20 @@ Position arithmeticJog (State* state, unsigned int player){
 
 Position reads_flood_fill_matrix(int flood_fill_matrix[][8], Position pos, int count) {
     const int sum_pos[8][2] = {{1, 1}, {1, 0}, {1, -1}, {0, 1}, {0, -1}, {-1, 1}, {-1, 0}, {-1, -1}};
+    Position play;
 
     while(count != 1) {
         for(int i = 0; i < 8; i++) {
-            if (pos.row + sum_pos[i][0] >= 0 && pos.row + sum_pos[i][0] < 8 && pos.column + sum_pos[i][1] >= 0 &&
-                pos.column + sum_pos[i][1] < 8 &&
-                flood_fill_matrix[pos.row + sum_pos[i][0]][pos.column + sum_pos[i][1]] == count - 1) {
+            play = (Position) {.row = pos.row + sum_pos[i][0], .column = pos.column + sum_pos[i][1]};
 
-                    pos.row = pos.row + sum_pos[i][0];
-                    pos.column = pos.column + sum_pos[i][1];
+            if (play.row >= 0 && play.row < 8 && play.column >= 0 && play.column < 8 &&
+                flood_fill_matrix[play.row][play.column] == count - 1) {
+
+                    pos = (Position) {.row = play.row, .column = play.column};
+                    --count;
                     break;
             }
         }
-        count--;
     }
     return pos;
 }
@@ -269,13 +270,16 @@ void computer_move(State* const state){
 
     for(int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++){
-            if ((i != (7 * (player - 1)) || j != 7 - (7 * (player - 1))) && state->board[i][j] == Blank)
+            if (state->board[i][j] == Blank)
                 flood_fill_matrix[i][j] = 0;
 
             else flood_fill_matrix[i][j] = -1;
         }
     }
-    Position pos = flood_fill(state, flood_fill_matrix, get_current_player(state));
+
+    flood_fill_matrix[7 * (player - 1)][7 - (7 * (player - 1))] = -1;
+
+    Position pos = flood_fill(state, flood_fill_matrix, player);
     make_move(state,pos);
 }
 
