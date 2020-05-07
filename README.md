@@ -14,7 +14,7 @@ Rastros is a Maths' game that was created in 1992. It's a game where both player
 
 For the bot we did a very OP late-game however very weak at early. This was all because we had no time for the early (Because of covid-19 a lot changed in our calendar).
 
-Bot will try to execute in following order:
+Bot will try to execute each algorithm in the following order:
 
   - Brute-Force (Which can only be executed if there are few spaces available and it has to be under 2s in a normal computer)
   - Flood-Fill (This is pretty fast to calculate the shortest route to the bot's base)
