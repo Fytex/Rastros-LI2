@@ -12,7 +12,7 @@ Rastros is a Maths' game that was created in 1992. It's a game where both player
 
 ## Bot
 
-For the bot we did a very OP late-game however very weak at early. This was all because we had no time for the early (Because of covid-19 a lot changed in our calendar).
+For the bot we did a very OP late-game however very weak at early. This was all because we had no time for the early since covid-19 changed a lot our time's management and each one's calendars).
 
 Bot will try to execute each algorithm in the following order:
 
