@@ -87,7 +87,7 @@ int read_from_file(State* const state, const char* const filename){
 
         for ( ; fgets(file_line, BUFFER_LINE, file); ++count) {
 
-            if (file_line[6]) { // file_line[6] is '\0' if no second Position in Move
+            if (file_line[6] && file_line[7]) { // file_line[6] is '\0' if no second Position in Move
                 pos1 = (Position) {.row = '8' - file_line[5], .column = file_line[4] - 'a'};
                 pos2 = (Position) {.row = '8' - file_line[8], .column = file_line[7] - 'a'};
                 move = (Move) {.player1 = pos1, .player2 = pos2};
@@ -100,6 +100,7 @@ int read_from_file(State* const state, const char* const filename){
                 edit_last_play(state, pos1);
 
                 edit_current_player(state, 1);
+                --count;
             }
         }
     }
