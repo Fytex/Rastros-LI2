@@ -1,5 +1,6 @@
 # Rastros-LI2    2020
 
+
 ## What's the language?
 
 This game is developed in C.
@@ -19,18 +20,3 @@ Bot will execute the first allowed/possible algorithm in the following order:
   - Brute-Force (Which can only be executed if there are few spaces available and it has to be under 2s in a normal computer)
   - Flood-Fill (This is pretty fast to calculate the shortest path to the bot's base. However this wont work in case there is no path)
   - Euclidean Distance (Just a math's formula to calculate which one of the next 8 available spaces is the nearest to the bot's base)
-  
-
-## Collaborators
-
-- Cristiano Pereira (CJGNP) N.º a93726
-- Pedro Paulo Tavares (Fytex) N.º a93227
-- Tiago Daniel Costa (tiago885) N.º a93322
-
-## Group&Shift
-
-Group: 1
-
-Shift: PL2
-
-Course : MIEI
